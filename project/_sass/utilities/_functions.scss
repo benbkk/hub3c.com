@@ -1,0 +1,16 @@
+//
+// Functions
+// --------------------------------------------------
+
+@function em($target, $context: $base__font-size) {
+    @return ($target/$context) * 1em;
+}
+
+// Call the color palette modifiers
+@function palette($palette, $shade: 'base') {
+  $palette-map: map-get($palettes, $palette);
+  @if $palette-map == null {
+    @error "#{$palette} is not a valid palette name.";
+  }
+	@return map-get($palette-map, $shade);
+}

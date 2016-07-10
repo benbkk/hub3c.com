@@ -1,0 +1,85 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Fonts
+@import "fonts/fonts";
+
+//Colors
+$white					: #FFFFFF;
+$black					: #141414;
+// Turquoise
+$turquoise			: #1abc9c;
+$greenSea				: #16a085;
+// Greens
+$emerald				: #2ecc71;
+$nephritis			: #27ae60;
+// Blue Light
+$peterRiver			: #3498db;
+$belizeHole			: #2980b9;
+// Blue Dark
+$midnightBlue		: #2c3e50;
+$wetAsphalt			: #34495e;
+// Purple
+$amethyst				: #9b59b6;
+$wisteria				: #8e44ad;
+// Yellow - Orange
+$sunflower			: #f1c40f;
+$orange					: #f39c12;
+$carrot					: #e67e22;
+$pumpkin				: #d35400;
+// Red
+$alizarin				: #e74c3c;
+$pomegranate		: #c0392b;
+// Grey Shades
+$clouds					: #ecf0f1;
+$silver					: #bdc3c7;
+$concrete				: #95a5a6;
+$asbestos				: #7f8c8d;
+// Hub3C
+$hub3cGrey			: #43545E;
+$hub3cGreen			: #8AC644;
+$hub3cBlue			: #33CCFF;
+
+// Color Palettes
+
+$palettes: (
+	white : (
+		base        	: $white
+	),
+	black : (
+		base					: $black
+	),
+	grey : (
+		lighter       : lighten($hub3cGrey, 12.5%),
+		base     			: $hub3cGrey,
+		dark          : darken($hub3cGrey, 12.5%)
+	),
+	blue : (
+		base     			: $hub3cBlue
+	),
+	clouds : (
+		light         : lighten($clouds, 3%),
+		base 					: $clouds,
+		dark 					: darken($clouds, 5%),
+		darker  			: darken($clouds, 10%)
+	),
+	green : (
+		base       		: $hub3cGreen
+	)
+);
+
+
+// BreakPoints
+
+$brkpoint-mobile-xs    	: 1px;
+$brkpoint-mobile-sm    	: 480px;
+$brkpoint-mobile-lg    	: 667px;
+$brkpoint-tablet-sm    	: 768px;
+$brkpoint-tablet       	: 1024px;
+$brkpoint-desktop-sm   	: 1280px;
+$brkpoint-desktop-lg   	: 1440px;
+$brkpoint-desktop-xlg  	: 1920px;
+$brkpoint-desktop-xxlg 	: 2560px;
+$brkpoint-height				: 600px;
+

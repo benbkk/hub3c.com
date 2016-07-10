@@ -1,0 +1,32 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Media Queries
+@mixin mq($break) {
+	@if $break == "mobile-sm" {
+		@media (min-width: $brkpoint-mobile-sm) and (max-width: $brkpoint-mobile-lg - 1) {
+			@content;
+		}
+	}
+	@else if $break =="mobile-lg" {
+		@media (max-width: $brkpoint-tablet-sm - 1) {
+			@content;
+		}
+	}
+
+	@else if $break == "tablet" {
+		@media (max-width: $brkpoint-tablet-lg - 1) {
+			@content;
+		}
+	}
+
+	@else if $break == "height" {
+		@media (max-height: $brkpoint-height) {
+			@content;
+		}
+	}
+	@else {
+		@error "Whoops! No value could be retrieved for '#{$break}'.";
+	}
+}
