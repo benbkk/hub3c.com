@@ -1,18 +1,9 @@
-// ---
-// # Only the main Sass file needs front matter (the dashes are enough)
-// ---
 @charset "utf-8";
 
-// Normalize and set up fonts before setting any styles
-@import
-  "vendor/normalize",
-  "fonts"
-;
+@import "compass";
+@import "bootstrap";
 
-/** Fonts
- * Headlines: 36px Bree Serif
- * Body: 16px Oxygen
- */
+@import "fonts/fonts";
 
 // Font variables
 $base-font-family:		"Oxygen", Helvetica, Arial, sans-serif;

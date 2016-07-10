@@ -1,13 +1,15 @@
-var gulp        = require('gulp'),
+var gulp            = require('gulp'),
     /** Utilities */
-    rename      = require('gulp-rename'),
-    size        = require('gulp-filesize'),
+    plugins         = require('gulp-plumber'),
+    rename          = require('gulp-rename'),
+    size            = require('gulp-filesize'),
     /** CSS */
-    sass          = require('gulp-sass'),
-    minifyCss     = require('gulp-minify-css'),
-    autoprefixer  = require('gulp-autoprefixer'),
+    sass            = require('gulp-ruby-sass'),
+    sourcemaps      = require('gulp-sourcemaps'),
+    cleanCss        = require('gulp-clean-css'),
+    autoprefixer    = require('gulp-autoprefixer'),
     /** Config */
-    paths      = require("../package.json").paths;
+    paths           = require("../package.json").paths;
 
 /**
  * CSS
@@ -15,16 +17,26 @@ var gulp        = require('gulp'),
  */
 
 module.exports = function buildCss () {
-
-  return gulp.src(paths.css.src + 'main.scss')
-    .pipe(sass({
-      includePaths: [paths.sass.src]
-    }).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions']
-    }))
-    .pipe(minifyCss())
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(size())
-    .pipe(gulp.dest(paths.css.dest));
+    return sass(paths.css.src + 'app.scss', {
+        lineNumbers: true,
+        loadPath: [
+            paths.bower + paths.fontawesome,
+            paths.bower + paths.compass,
+            paths.bower + paths.bootstrap.sass,
+            paths.sass.src
+        ],
+        style: 'expanded',
+        sourcemap: true,
+        sourcemapPath: paths
+    })
+    // If there is an error, don't stop compiling but use the custom displayError function
+    .on('error', function(err){
+        displayError(err);
+    })
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(gulp.dest(paths.css.dest))
+    // Minify the CSS file
+    .pipe(rename({suffix: '.min'}))
+    .pipe(cleanCss())
+    .pipe(gulp.dest(paths.css.dest))
 };

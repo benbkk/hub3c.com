@@ -7,6 +7,7 @@ var gulp          = require('gulp'),
 
     /** Utils */
     watch         = require('gulp-watch'),
+    plugins       = require('gulp-plumber'),
     browserSync   = require('browser-sync').create('jekyll'),
     requireDir    = require('require-dir'),
     runSequence   = require('run-sequence'),
@@ -59,8 +60,9 @@ gulp.task('serve', ['browser'], function() {
   // CSS/SCSS
   watch([
         paths.src +'fonts/*',
-        paths.sass.src +'*.scss',
-        paths.css.src +'main.scss',
+        paths.bower + paths.compass + '**/*.scss',
+        paths.bower + paths.bootstrap.sass + '**/*.scss',
+        paths.css.src +'app.scss',
         paths.sass.src +'**/*.scss',
   ], function() {
     runSequence('buildCss', ['browser:reload']);

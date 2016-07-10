@@ -1,13 +1,16 @@
-var gulp        = require('gulp'),
+var gulp           = require('gulp'),
   /** Utilities */
-    rename      = require('gulp-rename'),
-    size        = require('gulp-filesize'),
+    mainBowerFiles = require('gulp-main-bower-files'),
+    sourcemaps     = require('gulp-sourcemaps'),
+    rename         = require('gulp-rename'),
+    size           = require('gulp-filesize'),
+    gulpFilter     = require('gulp-filter'),
   /** JS Specific */
-    eslint      = require('gulp-eslint'),
-    concat      = require('gulp-concat'),
-    uglify      = require('gulp-uglify'),
+    eslint         = require('gulp-eslint'),
+    concat         = require('gulp-concat'),
+    uglify         = require('gulp-uglify'),
 /** Config */
-    paths      = require('../package.json').paths;
+    paths          = require('../package.json').paths;
 
 /**
  * JavaScript
@@ -16,27 +19,32 @@ var gulp        = require('gulp'),
 
 module.exports = function buildJs() {
 
-  // Build vendor files
-  gulp.src(paths.vendor.src + '*.js')
+  // Build vendor files - Getting all from bower_components
+  //gulp.src(paths.vendor.src + '*.js')
+  var filterJS = gulpFilter('**/*.js', '**/dist/js/*.js');
+  return gulp.src('./bower.json')
+    .pipe(mainBowerFiles())
+    .pipe(sourcemaps.init())
+    .pipe(filterJS)
   // Concat files
     .pipe(concat('vendor.js'))
+    .pipe(sourcemaps.write(paths))
+    .pipe(gulp.dest(paths.vendor.dest))
   // Minify combined files and rename
     .pipe(uglify())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(size())
     .pipe(gulp.dest(paths.vendor.dest));
 
+  // Custom JS - output as app.js & app.min.js
   return gulp.src(paths.js.src + '*.js')
-  // Concat files
-    .pipe(concat('main.js'))
+     .pipe(concat('app.js'))
   // Lint file
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
+    .pipe(gulp.dest(paths.js.dest))
   // Minify files and rename
     .pipe(uglify())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(size())
     .pipe(gulp.dest(paths.js.dest));
-
 };
+

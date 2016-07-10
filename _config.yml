@@ -1,10 +1,11 @@
 # --------------------------------
 # Site settings
-title: Matt Bengston
-author: Matt Bengston
-email: matt@aesinv.com
+title: Hub3c VideoChat 
+author: Ben Anggoro
+email: ben@benworkandplay.com
+project: Geekseat
 description: > # this means to ignore newlines until "baseurl:"
-  I'm a web developer that is extremely interested in front end development, enhancing workflows, and isomorphic JavaScript. I currently am a front end developer for ICF Interactive and in charge of web development for Import Image Racing. I also enjoy old Japanese cars and beer.
+  App prototype in HTML/CSS/JS
 
 # --------------------------------
 # Environment Settings
@@ -28,11 +29,9 @@ gdq_banner: AGDQ2016.jpg
 
 # --------------------------------
 # Social Networking
-twitter_username: deedilus
-github_username:  aesinv
-instagram_username: aesinv
-spotify_username: Matt Bengston
-spotify_userid: 1223222935
+twitter_username: benworkandplay
+github_username:  benbkk
+instagram_username: ben_bkk
 
 # --------------------------------
 # Build settings
@@ -53,7 +52,7 @@ include: [js/,fonts/,icons/]
 # --------------------------------
 # Suggested Tweets
 suggested_tweet:
-  url:        'http://aesinv.com'
-  via:        'deedilus'
-  hashtags:   ['Jekyll', 'Blog', 'Web Dev']
-  related:    ['davidensinger']
+  url:        'http://www.benworkandplay.com'
+  via:        'benworkandplay'
+  hashtags:   []
+  related:    []
