@@ -1,0 +1,43 @@
+//
+// SideNav
+// --------------------------------------------------
+
+.contact-list {
+	height: 100%;
+}
+
+.sidenav-inner {
+	position: relative;
+	height: 100%;
+}
+.section-header {
+	background: palette(clouds, dark);
+	h2.section-title {
+		text-transform: uppercase;
+		font-size: em(12px);
+	}
+}
+.search-contacts {
+	.form-group {
+		margin-bottom: 0;
+		&:active,
+		&:focus {
+			background: $white;
+			color: palette(grey);
+		}
+	}
+}
+.sidenav-footer {
+	padding:0.5em;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	font-size: em(12px);
+	background: palette(blue, darker);
+	p {
+		margin:0;
+		color: palette(clouds);
+	}
+}

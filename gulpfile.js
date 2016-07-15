@@ -62,6 +62,7 @@ gulp.task('serve', ['browser'], function() {
         paths.src +'fonts/*',
         paths.bower + paths.compass + '**/*.scss',
         paths.bower + paths.bootstrap.sass + '**/*.scss',
+        paths.bower + paths.hamburgers + '*/scss',
         paths.css.src +'app.scss',
         paths.sass.src +'**/*.scss',
   ], function() {

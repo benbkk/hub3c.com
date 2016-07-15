@@ -1,0 +1,57 @@
+// This is where main user profile info
+
+
+.main-user-profile,
+.contact-profile {
+	position: relative;
+}
+
+.contactImg {
+	width: 40px;
+	height: 40px;
+}
+
+.mainUserImg {
+	width: 80px;
+	height: 80px;
+	border: 5px solid palette(blue);
+}
+
+.mainUserImg,
+.contactImg {
+	position: relative;
+	display:inline-block;
+	margin-right: em(10px);
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+.mainUserImg {
+	.status-label {
+		@extend %status-lg;
+	}
+}
+
+.contactImg {
+	.status-label {
+		@extend %status-sm;
+	}
+}
+
+.mainUserInfo,
+.contactInfo {
+	display: inline-block;
+	vertical-align: middle;
+	.contactName {
+		display:block;
+		margin:0;
+	}
+}
+
+.mainUserStatus,
+.contactStatus {
+	display:block;
+	font-size: em(12px);
+	text-transform: uppercase;
+	color: palette(clouds, darkest);
+}

@@ -2,7 +2,9 @@
 // Functions
 // --------------------------------------------------
 
-@function em($target, $context: $base__font-size) {
+$font-size-base : 18px;
+
+@function em($target, $context: $font-size-base) {
     @return ($target/$context) * 1em;
 }
 

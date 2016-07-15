@@ -2,13 +2,17 @@
 <html>
   {% include head.html %}
   <body>
-  {% include menu-toggle.html %}
-    {% include nav.html %}
+    {% include header-app.html %}
+    {% include sidebar-nav.html %}
     <div id="appMainStage" class="main-stage">
-      {% include header.html %}
-      {{ content }}
-      {% include footer.html %}
+      {% include main-stage-header.html %}
+      <div class="main-content">
+        <div class="main-content-inner">
+          {{ content }}
+        </div>
+      </div>
+      {% include main-stage-footer.html %}
     </div>
-    {% include scripts.html %}
+    {% include components/scripts.html %}
   </body>
 </html>

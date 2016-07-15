@@ -1,0 +1,16 @@
+//
+// Helpers
+// --------------------------------------------------
+
+// Get rid of bootsrap things
+
+button,
+.nav > li a {
+	&:focus {
+		outline: none;
+	}
+}
+
+button {
+	-webkit-appearance:none;
+}

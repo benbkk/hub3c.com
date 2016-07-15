@@ -56,16 +56,26 @@ $palettes: (
 		dark          : darken($hub3cGrey, 12.5%)
 	),
 	blue : (
-		base     			: $hub3cBlue
+		light         : lighten($hub3cBlue, 12.5%),
+		base     			: $hub3cBlue,
+		dark          : darken($hub3cBlue, 12.5%),
+		darker        : darken($hub3cBlue, 17.5%),
 	),
 	clouds : (
 		light         : lighten($clouds, 3%),
 		base 					: $clouds,
 		dark 					: darken($clouds, 5%),
-		darker  			: darken($clouds, 10%)
+		darker  			: darken($clouds, 10%),
+		darkest       : darken($clouds, 25%)
 	),
 	green : (
 		base       		: $hub3cGreen
+	),
+	orange : (
+		base 					: $carrot
+	),
+	red : (
+		base          : $pomegranate
 	)
 );
 

@@ -1,0 +1,22 @@
+input,
+button,
+a, a.btn,
+div,
+section,
+img {
+	&:focus {
+	outline:none!important;
+	}
+}
+
+.search-contacts {
+	input.form-control {
+	background: palette(clouds);
+	border-color: transparent;
+	font-size: em(14px);
+	font-wight: 200;
+	}
+	&:focus {
+		border-bottom: 1px solid palette(clouds, dark);
+	}
+}

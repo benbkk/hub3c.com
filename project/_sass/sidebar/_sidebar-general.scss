@@ -1,0 +1,33 @@
+// General Structure
+.app-menu {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 25%;
+	min-width: 320px;
+	height: 100%;
+	background: palette(clouds);
+	overflow-y: scroll;
+	@include mq(mobile-lg) {
+		width:100%;
+	}
+}
+
+// Inner Wrapper
+.sidebar-nav-inner {
+	position: relative;
+}
+
+// Menu Items
+.sidebar-nav {
+	li {
+		font-size: em(16px);
+	}
+	.nav > li > a {
+		background: darken(palette(clouds), 2.55%);
+		&:hover {
+			background: palette(clouds);
+		}
+	}
+}

@@ -3,30 +3,54 @@
 // --------------------------------------------------
 
 // Media Queries
+
 @mixin mq($break) {
-	@if $break == "mobile-sm" {
-		@media (min-width: $brkpoint-mobile-sm) and (max-width: $brkpoint-mobile-lg - 1) {
-			@content;
-		}
-	}
-	@else if $break =="mobile-lg" {
-		@media (max-width: $brkpoint-tablet-sm - 1) {
-			@content;
-		}
-	}
-
-	@else if $break == "tablet" {
-		@media (max-width: $brkpoint-tablet-lg - 1) {
-			@content;
-		}
-	}
-
-	@else if $break == "height" {
-		@media (max-height: $brkpoint-height) {
-			@content;
-		}
-	}
-	@else {
-		@error "Whoops! No value could be retrieved for '#{$break}'.";
-	}
+  @if $break == "mobile-sm" {
+    @media (min-width: $brkpoint-mobile-xs) and (max-width: $brkpoint-mobile-sm) {
+      @content;
+    }
+  }
+  @else if $break == "mobile-lg" {
+    @media (max-width: $brkpoint-mobile-lg) {
+      @content;
+    }
+  }
+  @else if $break == "tablet-sm" {
+    @media (max-width: $brkpoint-tablet - 1) {
+      @content;
+    }
+  }
+  @else if $break == "tablet" {
+    @media (min-width: $brkpoint-tablet) and (max-width: $brkpoint-desktop-sm - 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop-sm" {
+    @media (max-width: $brkpoint-desktop-lg - 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop-lg" {
+    @media (min-width: $brkpoint-desktop-lg) and (max-width: $brkpoint-desktop-xlg - 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop-xlg" {
+    @media (min-width: $brkpoint-desktop-xlg) and (max-width: $brkpoint-desktop-xxlg - 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop-xxlg" {
+    @media (min-width: $brkpoint-desktop-xxlg) {
+      @content;
+    }
+  }
+  @else if $break == "large-min-height" {
+    @media (min-width: $brkpoint-tablet) and (max-height: $brkpoint-height) {
+      @content;
+    }
+  }
+  @else {
+    @error "Whoops! No value could be retrieved for '#{$break}'.";
+  }
 }

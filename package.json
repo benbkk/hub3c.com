@@ -36,6 +36,7 @@
     "sass": {
       "src": "project/_sass/"
     },
+    "hamburgers" : "css-hamburgers/_sass/hamburgers/",
     "css": {
       "src": "project/css/",
       "dest": "_dist/css/"

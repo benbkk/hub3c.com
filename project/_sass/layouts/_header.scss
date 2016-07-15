@@ -1,0 +1,26 @@
+//
+// Header
+// --------------------------------------------------
+
+
+// Main Stage
+.main-stage-header {
+	height: 116px;
+	margin-bottom:0;
+	background-color: palette(grey);
+}
+
+// Nav Header
+.app-nav-header {
+	position: relative;
+	padding: 1em;
+}
+
+#menuToggle {
+	position: absolute;
+	right: 0;
+}
+
+.header-inner {
+	position: relative;
+}

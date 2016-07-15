@@ -12,20 +12,9 @@ description: > # this means to ignore newlines until "baseurl:"
 environment: dev
 baseurl: "" # the subpath of your site, e.g. /blog/
 #url: "http://aesinv.com" # the base hostname & protocol for your site
-url: "http://dev.aesinv.com:4000"
+url: "localhost:3000"
 source: project
 destination: _dist
-
-# --------------------------------
-# Seasonal Support
-seasonal_assets_url: seasonal/
-
-# Games Done Quick Event
-gdq_event: false
-gdq_name: Awesome Games Done Quick 2016
-gdq_description: >
-  AGDQ a giant gaming party extravaganza and it raises money for the Prevent Cancer Foundation.<br /><br />Please tune in, enjoy the stream, and donate.
-gdq_banner: AGDQ2016.jpg
 
 # --------------------------------
 # Social Networking
@@ -39,10 +28,6 @@ markdown: kramdown
 safe: false
 future: true
 paginate: 5
-
-# Category Handling
-category_dir: /
-tag_dir: /tag/
 
 # --------------------------------
 # Includes & Excludes
