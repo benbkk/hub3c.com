@@ -22,7 +22,6 @@
     "tests"
   ],
   "dependencies": {
-    "normalize.css": "~3.0.3",
     "compass-mixins": "^1.0.2",
     "bootstrap-sass": "^3.3.6",
     "font-awesome": "fontawesome#^4.6.3",

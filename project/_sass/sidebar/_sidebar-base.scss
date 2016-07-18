@@ -1,0 +1,86 @@
+//
+// Sidebar Base Structure
+// --------------------------------------------------
+
+.sidebar--main {
+	position: relative;
+	margin-top: 24px;
+	float:left;
+	z-index: 0;
+	height: 100%;
+	width: 25%;
+	min-width:220px;
+	max-width: 300px;
+	background: palette(clouds);
+	overflow-y: scroll;
+	@include mq(mobile-lg) {
+		position: fixed;
+		top:0;
+		left:0;
+		z-index:0;
+		width:100%!important;
+	}
+}
+
+// sidebar-inner-wrapper
+.sidebar--main-inner {
+	position: relative;
+	min-height: 100%;
+}
+
+// Main Sidebar Header
+.sidebar--header {
+	background: palette(clouds, dark);
+	top:24px;
+	position: fixed;
+	z-index: 3;
+	width: inherit;
+}
+
+// Side Bar Search
+.sidebar-search {
+	.form-group {
+		margin-bottom: 0;
+		input[type="text"].form-control {
+			background: palette(clouds, dark);
+			color: palette(grey);
+			font-size: em(16px);
+			@include input-placeholder {
+				font-size: em(16px);
+				font-weight: 200;
+				color: palette(clouds, darkest);
+			}
+		}
+	}
+}
+
+// Section Header
+.sidebar--header {
+	h2.section-title {
+		text-transform: uppercase;
+		background: palette(clouds, darker);
+		font-size: em(14px);
+		font-weight: 300;
+		margin:0;
+		padding: 0.5em 1em;
+	}
+}
+
+// Sidebar Footer 
+
+.sidebar--footer {
+	position: fixed;
+	padding-top:0.5em;
+	padding-bottom: 0.5em;
+	background: palette(blue, dark);
+	bottom: 0;
+	text-align: center;
+	p {
+		margin-bottom:0;
+		font-size: em(12px);
+		color: palette(blue, darkest);
+	}
+	@include mq(mobile-lg) {
+		width:100%!important;
+	}
+}

@@ -1,29 +1,72 @@
+//
+// Extends
+// --------------------------------------------------
+
+
+// Status Label
 %status-label {
 	display:block;
 	position: absolute;
 	border-radius: 50%;
-	right: 0;
 	&.online {
-		background: palette(green);
+		background: palette(green-hub3c);
 	}
 	&.offline {
-		background: palette(red);
+		background: palette(grey, light);
 	}
 	&.idle {
-		background: palette(orange);
+		background: palette(yellow, light);
 	}
 }
 
 %status-lg {
 	@extend %status-label;
-	width: 16px;
-	height: 16px;
-	bottom: 0.25em;
+	width: 14px;
+	height: 14px;
+	bottom: 20px;
+	left: 60px;
 }
 
 %status-sm {
 	@extend %status-label;
-	width: 12px;
-	height: 12px;
+	width: 10px;
+	height: 10px;
 	bottom: 0em;
+}
+
+%liststyle {
+	list-style: none;
+	margin-left:0;
+	padding-left:0;
+}
+
+%btn-icon {
+	width: 40px;
+	color: palette(white);
+	height: 40px;
+	padding: 0;
+	border-radius: 50%;
+	background-color: palette(blue, darker);
+	border: 1px palette(blue, darker);
+	&:hover,
+	&:active, 
+	&:focus {
+		color: palette(white);
+		background: palette(blue, dark);
+	}
+}
+
+%btn-icon--sm {
+	width: 28px;
+	height:28px;
+	font-size: em(12px);
+	line-height: 28px;
+	color: palette(blue, light);
+}
+
+%btn-icon--lg {
+	width: 60px;
+	height: 60px;
+	font-size: em(21px);
+	line-height: 60px;
 }

@@ -1,11 +1,5 @@
-<section class="contact-list">
-  <header class="section-header">
-    <div class="container">
-      <h2 class="section-title h5">My Contacts</h2>
-    </div>
-  </header>    
-  <ul class="nav nav-pills nav-stacked">
-    {% for contact in site.data.contacts %}
+<ul class="nav nav-stacked">
+  {% for contact in site.data.contacts %}
     <li class="contact-info">
       <a href="#">
         <span class="contactImg"><img src="{{ contact.img | prepend: site.baseurl | prepend: 'img/' }}" class="img-responsive img-circle">
@@ -16,6 +10,5 @@
         </span>
       </a>
     </li>
-    {% endfor %}
-  </ul>
-</section>
+  {% endfor %}
+</ul>

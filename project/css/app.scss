@@ -7,15 +7,19 @@
 @import "bootstrap";
 @import "utilities/helpers";
 @import "utilities/extends";
-
+@import "utilities/reset";
 
 @import "fonts/fonts";
+@import "font-awesome";
 @import "hamburgers";
 
-@import "layouts/main-stage";
-@import "layouts/header";
-
-@import "layouts/sidenav";
+@import "layouts/base-structure";
+@import "headers/headers";
 @import "sidebar/sidebar";
 
+@import "main-stage/main--stage";
+@import "main-stage/main-stage--footer";
+
 @import "components/forms";
+@import "components/buttons";
+@import "components/users";

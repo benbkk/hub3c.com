@@ -1,0 +1,93 @@
+//
+// Sidebar Contacts
+// --------------------------------------------------
+
+// Structure
+.sidebar--contacts {
+	li {
+		font-size: em(14px);
+	}
+	.nav > li > a{
+		background: darken(palette(clouds), 2.55%);
+		padding: 0.5em 1em;
+		&:hover {
+			background: palette(clouds);
+		}
+		span.contact-toolbar {
+			display:block;
+			float:right;
+			ul {
+				@extend %liststyle;
+			}
+			a {
+
+			}
+		}
+	}
+}
+
+// Main User Profile on SideBar Header
+.user--primary{
+	position: relative;
+	padding: 0.5em;
+}
+
+.user--primary-img {
+	width: 60px;
+	height: 60px;
+}
+
+// User profile image in the contact list
+.contactImg {
+	width: 36px;
+	height: 36px;
+}
+
+// Let's go DRY
+.user--primary-info,
+.contact-profile {
+	position: relative;
+}
+
+.user--primary-img,
+.contactImg {
+	position: relative;
+	display:inline-block;
+	margin-right: em(10px);
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+.user--primary-img {
+	& ~ .status-label {
+		@extend %status-lg;
+	}
+}
+
+.contactImg {
+	.status-label {
+		@extend %status-sm;
+	}
+}
+
+.user--primary-info,
+.contactInfo {
+	display: inline-block;
+	vertical-align: middle;
+	.contactName {
+		display:block;
+		margin:0;
+	}
+}
+
+.user--primary-status,
+.contactStatus {
+	display:block;
+	font-size: em(12px);
+	text-transform: uppercase;
+	color: palette(clouds, darkest);
+}
+
+.contact-list {
+	overflow-y:scroll;
+}

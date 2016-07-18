@@ -1,0 +1,43 @@
+//
+// Window Header
+// --------------------------------------------------
+
+.window-header {
+	margin-bottom:0;
+	width: 100%;
+	background: palette(clouds);
+	border-color: palette(clouds, dark);
+	height: 24px;
+	min-height: 24px;
+	z-index:9999;
+}
+
+.window-header-inner {
+	position: relative;
+}
+
+.window-toolbar {
+	float: left;
+	@include clearfix;
+	padding-left: 10px;
+	line-height: 24px;
+}
+
+.toolbar-btn {
+	display:inline-block;
+	margin-right: 2px;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	border-radius: 50%;
+	-webkit-backface-visibility: hidden;
+	&.close-window {
+		background: palette(red-bright);
+	}
+	&.resize {
+		background: palette(yellow);
+	}
+	&.full-screen {
+		background: palette(green);
+	}
+}

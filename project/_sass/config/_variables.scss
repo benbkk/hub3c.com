@@ -51,31 +51,45 @@ $palettes: (
 		base					: $black
 	),
 	grey : (
-		lighter       : lighten($hub3cGrey, 12.5%),
+		lighter       : lighten($hub3cGrey, 22.5%),
+		light         : lighten($hub3cGrey, 12.5%),
 		base     			: $hub3cGrey,
 		dark          : darken($hub3cGrey, 12.5%)
 	),
 	blue : (
+		lighter       : lighten($hub3cBlue, 20%),
 		light         : lighten($hub3cBlue, 12.5%),
 		base     			: $hub3cBlue,
 		dark          : darken($hub3cBlue, 12.5%),
 		darker        : darken($hub3cBlue, 17.5%),
+		darkest				: darken($hub3cBlue, 25%)
 	),
 	clouds : (
 		light         : lighten($clouds, 3%),
 		base 					: $clouds,
 		dark 					: darken($clouds, 5%),
 		darker  			: darken($clouds, 10%),
-		darkest       : darken($clouds, 25%)
+		darkest       : darken($clouds, 20%),
+		x-darkest     : darken($clouds, 40%)
 	),
-	green : (
+	green-hub3c : (
 		base       		: $hub3cGreen
 	),
+	green : (
+		base          : $nephritis
+	), 
+	yellow : (
+		light         : lighten($sunflower, 10%),
+		base          : $sunflower
+	), 
 	orange : (
 		base 					: $carrot
 	),
 	red : (
 		base          : $pomegranate
+	),
+	red-bright : (
+		base          : $alizarin
 	)
 );
 

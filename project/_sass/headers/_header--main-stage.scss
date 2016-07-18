@@ -1,0 +1,36 @@
+//
+// Header - App Main Stage
+// --------------------------------------------------
+
+.header--main {
+	position: fixed;
+	top:24px;
+	right:0;
+	background: palette(clouds);
+	@include mq(mobile-lg) {
+		width: calc(100% - 60px)!important;
+	}
+}
+
+.header--main-inner {
+	position: relative;
+	@include clearfix;
+	display:table;
+	width:100%;
+	padding: 0 1em 0 0;
+}
+
+.user--secondary {
+	max-width: 300px;
+	min-width: 240px;
+	float: left;
+}
+
+.toolbar--chat-top {
+	text-align: right;
+	display:table-cell;
+	vertical-align:middle;
+	button {
+		margin: 0 5px;
+	}
+}
