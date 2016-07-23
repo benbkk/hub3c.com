@@ -2,13 +2,22 @@
 // Base
 // --------------------------------------------------
 
-html,
+html, 
 body {
-	height:100%;
+	height: 100%;
 	position: relative;
+	padding: 0;
+  margin: 0;
 }
 
-.main-wrapper {
+}
+
+body {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.main--wrapper {
 	position: relative;
 	overflow:hidden;
 	height:100%;

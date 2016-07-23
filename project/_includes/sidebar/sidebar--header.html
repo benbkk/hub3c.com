@@ -1,6 +1,8 @@
 <header id="sidebarHeader" class="sidebar--header">
-	{% include components/toggle--menu.html %}
 	{% include components/user--primary.html %}
-	{% include components/search--sidebar.html %}
-  <h2 class="section-title h5">My Contacts</h2>
+	<div class="section-header">
+  	<span class="section-title">My Contacts</span>
+  	<button class="btn btn--icon-sm btn-green add-contacts" title="Add New Contacts"><i class="fa fa-plus"></i><span class="sr-only">Add Contacts</span></button>
+  </div>	
+  {% include components/search--sidebar.html %}
 </header>

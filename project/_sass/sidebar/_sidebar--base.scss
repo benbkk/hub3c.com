@@ -1,0 +1,43 @@
+//
+// Sidebar Base Structure
+// --------------------------------------------------
+
+.sidebar--main {
+	position: relative;
+	float:left;
+	z-index: 0;
+	height: 100%;
+	width: 25%;
+	min-width:250px;
+	max-width: 250px;
+	background: palette(clouds);
+	@include mq(mobile-lg) {
+		width:100%!important;
+		max-width:none;
+	}
+}
+
+// sidebar-inner-wrapper
+.sidebar--main-inner {
+	position: relative;
+	min-height: 100%;
+}
+
+// Sidebar Footer 
+
+.sidebar--footer {
+	position: fixed;
+	padding-top:0.5em;
+	padding-bottom: 0.5em;
+	background: palette(blue, dark);
+	bottom: 0;
+	text-align: center;
+	p {
+		margin-bottom:0;
+		font-size: em(12px);
+		color: palette(blue, darkest);
+	}
+	@include mq(mobile-lg) {
+		width:100%!important;
+	}
+}

@@ -12,10 +12,11 @@ description: > # this means to ignore newlines until "baseurl:"
 environment: dev
 baseurl: "" # the subpath of your site, e.g. /blog/
 #url: "http://aesinv.com" # the base hostname & protocol for your site
-url: "localhost:3000"
+url: ""
 source: project
-assets_img: img/
 destination: _dist
+assets:
+  img: 'img/'
 
 # --------------------------------
 # Social Networking
@@ -28,17 +29,8 @@ instagram_username: ben_bkk
 markdown: kramdown
 safe: false
 future: true
-paginate: 5
 
 # --------------------------------
 # Includes & Excludes
 exclude: [css/]
 include: [js/,fonts/,icons/]
-
-# --------------------------------
-# Suggested Tweets
-suggested_tweet:
-  url:        'http://www.benworkandplay.com'
-  via:        'benworkandplay'
-  hashtags:   []
-  related:    []

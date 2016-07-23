@@ -14,3 +14,9 @@ button,
 button {
 	-webkit-appearance:none;
 }
+
+.hide-small {
+	@include mq(mobile-lg) {
+		opacity:0;
+	}
+}

@@ -1,0 +1,35 @@
+//
+// Sidebar Contacts
+// --------------------------------------------------
+
+// Structure
+.sidebar--contacts {
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left:0;
+	padding-bottom: 36px;
+	width:250px;
+	background: darken(palette(clouds), 5%);
+	overflow-y: auto;
+	li {
+		font-size: em(14px);
+	}
+	.nav > li > a{
+		background: darken(palette(clouds), 2.5%);
+		padding: 0.5em 1em;
+		&:hover {
+			background: palette(clouds);
+		}
+		span.contact-toolbar {
+			display:block;
+			float:right;
+			ul {
+				@extend %liststyle;
+			}
+			a {
+
+			}
+		}
+	}
+}

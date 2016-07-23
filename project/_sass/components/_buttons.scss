@@ -2,17 +2,56 @@
 // Buttons
 // --------------------------------------------------
 
+%btn--search {
+	background: transparent;
+	color: palette(blue, darker);
+}
+
+%btn--icon {
+	color: palette(white);
+	padding: 0;
+	display:inline-block;
+	border-radius: 50%;
+	background-color: palette(blue, darker);
+	border: 1px palette(blue, darker);
+	&:hover,
+	&:active, 
+	&:focus {
+		color: palette(white);
+		background: palette(blue, dark);
+	}
+}
+
+%btn--icon-sm {
+	@extend %btn--icon;
+	width: 24px;
+	height:24px;
+	font-size: em(12px);
+	line-height: 24px;
+	color: palette(blue, light);
+}
+
+%btn--icon-lg {
+	@extend %btn--icon;
+	width: 40px;
+	height: 40px;
+	font-size: em(18px);
+	line-height: 40px;
+}
+
 button,
 .btn {
 	@include transition(all 0.2s ease-in-out);
 }
 
-.btn-icon {
-	@extend %btn-icon;
-
+.btn--icon {
+	@extend %btn--icon;
 }
 
-.btn-icon--sm {
-	@extend %btn-icon--sm;
-		opacity: 0.8;
+.btn--icon-sm {
+	@extend %btn--icon-sm;
+}
+
+.btn--icon-lg {
+	@extend %btn--icon-lg;
 }

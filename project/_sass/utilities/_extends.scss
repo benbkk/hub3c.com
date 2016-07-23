@@ -2,7 +2,6 @@
 // Extends
 // --------------------------------------------------
 
-
 // Status Label
 %status-label {
 	display:block;
@@ -21,10 +20,14 @@
 
 %status-lg {
 	@extend %status-label;
-	width: 14px;
-	height: 14px;
-	bottom: 20px;
-	left: 60px;
+	width: 12px;
+	height: 12px;
+	bottom: 10px;
+	left: 45px;
+	@include mq(mobile-lg) {
+		left: 40px;
+		bottom: 10px;
+	}
 }
 
 %status-sm {
@@ -40,33 +43,24 @@
 	padding-left:0;
 }
 
-%btn-icon {
-	width: 40px;
-	color: palette(white);
-	height: 40px;
-	padding: 0;
-	border-radius: 50%;
-	background-color: palette(blue, darker);
-	border: 1px palette(blue, darker);
-	&:hover,
-	&:active, 
-	&:focus {
-		color: palette(white);
-		background: palette(blue, dark);
-	}
+%absolute--center-v {
+	position: absolute;
+	top:0;
+	bottom:0;
+	margin: auto;
 }
 
-%btn-icon--sm {
-	width: 28px;
-	height:28px;
-	font-size: em(12px);
-	line-height: 28px;
-	color: palette(blue, light);
+%absolute--center-h {
+	position: absolute;
+	left:0;
+	right:0;
+	margin: auto;
 }
 
-%btn-icon--lg {
-	width: 60px;
-	height: 60px;
-	font-size: em(21px);
-	line-height: 60px;
+%absolute--center {
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
 }

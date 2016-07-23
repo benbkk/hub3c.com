@@ -2,19 +2,12 @@
 // Forms
 // --------------------------------------------------
 
-
-// Resets
-
-.search-contacts {
-	input.form-control {
-	background: palette(clouds);
+input.form-control {
+	background: transparent;
 	border-color: transparent;
 	font-size: em(14px);
-	font-wight: 200;
-	}
-	&:focus {
-		border-bottom: 1px solid palette(clouds, darker);
-	}
+	font-weight: 200;
+	border-bottom: 1px solid transparent;
 }
 
 button,
@@ -49,6 +42,7 @@ textarea {
 
 span.input-file-container {
 	cursor: pointer;
+	text-align: center;
 	display:inline-block;
 	width:32px;
 	height: 32px;

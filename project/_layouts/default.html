@@ -3,16 +3,7 @@
   {% include components/head.html %}
   <body>
     {% include components/window.html %}
-    <div id="mainWrapper" class="main-wrapper">
-      {% include sidebar--main.html %}
-      <div id="mainStage" class="main--stage">
-        {% include header--main-stage.html %}
-        <div class="main--stage-content">
-          {{ content }}
-        </div>
-        {% include footer--main-stage.html %}
-      </div>
-    </div>
-  {% include components/scripts.html %}
+    {% include main.html %}
+    {% include components/scripts.html %}
   </body>
 </html>

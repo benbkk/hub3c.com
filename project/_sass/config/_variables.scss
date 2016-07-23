@@ -5,6 +5,10 @@
 // Fonts
 @import "fonts/fonts";
 
+$font--family-regular: "SourceSansPro Regular", Arial, Helvetica, sans-serif;
+$font--family-light  : "SourceSansPro Light", Arial, Helvetica, sans-serif;
+$font--family-bold   : "SourceSansPro Bold", Arial, Helvetica, sans-serif;
+
 //Colors
 $white					: #FFFFFF;
 $black					: #141414;
@@ -48,7 +52,8 @@ $palettes: (
 		base        	: $white
 	),
 	black : (
-		base					: $black
+		base					: $black,
+		shadow        : rgba($black, 0.1)
 	),
 	grey : (
 		lighter       : lighten($hub3cGrey, 22.5%),
@@ -106,4 +111,3 @@ $brkpoint-desktop-lg   	: 1440px;
 $brkpoint-desktop-xlg  	: 1920px;
 $brkpoint-desktop-xxlg 	: 2560px;
 $brkpoint-height				: 600px;
-
