@@ -37,4 +37,11 @@
 	display:table-cell;
 	vertical-align:middle;
 	max-width: 100px;
+	.btn--close {
+		display: none;
+		@include mq(mobile-sm) {
+			display:inline-block;
+			top:2px;
+		}
+	}
 }

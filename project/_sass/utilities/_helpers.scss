@@ -18,5 +18,15 @@ button {
 .hide-small {
 	@include mq(mobile-lg) {
 		opacity:0;
+		width:0;
+		height:0;
+		visibility: hidden;
+	}
+}
+
+.show-small {
+	display:none;
+	@include mq(mobile-lg) {
+		display:block;
 	}
 }

@@ -27,7 +27,6 @@
 
 		$sidebarHeader.css('width', sidebarWidth + 'px');
 		$sidebarFooter.css('width', sidebarWidth + 'px');
-		$sidebarContacts.css('padding-top', sidebarHeaderHeight + windowHeaderHeight + 'px');
 		
 		$mainStageHeader.css('width', windowWidth - sidebarWidth + 'px');
 		$mainStageContent.css('width', windowWidth - sidebarWidth + 'px');
@@ -71,4 +70,16 @@
 			}	
 		});		
 	}
+
+	// Video Toggle. Again this is for demonstration purpose only.
+	$('#startVideoCall').on('click touchstart', function(e){
+		$('body, #mainStage, #sidebarMain, #videoStage').addClass('video-call-is-on');
+	});
+	if ($('#videoStage').length) {
+		$('#openChat').on('click', function(){
+			$(this).toggleClass('chat-sidebar-open');
+			$('#mainStage').toggleClass('chat-sidebar-open');
+		});
+	}
+
 })(jQuery);

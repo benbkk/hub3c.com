@@ -55,3 +55,45 @@ button,
 .btn--icon-lg {
 	@extend %btn--icon-lg;
 }
+
+.btn--green {
+	background: palette(green-hub3c);
+}
+
+.btn--close {
+	cursor:pointer;
+	padding: 0;
+	background: transparent;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	display:inline-block;
+	@include transform(rotate(45deg));
+	@include transform-origin(25px 25px);
+	&::before,
+	&::after {
+		content:'';
+		position: absolute;
+		margin:auto;
+		background: $text-color;
+	}
+	&::before {
+		width: 2px;
+		height:100%;
+		left:0;
+		right:0;
+	}
+	&::after {
+		height: 2px;
+		width: 100%;
+		top:0;
+		bottom:0;
+		left:0;
+	}
+	opacity: 0.5;
+	&:hover,
+	&:active,
+	&:focus {
+		opacity: 0.8;
+	}
+}

@@ -1,0 +1,10 @@
+//
+// Video Stage - Header
+// --------------------------------------------------
+
+.video--stage-header {
+	position: relative;
+	padding: 1em;
+	@include clearfix;
+	margin-top: 28px;
+}
