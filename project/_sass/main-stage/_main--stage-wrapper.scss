@@ -26,6 +26,18 @@
 	@include mq(mobile-sm) {
 		width: 100%!important;
 		min-width: 320px;
+		&.out {
+			@include transform(translateX(100%));
+		}
+	}
+}
+
+.main--stage {
+	.btn--close {
+		position: absolute;
+		top: calc(28px + 1em);
+		right: 1em;
+		display:none;
 	}
 }
 
@@ -72,9 +84,13 @@
 				}
 			}
 		}
-		&.chat-sidebar-open {
+		&.sidebar-open {
 			@include transform(translateX(0));
 			z-index:2;
+			.btn--close {
+				display:block;
+				z-index:999;
+			}
 		}
 	}
 }

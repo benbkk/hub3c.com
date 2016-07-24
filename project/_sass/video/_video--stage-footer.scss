@@ -6,19 +6,26 @@
 	cursor:pointer;
 	position: relative;
 	height:180px;
-	display:table;
 	width:100%;
 	z-index:2;
+	.btn--open-chat {
+		position: absolute;
+		bottom: 3em;
+		right: 1.5em;
+		display:block;
+	}
 }
 
 .video--toolbar-bottom {
-	display:table-cell;
+	position: absolute;
+	bottom: 2.6em;
+	padding-left:1em;
+	padding-right: 1em;
+	text-align:center;
 	vertical-align: middle;
 	@include transition(all 0.2s ease-in-out);
-	text-align: center;
-	opacity:0.2;
 	button {
-		margin:10px;
+		margin:5px;
 	}
 }
 
@@ -35,16 +42,16 @@
 	.btn--mute-video {
 		overflow:hidden;
 		position:relative;
+		&.muted,
 		&:hover,
-		&:active,
-		&:focus {
+		&:active {
 			background: palette(red);
 			&::before {
 				position: absolute;
 				display: block;
 				content: '';
-				background: rgba($white, 0.5);
-				width: 4px;
+				background: rgba($white, 0.8);
+				width: 2px;
 				height: 100%;
 				left:50%;
 				@include transform(rotate(45deg));

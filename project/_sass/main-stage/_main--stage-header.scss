@@ -37,11 +37,16 @@
 	display:table-cell;
 	vertical-align:middle;
 	max-width: 100px;
-	.btn--close {
-		display: none;
+	.btn--back-to-contacts {
+		display:none;
+		background: palette(green-hub3c);
+		&:hover,
+		&:active,
+		&:focus {
+			background: darken(palette(green-hub3c),5%);
+		}
 		@include mq(mobile-sm) {
 			display:inline-block;
-			top:2px;
 		}
 	}
 }

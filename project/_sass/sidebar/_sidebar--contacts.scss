@@ -17,6 +17,9 @@
 	@include mq(mobile-lg) {
 		padding-top: 155px;
 	}
+	@include mq(mobile-sm) {
+		width:100%!important;
+	}
 }
 
 .sidebar--contacts {

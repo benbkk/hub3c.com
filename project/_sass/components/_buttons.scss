@@ -14,11 +14,13 @@
 	border-radius: 50%;
 	background-color: palette(blue, darker);
 	border: 1px palette(blue, darker);
+	opacity:0.8;
 	&:hover,
 	&:active, 
 	&:focus {
 		color: palette(white);
 		background: palette(blue, dark);
+		opacity:1;
 	}
 }
 
@@ -65,8 +67,8 @@ button,
 	padding: 0;
 	background: transparent;
 	position: relative;
-	width: 40px;
-	height: 40px;
+	width: 36px;
+	height: 36px;
 	display:inline-block;
 	@include transform(rotate(45deg));
 	@include transform-origin(25px 25px);

@@ -60,7 +60,7 @@
 		mqLarge = 677,
 		windowWidth = $(window).outerWidth();
 
-		$('#toggleSearch').on('click', function () {	
+		$('#toggleSearch').on('click touchstart', function () {	
 			if ( windowWidth > mqSmall && windowWidth <= mqLarge ) {
 				$('#mainStage').toggleClass('slide-out');
 			} else {
@@ -71,15 +71,37 @@
 		});		
 	}
 
+	$('#backToContacts').on('click touchstart', function(){
+		$('#mainStage').addClass('out');
+	});
+
 	// Video Toggle. Again this is for demonstration purpose only.
 	$('#startVideoCall').on('click touchstart', function(e){
 		$('body, #mainStage, #sidebarMain, #videoStage').addClass('video-call-is-on');
 	});
 	if ($('#videoStage').length) {
-		$('#openChat').on('click', function(){
-			$(this).toggleClass('chat-sidebar-open');
-			$('#mainStage').toggleClass('chat-sidebar-open');
+		$('#openChat').on('click touchstart', function(){
+			$('#mainStage').toggleClass('sidebar-open');
 		});
-	}
+		$('a#closePanel').on('click touchstart', function(){
+			$(this).parent().removeClass('sidebar-open');
+			$('#openChat').removeClass('sidebar-open');
+		});
+
+		$('#muteVoice').on('click touchstart', function(){
+			$(this).toggleClass('muted');
+		});
+
+		$('#muteVideo').on('click touchstart', function(){
+			$(this).toggleClass('muted');
+		});
+
+		$('#openContacts').on('click touchstart', function(){
+			$('#sidebarMain').addClass('sidebar-open');
+		});
+		$('#hangUp').on('click touchstart', function(){
+			$('body, #mainStage, #sidebarMain, #videoStage').removeClass('video-call-is-on');
+		});
+	}	
 
 })(jQuery);

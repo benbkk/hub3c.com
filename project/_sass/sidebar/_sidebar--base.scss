@@ -11,7 +11,7 @@
 	min-width:250px;
 	max-width: 250px;
 	background: palette(clouds);
-	@include transition(transform 0.2s ease-in-out);
+	transition: 0.2s all ease-in;
 	@include transform(translateX(0));
 	@include mq(mobile-sm) {
 		width:100%!important;
@@ -20,7 +20,7 @@
 	.btn--close {
 		position: absolute;
 		top: calc(28px + 1em);
-		right: 0.5em;
+		right: 0.75em;
 		z-index: 999;
 		display:none;
 	}
@@ -56,5 +56,12 @@
 .sidebar--main {
 	&.video-call-is-on {
 		@include transform(translateX(-250px));
+		&.sidebar-open {
+			@include transform(translateX(0));
+			z-index: 3;
+			.btn--close {
+				display:block;
+			}
+		}
 	}
 }
