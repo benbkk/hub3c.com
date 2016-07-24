@@ -35,7 +35,14 @@ textarea {
 
 input:not([type=checkbox]):not([type=radio]),
 textarea {
-	@include placeholder(palette(clouds, darkest));
+	@include input-placeholder {
+		color: palette(gray, lighter);
+		font-family: $font--family-light;
+	};
+}
+
+.nav-stacked > li + li {
+	margin:0;
 }
 
 // Input Type File

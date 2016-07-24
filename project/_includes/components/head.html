@@ -4,12 +4,12 @@
   <meta name="viewport" content="width=device-width initial-scale=1">
   {%capture metaTitle%}{{site.title}}{%endcapture%}
   {%capture metaDescription%}{{site.title}} {{site.description}} by {{site.author}} for {{site.project}}{%endcapture%}
-  <title>{{ metaTitle }}</title>
+  <title>{% if page.title %}{{page.title}} {%else%} {{ metaTitle }}{% endif %}</title>
   <!--// Metadata //-->
   <meta name="author" content="{{ site.author }}" />
   <meta name="description" content="{{ metaDescription }}">
   <link rel="icon" href="/favicon.ico" />
   <!--// Stylesheets //-->
-  <link rel="stylesheet" href="{{ "/css/app.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url}}">
+  <link rel="stylesheet" href="{{ "css/app.css" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>

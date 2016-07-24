@@ -4,17 +4,14 @@
 
 .main--stage-footer {
 	position: fixed;
-	height:120px;
+	height:100px;
 	bottom: 0;
 	right:0;
 	z-index: 2;
-	background: palette(clouds);
+	background: darken(palette(clouds),3%);
 	@include mq(mobile-lg) {
-		width: calc(100% - 60px)!important;
-		z-index:1;
-	}
-	@include mq(mobile-sm) {
 		width: 100%!important;
+		z-index:1;
 	}
 }
 
@@ -59,17 +56,16 @@
 	float:left;
 	position: relative;
 	textarea {
-		padding-top:3em;
-		padding-left:1em;
-		padding-right:0;
+		padding: 1em 0 1em 1em;
 		font-size: em(15px);
 		min-height: 100%;
 		resize: none;
 		width: 100%;
 		background: transparent;
 		@include input-placeholder {
-			color: palette(clouds, darkest);
-			font-weight:200;
+			color: palette(gray, light);
+			font-family: $font--family-light;
+			vertical-align: middle;
 		}
 	}
 }

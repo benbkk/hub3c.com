@@ -10,19 +10,15 @@ description: > # this means to ignore newlines until "baseurl:"
 # --------------------------------
 # Environment Settings
 environment: dev
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/" # the subpath of your site, e.g. /blog/
 #url: "http://aesinv.com" # the base hostname & protocol for your site
-url: ""
+url: "http://localhost:3000"
 source: project
 destination: _dist
 assets:
-  img: 'img/'
+  img: "img/"
+  js: "js/"
 
-# --------------------------------
-# Social Networking
-twitter_username: benworkandplay
-github_username:  benbkk
-instagram_username: ben_bkk
 
 # --------------------------------
 # Build settings
@@ -34,3 +30,15 @@ future: true
 # Includes & Excludes
 exclude: [css/]
 include: [js/,fonts/,icons/]
+
+collections:
+  contacts:
+    output: true
+    permalink: /contacts/:path/
+
+defaults:
+  scope:
+    path: "contacts"
+    type: contacts
+    values:
+      layout: contact

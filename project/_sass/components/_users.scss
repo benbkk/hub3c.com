@@ -1,30 +1,6 @@
 //
-// Sidebar Contacts
+// Users 
 // --------------------------------------------------
-
-// Structure
-.sidebar-contacts {
-	li {
-		font-size: em(14px);
-	}
-	.nav > li > a{
-		background: darken(palette(clouds), 2.55%);
-		padding: 0.5em 1em;
-		&:hover {
-			background: palette(clouds);
-		}
-		span.contact-toolbar {
-			display:block;
-			float:right;
-			ul {
-				@extend %liststyle;
-			}
-			a {
-
-			}
-		}
-	}
-}
 
 // Main User Profile on SideBar Header
 .user--primary,
@@ -78,11 +54,6 @@
 	}
 }
 
-.contactImg {
-	.status-label {
-		@extend %status-sm;
-	}
-}
 
 .user--primary-info,
 .user--secondary-info,
@@ -101,7 +72,8 @@
 	display:block;
 	font-size: em(12px);
 	text-transform: uppercase;
-	color: palette(clouds, darkest);
+	color: lighten(palette(gray, lighter),5%);
+	font-family: $font--family-light;
 }
 
 .contact-list {

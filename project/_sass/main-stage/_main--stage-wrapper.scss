@@ -3,13 +3,29 @@
 // --------------------------------------------------
 
 .main--stage {
+	transition: 0.2s all ease-in;
 	position: relative;
 	float:right;
 	background: palette(clouds);
-	max-width: calc(100% - 250px);
-	width:75%;
+	width: calc(100% - 250px);
 	height:100%;
 	min-height: 100%;
 	box-shadow: 1px 0 0 palette(grey);
+	@include mq(mobile-lg) {
+		width: calc(100% - 60px);
+		position: absolute;
+		right:0;
+		top: 0;
+	}
+	@include mq(mobile-lg) {
+		@include transform(translateX(0));
+		&.slide-out {
+			@include transform(translateX(190px));
+		}	
+	}
+	@include mq(mobile-sm) {
+		width: 100%!important;
+		min-width: 320px;
+	}
 }
 

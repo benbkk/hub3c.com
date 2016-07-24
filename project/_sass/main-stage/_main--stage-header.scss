@@ -8,15 +8,15 @@
 	position: fixed;
 	top:28px;
 	right:0;
-	background: palette(clouds);
+	background: darken(palette(clouds),3%);
 	z-index: 3;
 	@include mq(mobile-lg) {
-		width: calc(100% - 60px)!important;
+		width: 100%!important;
 		height: 70px;
 	}
 	@include mq(mobile-sm) {
 		width: 100%!important;
-		padding-left: 2em;
+		padding-left: 0.5em;
 		padding-right: 0.5em;
 	}
 }

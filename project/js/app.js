@@ -47,4 +47,28 @@
 			}
 		});
 	});
+
+	// Search Toggle
+	// Will push the main stage to the right
+	// On large mobile (480px - 767px)
+	searchToggle();
+	$(window).on('resize', function(){
+		searchToggle();
+	});
+
+	function searchToggle() {
+		var mqSmall = 480,
+		mqLarge = 677,
+		windowWidth = $(window).outerWidth();
+
+		$('#toggleSearch').on('click', function () {	
+			if ( windowWidth > mqSmall && windowWidth <= mqLarge ) {
+				$('#mainStage').toggleClass('slide-out');
+			} else {
+				if($('#mainStage').hasClass('slide-out')) {
+					$(this).removeClass('slide-out');
+				}
+			}	
+		});		
+	}
 })(jQuery);

@@ -22,4 +22,8 @@ body {
 	overflow:hidden;
 	height:100%;
 	width:100%;
+	@include mq(mobile-sm) {
+		width:100%!important;
+		min-width: 320px;
+	}
 }

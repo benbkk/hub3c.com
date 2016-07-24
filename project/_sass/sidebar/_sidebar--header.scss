@@ -4,12 +4,11 @@
 
 // Main Sidebar Header
 .sidebar--header {
-	background: palette(clouds, dark);
+	background: darken(palette(clouds, dark),5%);
 	top:28px;
 	position: fixed;
 	z-index: 3;
 	width: inherit;
-	border-bottom: 1px solid palette(clouds, darker);
 }
 
 // Section Header
@@ -52,6 +51,6 @@
 	}
 	input[type="text"] {
 		font-size: em(14px);
-		padding-left:0;
+		padding-left: 9px;
 	}
 }

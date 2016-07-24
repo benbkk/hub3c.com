@@ -1,11 +1,15 @@
 <ul class="nav nav-stacked contacts-list">
-  {% for contact in site.data.contacts %}
+  {% for contact in site.contacts %}
+    {% if page.url == contact.url %}
+    <li class="contact-info active">
+    {% else %}
     <li class="contact-info">
-      <a href="#">
-        <span class="contactImg"><img src="{{ contact.img | prepend: site.baseurl | prepend: 'img/' }}" class="img-responsive img-circle">
-        <span class="status-label {{ contact.status }}"></span></span>
+    {% endif %}
+      <a href="{{ contact.url }}">
+        <span class="contactImg"><img src="{{ contact.img | prepend: site.assets.img | prepend: site.baseurl | prepend: site.url }}" class="img-responsive img-circle">
+        <span class="status-label {{ contact.status | downcase }}"></span></span>
         <span class="contactInfo">
-          <span class="contactName">{{ contact.name }}</span>
+          <span class="contactName">{{ contact.title }}</span>
           <span class="contactStatus">{{ contact.status }}</span>
         </span>
       </a>
