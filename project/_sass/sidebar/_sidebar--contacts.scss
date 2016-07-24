@@ -3,15 +3,26 @@
 // --------------------------------------------------
 
 // Structure
+
 .sidebar--contacts {
 	position: fixed;
 	top:0;
 	bottom: 0;
 	left:0;
-	padding-bottom: 36px;
 	width:250px;
 	background: palette(clouds);
 	overflow-y: auto;
+	padding-top: 170px;
+	padding-bottom: 36px;
+	@include mq(mobile-lg) {
+		padding-top: 155px;
+	}
+	@include mq(mobile-sm) {
+		width:100%!important;
+	}
+}
+
+.sidebar--contacts {
 	li {
 		position: relative;
 	}

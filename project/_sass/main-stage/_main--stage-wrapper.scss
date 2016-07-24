@@ -26,6 +26,71 @@
 	@include mq(mobile-sm) {
 		width: 100%!important;
 		min-width: 320px;
+		&.out {
+			@include transform(translateX(100%));
+		}
 	}
 }
 
+.main--stage {
+	.btn--close {
+		position: absolute;
+		top: calc(28px + 1em);
+		right: 1em;
+		display:none;
+	}
+}
+
+// On Video Button Click
+
+.main--stage {
+	@include transform(translateX(0));
+	&.video-call-is-on {
+		@include transform(translateX(100%));
+		width:320px;
+		max-width: 320px;
+		.main--stage-header,
+		.main--stage-content,
+		.main--stage-footer {
+			width:320px;
+			max-width: 320px;
+		}
+		.main--stage-header {
+			.toolbar--chat-top {
+				display:none;
+			}
+			.user--secondary {
+				.user--secondary-img {
+					width: 50px;
+					height: 50px;
+				}
+				.status-label {
+					left: 40px;
+				}
+			}
+		}
+		.main--stage-content {
+			padding-left: 1em;
+			padding-right: 1em;
+			li.chat-item {
+				width:100%;
+			}
+		}
+		.main--stage-footer {
+			.toolbar--chat {
+				text-align:right;
+				.btn--share-screen {
+					display: none;
+				}
+			}
+		}
+		&.sidebar-open {
+			@include transform(translateX(0));
+			z-index:2;
+			.btn--close {
+				display:block;
+				z-index:999;
+			}
+		}
+	}
+}

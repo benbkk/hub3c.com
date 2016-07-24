@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   {% include components/head.html %}
-  <body>
+  <body class="layout--{{ page.layout}}">
     {% include components/window.html %}
-    {% include main--default.html %}
+    <div id="mainWrapper" class="main--wrapper layout--{{page.layout}}-wrapper">
+			{% include sidebar.html %}
+			{{ content }}
+    </div>		
     {% include components/scripts.html %}
   </body>
 </html>

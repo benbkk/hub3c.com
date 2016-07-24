@@ -1,0 +1,28 @@
+//
+// Video Stage - Header
+// --------------------------------------------------
+
+.video--stage-header {
+	position: relative;
+	@include clearfix;
+	padding: 1em;
+	@include clearfix;
+	margin-top: 28px;
+	.btn--open-contacts {
+		background: palette(green-hub3c);
+		&:hover,
+		&:active,
+		&:focus {
+			background: darken(palette(green-hub3c), 5%);
+		}
+	}
+	.btn--hang-up {
+		float: right;
+		background: palette(red);
+		&:hover,
+		&:active,
+		&:focus {
+			background: darken(palette(red), 5%);
+		}
+	}
+}

@@ -14,11 +14,13 @@
 	border-radius: 50%;
 	background-color: palette(blue, darker);
 	border: 1px palette(blue, darker);
+	opacity:0.8;
 	&:hover,
 	&:active, 
 	&:focus {
 		color: palette(white);
 		background: palette(blue, dark);
+		opacity:1;
 	}
 }
 
@@ -54,4 +56,46 @@ button,
 
 .btn--icon-lg {
 	@extend %btn--icon-lg;
+}
+
+.btn--green {
+	background: palette(green-hub3c);
+}
+
+.btn--close {
+	cursor:pointer;
+	padding: 0;
+	background: transparent;
+	position: relative;
+	width: 36px;
+	height: 36px;
+	display:inline-block;
+	@include transform(rotate(45deg));
+	@include transform-origin(25px 25px);
+	&::before,
+	&::after {
+		content:'';
+		position: absolute;
+		margin:auto;
+		background: $text-color;
+	}
+	&::before {
+		width: 2px;
+		height:100%;
+		left:0;
+		right:0;
+	}
+	&::after {
+		height: 2px;
+		width: 100%;
+		top:0;
+		bottom:0;
+		left:0;
+	}
+	opacity: 0.5;
+	&:hover,
+	&:active,
+	&:focus {
+		opacity: 0.8;
+	}
 }

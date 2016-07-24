@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html>
-  {% include components/head.html %}
-  <body>
-    {% include components/window.html %}
-    {% include main--contacts.html %}
-    {% include components/scripts.html %}
-  </body>
-</html>
+---
+
+layout: default
+
+---
+
+<div id="mainStage" class="main--stage main--stage-{{page.layout}}">
+	<a id="closePanel" class="btn btn--close"></a>
+	{% include contacts/contact--header.html %}
+	{% include contacts/contact--content.html %}
+	{% include contacts/contact--footer.html %}
+</div>
+{% include components/video--stage.html %}

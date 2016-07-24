@@ -1,0 +1,33 @@
+//
+// Video Stage - wrapper 
+// --------------------------------------------------
+
+.video--stage {
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background: palette(gray, dark);
+	z-index:-1;
+	opacity:0;
+	visibility:hidden;
+	@include transition(all 0.2s ease-in-out);
+	&.video-call-is-on {
+		opacity:1;
+		visibility:visible;
+		z-index:0;
+	}
+}
+
+.video--stage-wrapper {
+	min-height: 100%;
+	position: relative;
+	margin-bottom: -180px;
+	&::after {
+		content: "";
+  	display: block;
+  	height:180px;
+	}
+}
+

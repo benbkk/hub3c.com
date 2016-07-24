@@ -6,7 +6,14 @@
 .user--primary,
 .user--secondary {
 	position: relative;
+}
+
+.user--primary {
 	padding: 0.5em 0.25em;
+}
+
+.user--secondary {
+	padding: 0.5em 0;
 }
 
 
