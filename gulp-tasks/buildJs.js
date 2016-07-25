@@ -37,8 +37,8 @@ module.exports = function buildJs() {
     .pipe(gulp.dest(paths.vendor.dest));
 
   // Custom JS - output as app.js & app.min.js
-  return gulp.src(paths.js.src + '*.js')
-     .pipe(concat('app.js'))
+  return gulp.src(paths.js.src + 'app.js')
+  //.pipe(concat('app.js'))
   // Lint file
     .pipe(gulp.dest(paths.js.dest))
   // Minify files and rename
