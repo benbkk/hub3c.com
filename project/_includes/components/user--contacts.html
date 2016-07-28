@@ -5,7 +5,7 @@
     {% else %}
     <li class="contact-info">
     {% endif %}
-      <a href="{{ contact.url }}">
+      <a href="{{ contact.url | prepend: site.baseurl }}">
         <span class="contactImg"><img src="{{ contact.img | prepend: site.assets.img | prepend: site.baseurl | prepend: site.url }}" class="img-responsive img-circle">
         <span class="status-label {{ contact.status | downcase }}"></span></span>
         <span class="contactInfo">

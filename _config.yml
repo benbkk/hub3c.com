@@ -10,14 +10,14 @@ description: > # this means to ignore newlines until "baseurl:"
 # --------------------------------
 # Environment Settings
 environment: dev
-baseurl: "/hub3c-vidchat/" # the subpath of your site, e.g. /blog/
+baseurl: "/hub3c-vidchat" # the subpath of your site, e.g. /blog/
 #url: "http://aesinv.com" # the base hostname & protocol for your site
 url: "http://www.benworkandplay.com"
 source: project
 destination: _dist
 assets:
-  img: "img/"
-  js: "js/"
+  img: "/img/"
+  js: "/js/"
 
 
 # --------------------------------
@@ -34,11 +34,11 @@ include: [js/,fonts/,icons/]
 collections:
   contacts:
     output: true
-    permalink: /hub3c-vidchat/contacts/:path/
+    permalink: /contacts/:path/
 
 defaults:
   scope:
-    path: "contacts"
+    path: ""
     type: contacts
     values:
       layout: contact
