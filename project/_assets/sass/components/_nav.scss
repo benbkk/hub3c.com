@@ -1,0 +1,49 @@
+//
+// Site Navigation
+// --------------------------------------------------
+
+.site-nav {
+	float:right;
+	> .container {
+		position: relative;
+	}
+	.nav {
+		li {
+			text-transform: lowercase;	
+		}
+		> li > a {
+			@include transition(0.2s all ease-in-out);
+			color: palette(clouds);
+			height:$navbar-height;
+			padding-top:0;
+			padding-bottom:0;
+			line-height: $navbar-height;
+			&:hover,
+			&:active {
+				color: palette(white);
+			}
+		}
+	}
+	@include mq(tablet-sm) {
+		display:none;
+	}
+}
+
+
+
+.menu-toggle {
+	position: absolute;
+	z-index: 9;
+	right: 10px;
+	top:0px;
+	display:none;
+	@include mq(tablet-sm) {
+		display:block;
+	}
+}
+
+.hamburger-inner, 
+.hamburger-inner::before, 
+.hamburger-inner::after {
+	background: palette(white);
+}

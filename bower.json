@@ -1,19 +1,17 @@
 {
-  "name": "hub3c-vidchat",
+  "name": "hub3c.com",
   "version": "1.0.0",
   "authors": [
     "Ben Anggoro <ben@benworkandplay.com>"
   ],
-  "description": "Video chat app prototype for Geekseat",
+  "description": "Landing page for Hub3c",
   "main": "_config.yml",
   "keywords": [
-    "app",
-    "prototype",
-    "static",
-    "videocall"
+    "website",
+    "prototype"
   ],
   "license": "UNLICENSED",
-  "homepage": "http://www.geekseat.com.au",
+  "homepage": "http://www.hub3c.com",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -28,7 +26,6 @@
     "jquery": "2.2.4",
     "css-hamburgers": "^0.5.0"
   },
-  "devDependencies": {
-    "list.js": "^1.2.0"
-  }
+  "devDependencies": {},
+  "private": true
 }

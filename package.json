@@ -1,12 +1,12 @@
 {
-  "name": "hub3c-vidchat",
+  "name": "Hub3C.com",
   "version": "1.0.0",
-  "description": "Hub3C video chat app prototype by Ben Anggoro for Geekseat",
+  "description": "Hub3c marketing website prototype",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/benworkandplay/hub3c-vidchat"
+    "url": ""
   },
-  "homepage": "http://geekseat.com.au",
+  "homepage": "http://www.hub3c.com",
   "main": "Gulpfile.js",
   "scripts": {
     "test": "gulp"
@@ -15,16 +15,17 @@
   "license": "UNLICENSED",
   "paths": {
     "tasks": "gulp-tasks/",
+    "project": "project/",
     "src": "project/",
     "build": "_dist/",
     "bower": "bower_components/",
-    "vendor": {
-      "src": "project/js/lib/",
-      "dest": "_dist/js/"
-    },
     "js": {
-      "src": "project/js/",
-      "dest": "_dist/js/"
+      "src": "project/_assets/js/",
+      "dest": "project/js/"
+    },
+    "sass": {
+      "src": "project/_assets/sass/",
+      "dest": "project/css/"
     },
     "compass": "compass-mixins/lib/",
     "bootstrap": {
@@ -32,51 +33,51 @@
       "js": "bootstrap-sass/assets/javascripts/",
       "fonts": "bootstrap-sass/assets/fonts/"
     },
-    "fontawesome" : "font-awesome/scss/",
-    "sass": {
-      "src": "project/_sass/"
-    },
-    "hamburgers" : "css-hamburgers/_sass/hamburgers/",
-    "css": {
-      "src": "project/css/",
-      "dest": "_dist/css/"
-    },
+    "hamburgers": "css-hamburgers/_sass/hamburgers/",
     "img": {
-      "src": "project/img/",
-      "dest": "_dist/img/"
+      "src": "project/_assets/img/",
+      "dest": "project/img"
+    },
+    "fonts": {
+      "src": "project/_assets/fonts/",
+      "dest": "project/fonts/"
+    },
+    "fontawesome": {
+      "sass": "font-awesome/scss/",
+      "fonts": "font-awesome/fonts/",
+      "dest": "project/fonts/font-awesome/"
     }
   },
   "dependencies": {
-    "graceful-fs": "^4.1.4",
-    "gulp": "^3.9.0",
-    "gulp-auto-task": "0.0.1",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-clean-css": "^2.0.11",
-    "gulp-concat": "^2.6.0",
-    "gulp-eslint": "^1.0.0",
-    "gulp-filesize": "0.0.6",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-jshint": "^1.11.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-ruby-sass": "^2.0.6",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.6",
-    "gulp-watch": "^4.3.4",
-    "imagemin-pngquant": "^4.1.2",
-    "lodash": "^4.13.1",
-    "minimatch": "^3.0.2",
-    "require-dir": "^0.3.0",
-    "run-sequence": "^1.1.2"
+    "graceful-fs": "^4.1.5"
   },
   "devDependencies": {
     "browser-sync": "^2.8.2",
-    "graceful-fs": "^4.1.4",
-    "gulp-clean-css": "^2.0.11",
+    "graceful-fs": "^4.1.5",
+    "gulp": "^3.9.1",
+    "gulp-auto-task": "0.0.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-filesize": "0.0.6",
     "gulp-filter": "^4.0.0",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-jshint": "^2.0.1",
     "gulp-main-bower-files": "^1.5.2",
     "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.0.6",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.9",
+    "imagemin-pngquant": "^5.0.0",
+    "jshint": "^2.9.2",
+    "lodash": "^4.14.1",
+    "minimatch": "^3.0.2",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.2.2"
   }
 }

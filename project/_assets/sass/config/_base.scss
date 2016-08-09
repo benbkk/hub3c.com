@@ -1,0 +1,51 @@
+//
+// Base
+// --------------------------------------------------
+
+html, 
+body {
+	height: 100%!important;
+}
+html, 
+body, * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+body {
+	background: palette(clouds);
+}
+
+.main--wrapper {
+	position: relative;
+	overflow:hidden;
+	height:100%;
+	width:100%;
+	@include mq(mobile-sm) {
+		width:100%!important;
+		min-width: 320px;
+	}
+}
+
+@keyframes kenburns {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  50% {
+      transform: scale3d(1.5, 1.5, 1.5) translate3d(0px, 0px, 0px);
+      animation-timing-function: ease-in;
+      opacity: 1;
+  }
+  100% {
+      transform: scale3d(2, 2, 2) translate3d(0px, 0px, 0px);
+      opacity: 1;
+  }
+}
