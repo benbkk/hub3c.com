@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   {% include components/head.html %}
-  <body class="layout--{{ page.layout}}">
-    {% include components/window.html %}
+  <body {% if page.layout %} class="body--{{ page.layout}}" {% endif %}>
+  	{%include header.html%}
     <div id="mainWrapper" class="main--wrapper layout--{{page.layout}}-wrapper">
-			{% include sidebar.html %}
-			{{ content }}
-    </div>		
-    {% include components/scripts.html %}
+			{{content}}
+		</div>		
+    {%include components/scripts.html%}
   </body>
 </html>

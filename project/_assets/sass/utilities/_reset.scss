@@ -1,0 +1,15 @@
+//
+// Reset
+// --------------------------------------------------
+
+.container {
+	@include mq(tablet-sm){
+		width: 90%;
+		margin: auto;
+	}
+	@include mq(mobile-lg) {
+		width: 96%;
+		margin: auto;
+	}
+}  
+

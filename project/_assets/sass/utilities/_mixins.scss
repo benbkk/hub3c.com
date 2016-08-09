@@ -1,0 +1,98 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Media Queries
+
+@mixin mq($break) {
+  @if $break == "mobile-sm" {
+    @media (min-width: $brkpoint-mobile-xs) and (max-width: $brkpoint-mobile-sm) {
+      @content;
+    }
+  }
+  @else if $break == "mobile-lg" {
+    @media (max-width: $brkpoint-mobile-lg) {
+      @content;
+    }
+  }
+  @else if $break == "tablet-sm" {
+    @media (max-width: $brkpoint-tablet - 1) {
+      @content;
+    }
+  }
+  @else if $break == "tablet" {
+    @media (min-width: $brkpoint-tablet) and (max-width: $brkpoint-desktop-sm - 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop-sm" {
+    @media (max-width: $brkpoint-desktop-lg - 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop-lg" {
+    @media (min-width: $brkpoint-desktop-lg) and (max-width: $brkpoint-desktop-xlg - 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop-xlg" {
+    @media (min-width: $brkpoint-desktop-xlg) and (max-width: $brkpoint-desktop-xxlg - 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop-xxlg" {
+    @media (min-width: $brkpoint-desktop-xxlg) {
+      @content;
+    }
+  }
+  @else if $break == "large-min-height" {
+    @media (min-width: $brkpoint-tablet) and (max-height: $brkpoint-height) {
+      @content;
+    }
+  }
+  @else {
+    @error "Whoops! No value could be retrieved for '#{$break}'.";
+  }
+}
+
+// Image Replace
+@mixin img-replace($img, $w, $h, $disp: block) {
+  background-image: url('#{$path--rel}/#{$img}');
+  background-repeat: no-repeat;
+  width: $w;
+  height: $h;
+  display: $disp;
+}
+
+// Placeholder
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; } 
+}
+
+// Triangles
+
+// Arrow Left
+@mixin arrow-left($width, $color) {
+  &::before {
+    width: 0;
+    height: 0;
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-right: $width solid $color;
+  }
+}
+
+// Arrow Right
+@mixin arrow-right($width, $color) {
+  &::after {
+    width: 0;
+    height:0;
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+  }
+}
