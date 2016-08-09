@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
 environment: production
 baseurl: "/hub3c.com/" # the subpath of your site, e.g. /blog/
 #url: "http://aesinv.com" # the base hostname & protocol for your site
-url: "http://www.benworkandplay.com"
+url: "http://benworkandplay.com"
 source: project
 destination: _dist
 
