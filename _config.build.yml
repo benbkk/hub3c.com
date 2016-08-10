@@ -1,0 +1,26 @@
+# --------------------------------
+# Site settings
+title: Hub3C.com
+author: Ben Anggoro
+email: ben@benworkandplay.com
+project: Hub3C for Geekseat.com.au
+description: > # this means to ignore newlines until "baseurl:"
+  Landing page prototype for Hub3C marketing website
+
+# --------------------------------
+# Environment Settings
+environment: production
+baseurl: "/hub3c.com/" # the subpath of your site, e.g. /blog/
+#url: "http://aesinv.com" # the base hostname & protocol for your site
+url: "http://benworkandplay.com"
+source: project
+destination: _dist
+
+# --------------------------------
+# Build settings
+markdown: kramdown
+safe: false
+future: true
+permalink: pretty
+
+# Includes & Excludes

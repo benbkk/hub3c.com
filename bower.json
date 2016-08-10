@@ -24,8 +24,16 @@
     "bootstrap-sass": "^3.3.6",
     "font-awesome": "fontawesome#^4.6.3",
     "jquery": "2.2.4",
-    "css-hamburgers": "^0.5.0"
+    "css-hamburgers": "^0.5.0",
+    "scrollreveal": "^3.3.1",
+    "animsition": "^4.0.2",
+    "magnific-popup": "^1.1.0"
   },
   "devDependencies": {},
+  "overrides": {
+    "venobox": {
+      "main": "venobox/venobox.js"
+    }
+  },
   "private": true
 }

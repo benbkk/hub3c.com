@@ -20,7 +20,7 @@ const gulp           = require('gulp'),
 module.exports = function buildVendorJs() {
   // Build vendor files - Getting all from bower_components
   //gulp.src(paths.vendor.src + '*.js')
-  const filterJS = gulpFilter('**/*.js', '**/dist/js/*.js');
+  const filterJS = gulpFilter('**/*.js', '**/**/*.js', '**/dist/js/*.js');
   return gulp.src('./bower.json')
     .pipe(mainBowerFiles())
     .pipe(sourcemaps.init())

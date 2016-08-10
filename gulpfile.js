@@ -97,7 +97,7 @@ gulp.task('serve', () => {
   watch([
   		paths.js.src + '*.js'
   ], () => {
-		runSequence('clean:Js', 'buildJs', 'browser:reload');
+		runSequence('clean:Js', 'buildJs', 'build', 'browser:reload');
   });
   // Images
   watch([paths.img.src +'*', paths.img.src +'**/*'], () => {

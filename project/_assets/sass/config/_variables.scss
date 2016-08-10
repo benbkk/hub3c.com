@@ -53,7 +53,8 @@ $palettes: (
 	),
 	black : (
 		base					: $black,
-		shadow        : rgba($black, 0.1)
+		shadow        : rgba($black, 0.1),
+		shadow-dark   : rgba($black, 0.3)
 	),
 	grey : (
 		lighter       : lighten($hub3cGrey, 22.5%),

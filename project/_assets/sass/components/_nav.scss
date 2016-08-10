@@ -3,24 +3,31 @@
 // --------------------------------------------------
 
 .site-nav {
+	padding-top:10px;
+	padding-bottom: 10px;
+	display:inline-block;
+	vertical-align:middle;
 	float:right;
 	> .container {
 		position: relative;
 	}
 	.nav {
 		li {
-			text-transform: lowercase;	
+			text-transform: uppercase;
+			margin-left:8px;
+			font-size: em(14px);
+			letter-spacing: 1px;
 		}
 		> li > a {
 			@include transition(0.2s all ease-in-out);
-			color: palette(clouds);
-			height:$navbar-height;
-			padding-top:0;
-			padding-bottom:0;
-			line-height: $navbar-height;
+			border-radius:0;
+			color: palette(clouds, dark);
+			background: palette(black, shadow);
+			vertical-align: middle;
 			&:hover,
 			&:active {
 				color: palette(white);
+				background: palette(black, shadow-dark);
 			}
 		}
 	}
@@ -33,6 +40,7 @@
 
 .menu-toggle {
 	position: absolute;
+	cursor: pointer;
 	z-index: 9;
 	right: 10px;
 	top:0px;
