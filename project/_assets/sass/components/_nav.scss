@@ -3,10 +3,6 @@
 // --------------------------------------------------
 
 .site-nav {
-	padding-top:10px;
-	padding-bottom: 10px;
-	display:inline-block;
-	vertical-align:middle;
 	float:right;
 	> .container {
 		position: relative;
@@ -17,6 +13,7 @@
 			margin-left:8px;
 			font-size: em(14px);
 			letter-spacing: 1px;
+			vertical-align:middle;
 		}
 		> li > a {
 			@include transition(0.2s all ease-in-out);

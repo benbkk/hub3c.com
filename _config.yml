@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
 environment: dev
 baseurl: "/" # the subpath of your site, e.g. /blog/
 #url: "http://aesinv.com" # the base hostname & protocol for your site
-url: "http://localhost:3000"
+url: "http://localhost"
 source: project
 destination: _dist
 
@@ -23,5 +23,6 @@ safe: false
 future: true
 permalink: pretty
 
-# --------------------------------
 # Includes & Excludes
+collections:
+- home-sections
