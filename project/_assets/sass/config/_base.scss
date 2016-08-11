@@ -21,7 +21,7 @@ body {
 	background: palette(clouds);
 }
 
-.main--wrapper {
+.site--wrapper {
 	position: relative;
 	overflow:hidden;
 	height:100%;
@@ -30,6 +30,12 @@ body {
 		width:100%!important;
 		min-width: 320px;
 	}
+}
+
+.site--content {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
 }
 
 @keyframes kenburns {

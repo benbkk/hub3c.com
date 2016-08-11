@@ -6,7 +6,7 @@
 	position:relative;
 	overflow-x:hidden;
 	overflow-y:hidden;
-	&.frontpage {
+	&-frontpage {
 		height: 617px;
 		overflow:hidden;
 		.page-header-bg {
@@ -15,7 +15,7 @@
 			left:0;
 			width: 100%;
 			height: 100%;
-			z-index: -2;
+			z-index: 0;
 			background: url('../img/hero.jpg') center top no-repeat;
 			background-size:cover;
 			background-color: palette(blue, dark);
@@ -76,6 +76,9 @@ a.video--play-btn {
 	line-height:1.1;
 	font-family: $font--family-light;
 	color: palette(white);
+	@include mq(mobile-lg) {
+		font-size: 3em;
+	}
 }
 
 // Pseudo

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   {% include components/head.html %}
-  <body {% if page.layout %} class="body--{{ page.layout}}" {% endif %}>
-  	{%include header.html%}
-    <div id="mainWrapper" class="main--wrapper layout--{{page.layout}}-wrapper">
-			{{content}}
-		</div>		
+  <body {% if page.url == '/' %} class="is--frontpage"{% endif %}>
+  	<div id="siteWrapper" class="site--wrapper">
+  		{%include header.html%}
+  		<div id="siteContent" class="site--content">
+   			{{content}}
+   		</div>
+   		{%include footer.html%}
+   	</div>	
     {%include components/scripts.html%}
   </body>
 </html>

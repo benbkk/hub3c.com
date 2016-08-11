@@ -24,3 +24,5 @@ future: true
 permalink: pretty
 
 # Includes & Excludes
+collections:
+- home-sections
