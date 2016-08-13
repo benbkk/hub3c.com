@@ -3,3 +3,11 @@ layout: page
 title: hub3c
 headline: The business platform that promotes business
 ---
+
+{%for section in site.home-sections%}
+	<section id="section{{section.title | capitalize}}" class="page-section {{section.title}}">
+		<h2 class="section-headline">{{section.headline}}</h2>
+		<h3 class="section-subheadline">{{section.subheadline</h3>
+		<p>{{section.content}}</p>
+	</section>
+{%endfor%}

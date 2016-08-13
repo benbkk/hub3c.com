@@ -3,12 +3,13 @@
 // --------------------------------------------------
 
 .site-nav {
-	float:right;
-	> .container {
-		position: relative;
-	}
+	display:inline-block;
+	vertical-align:middle;
+	width: calc(100% - 150px);
+	text-align:right;
 	.nav {
 		li {
+			display:inline-block;
 			text-transform: uppercase;
 			margin-left:8px;
 			font-size: em(14px);

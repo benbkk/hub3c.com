@@ -4,27 +4,26 @@
 
 .page--header {
 	position:relative;
-	overflow-x:hidden;
-	overflow-y:hidden;
-	&-frontpage {
+	overflow:hidden;
+	&.frontpage {
 		height: 617px;
 		overflow:hidden;
-		.page-header-bg {
+		.page--header-bg {
 			position: absolute;
 			top:0;
 			left:0;
 			width: 100%;
 			height: 100%;
 			z-index: 0;
-			background: url('../img/hero.jpg') center top no-repeat;
-			background-size:cover;
 			background-color: palette(blue, dark);
 			background-blend-mode: multiply;
-			animation-name: kenburns;
-			animation-duration: 120s;
-			animation-timing-function: ease-out;
- 			animation-fill-mode: forwards;
- 			-webkit-animation-fill-mode: forwards;
+			& > img {
+				animation-name: kenburns;
+				animation-duration: 120s;
+				animation-timing-function: ease-out;
+	 			animation-fill-mode: forwards;
+	 			-webkit-animation-fill-mode: forwards;
+			}
 		}
 	}	
 	display: table;

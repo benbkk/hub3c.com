@@ -1,21 +1,4 @@
 ---
 layout: default
 ---
-<section id="pageHeader" class="page--header{% if page.url == '/' %} frontpage{% endif %}">
-	<div class="inner-wrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8">
-					<h1 class="page--headline">{{page.headline}}</h1>
-					<a href="https://vimeo.com/147010370" class="video--play-btn popup-vimeo">
-						<span class="play--btn"><i class="fa fa-video-camera"></i></span>
-						<span class="video--caption">See it in action</span>
-					</a>	
-				</div>
-			</div>		
-		</div>
-	</div>
-	<div class="page-header-bg"></div>	
-</section>
-<div id="pageContent" class="page--content">
-</div>
+{%include page/page-header.html%}

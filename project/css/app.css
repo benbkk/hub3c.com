@@ -4069,10 +4069,6 @@ tbody.collapse.in {
   cursor: default;
 }
 
-/* line 118, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navs.scss */
-.nav-pills > li {
-  float: left;
-}
 /* line 122, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navs.scss */
 .nav-pills > li > a {
   border-radius: 2px;
@@ -4594,7 +4590,7 @@ tbody.collapse.in {
   /* line 382, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-right {
     float: right !important;
-    margin-right: 15px;
+    margin-right: 0;
   }
   /* line 386, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-right ~ .navbar-right {
@@ -10918,10 +10914,9 @@ body {
   width: 100%;
   height: 70px;
   z-index: 9;
-  display: table;
 }
 
-/* line 15, project/_assets/sass/components/_header.scss */
+/* line 14, project/_assets/sass/components/_header.scss */
 .site-logo {
   background-image: url("../img//hub3c-logo.svg");
   background-repeat: no-repeat;
@@ -10930,26 +10925,26 @@ body {
   display: inline-block;
   background-position: center;
   background-size: contain;
-  float: left;
+  vertical-align: middle;
 }
 
 /* line 5, project/_assets/sass/components/_nav.scss */
 .site-nav {
-  float: right;
-}
-/* line 7, project/_assets/sass/components/_nav.scss */
-.site-nav > .container {
-  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 150px);
+  text-align: right;
 }
 /* line 11, project/_assets/sass/components/_nav.scss */
 .site-nav .nav li {
+  display: inline-block;
   text-transform: uppercase;
   margin-left: 8px;
   font-size: 0.875em;
   letter-spacing: 1px;
   vertical-align: middle;
 }
-/* line 18, project/_assets/sass/components/_nav.scss */
+/* line 19, project/_assets/sass/components/_nav.scss */
 .site-nav .nav > li > a {
   transition: 0.2s all ease-in-out;
   border-radius: 0;
@@ -10957,7 +10952,7 @@ body {
   background: rgba(20, 20, 20, 0.1);
   vertical-align: middle;
 }
-/* line 24, project/_assets/sass/components/_nav.scss */
+/* line 25, project/_assets/sass/components/_nav.scss */
 .site-nav .nav > li > a:hover, .site-nav .nav > li > a:active {
   color: #FFFFFF;
   background: rgba(20, 20, 20, 0.3);
@@ -10969,7 +10964,7 @@ body {
   }
 }
 
-/* line 38, project/_assets/sass/components/_nav.scss */
+/* line 39, project/_assets/sass/components/_nav.scss */
 .menu-toggle {
   position: absolute;
   cursor: pointer;
@@ -10979,13 +10974,13 @@ body {
   display: none;
 }
 @media (max-width: 1023px) {
-  /* line 38, project/_assets/sass/components/_nav.scss */
+  /* line 39, project/_assets/sass/components/_nav.scss */
   .menu-toggle {
     display: block;
   }
 }
 
-/* line 50, project/_assets/sass/components/_nav.scss */
+/* line 51, project/_assets/sass/components/_nav.scss */
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
@@ -10995,35 +10990,35 @@ body {
 /* line 5, project/_assets/sass/components/_page.scss */
 .page--header {
   position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   display: table;
   width: 100%;
 }
-/* line 9, project/_assets/sass/components/_page.scss */
-.page--header-frontpage {
+/* line 8, project/_assets/sass/components/_page.scss */
+.page--header.frontpage {
   height: 617px;
   overflow: hidden;
 }
-/* line 12, project/_assets/sass/components/_page.scss */
-.page--header-frontpage .page-header-bg {
+/* line 11, project/_assets/sass/components/_page.scss */
+.page--header.frontpage .page--header-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
-  background: url("../img/hero.jpg") center top no-repeat;
-  background-size: cover;
   background-color: #00b6f2;
   background-blend-mode: multiply;
+}
+/* line 20, project/_assets/sass/components/_page.scss */
+.page--header.frontpage .page--header-bg > img {
   animation-name: kenburns;
   animation-duration: 120s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 32, project/_assets/sass/components/_page.scss */
+/* line 31, project/_assets/sass/components/_page.scss */
 .page--header .inner-wrap {
   position: relative;
   z-index: 1;
@@ -11032,18 +11027,18 @@ body {
 }
 
 @-moz-document url-prefix() {
-  /* line 43, project/_assets/sass/components/_page.scss */
+  /* line 42, project/_assets/sass/components/_page.scss */
   .page--header.frontpage .page-header-bg {
     animation: none;
   }
 }
-/* line 51, project/_assets/sass/components/_page.scss */
+/* line 50, project/_assets/sass/components/_page.scss */
 a.video--play-btn {
   transition: 0.2s all ease-in-out;
   display: block;
   margin: 1em 0;
 }
-/* line 55, project/_assets/sass/components/_page.scss */
+/* line 54, project/_assets/sass/components/_page.scss */
 a.video--play-btn span.play--btn {
   display: inline-block;
   width: 48px;
@@ -11056,13 +11051,13 @@ a.video--play-btn span.play--btn {
   color: #FFFFFF;
   background: #8AC644;
 }
-/* line 67, project/_assets/sass/components/_page.scss */
+/* line 66, project/_assets/sass/components/_page.scss */
 a.video--play-btn span.video--caption {
   display: inline-block;
   margin-left: 5px;
 }
 
-/* line 73, project/_assets/sass/components/_page.scss */
+/* line 72, project/_assets/sass/components/_page.scss */
 .page--headline {
   margin: 0;
   font-size: 4em;
@@ -11071,13 +11066,13 @@ a.video--play-btn span.video--caption {
   color: #FFFFFF;
 }
 @media (max-width: 667px) {
-  /* line 73, project/_assets/sass/components/_page.scss */
+  /* line 72, project/_assets/sass/components/_page.scss */
   .page--headline {
     font-size: 3em;
   }
 }
 
-/* line 87, project/_assets/sass/components/_page.scss */
+/* line 86, project/_assets/sass/components/_page.scss */
 .page--header::before, .page--header::after {
   position: absolute;
   z-index: 2;
@@ -11086,20 +11081,20 @@ a.video--play-btn span.video--caption {
   background: #ecf0f1;
   bottom: 0;
 }
-/* line 96, project/_assets/sass/components/_page.scss */
+/* line 95, project/_assets/sass/components/_page.scss */
 .page--header::before {
   width: 30%;
   border-radius: 0 50px 0 0;
   left: 0;
 }
-/* line 101, project/_assets/sass/components/_page.scss */
+/* line 100, project/_assets/sass/components/_page.scss */
 .page--header::after {
   width: 70%;
   border-radius: 50px 0 0 0;
   right: 0;
 }
 
-/* line 108, project/_assets/sass/components/_page.scss */
+/* line 107, project/_assets/sass/components/_page.scss */
 .page-content {
   height: 100%;
   position: relative;
