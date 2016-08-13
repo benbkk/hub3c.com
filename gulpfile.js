@@ -85,6 +85,9 @@ gulp.task('serve', () => {
   // CSS/SCSS
   watch([
 		paths.bower + paths.compass + '**/*.scss',
+		paths.bower + paths.compass + '*.scss',
+		paths.bower + paths.animate + '**/*.scss',
+		paths.bower + paths.animate + '*.scss',
 		paths.bower + paths.bootstrap.sass + '*.scss',
 		paths.bower + paths.bootstrap.sass + '**/*.scss',
 		paths.bower + paths.fontawesome + '*.scss',

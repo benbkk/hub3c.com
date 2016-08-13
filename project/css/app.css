@@ -11,6 +11,94 @@
  * A partial implementation of the Ruby display functions from Compass:
  * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
  */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @font-face {
   font-family: 'SourceSansPro Regular';
   font-weight: normal;
@@ -315,7 +403,7 @@ html {
 /* line 27, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
   font-family: "SourceSansPro Regular", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.42857;
   color: #768f9e;
   background-color: #fff;
@@ -388,8 +476,8 @@ img {
 
 /* line 113, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 hr {
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   border: 0;
   border-top: 1px solid white;
 }
@@ -453,8 +541,8 @@ h6 .small,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 22px;
-  margin-bottom: 11px;
+  margin-top: 25px;
+  margin-bottom: 12.5px;
 }
 /* line 30, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
@@ -473,8 +561,8 @@ h3 .small, .h3 small,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 11px;
-  margin-bottom: 11px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
 }
 /* line 41, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h4 small,
@@ -491,57 +579,57 @@ h6 .small, .h6 small,
 
 /* line 47, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h1, .h1 {
-  font-size: 41px;
+  font-size: 46px;
 }
 
 /* line 48, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h2, .h2 {
-  font-size: 34px;
+  font-size: 38px;
 }
 
 /* line 49, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h3, .h3 {
-  font-size: 28px;
+  font-size: 31px;
 }
 
 /* line 50, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h4, .h4 {
-  font-size: 20px;
+  font-size: 23px;
 }
 
 /* line 51, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h5, .h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* line 52, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h6, .h6 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* line 58, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 p {
-  margin: 0 0 11px;
+  margin: 0 0 12.5px;
 }
 
 /* line 62, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 .lead {
-  margin-bottom: 22px;
-  font-size: 18px;
+  margin-bottom: 25px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   /* line 62, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
   .lead {
-    font-size: 24px;
+    font-size: 27px;
   }
 }
 
 /* line 78, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 small,
 .small {
-  font-size: 87%;
+  font-size: 88%;
 }
 
 /* line 83, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
@@ -722,7 +810,7 @@ a.bg-danger:focus {
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 11px;
+  margin-bottom: 12.5px;
 }
 /* line 153, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 ul ul,
@@ -754,7 +842,7 @@ ol ol {
 /* line 185, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 dl {
   margin-top: 0;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 }
 
 /* line 189, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
@@ -813,9 +901,9 @@ abbr[data-original-title] {
 
 /* line 241, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 blockquote {
-  padding: 11px 22px;
-  margin: 0 0 22px;
-  font-size: 20px;
+  padding: 12.5px 25px;
+  margin: 0 0 25px;
+  font-size: 22.5px;
   border-left: 5px solid white;
 }
 /* line 250, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
@@ -870,7 +958,7 @@ blockquote.pull-right .small:after {
 
 /* line 294, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 address {
-  margin-bottom: 22px;
+  margin-bottom: 25px;
   font-style: normal;
   line-height: 1.42857;
 }
@@ -912,9 +1000,9 @@ kbd kbd {
 /* line 41, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_code.scss */
 pre {
   display: block;
-  padding: 10.5px;
-  margin: 0 0 11px;
-  font-size: 15px;
+  padding: 12px;
+  margin: 0 0 12.5px;
+  font-size: 17px;
   line-height: 1.42857;
   word-break: break-all;
   word-wrap: break-word;
@@ -2079,7 +2167,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 }
 /* line 31, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_tables.scss */
 .table > thead > tr > th,
@@ -2279,7 +2367,7 @@ table th[class*="col-"] {
   /* line 171, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_tables.scss */
   .table-responsive {
     width: 100%;
-    margin-bottom: 16.5px;
+    margin-bottom: 18.75px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
@@ -2341,8 +2429,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 22px;
-  font-size: 24px;
+  margin-bottom: 25px;
+  font-size: 27px;
   line-height: inherit;
   color: #6f8998;
   border: 0;
@@ -2398,7 +2486,7 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.42857;
   color: #43545E;
 }
@@ -2407,7 +2495,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 36px;
+  height: 39px;
   padding: 6px 12px;
   line-height: 1.42857;
   background-color: transparent;
@@ -2458,7 +2546,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 36px;
+    line-height: 39px;
   }
   /* line 197, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
@@ -2479,7 +2567,7 @@ input[type="search"] {
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn, .input-group-sm
   input[type="month"] {
-    line-height: 33px;
+    line-height: 36px;
   }
   /* line 202, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
@@ -2500,7 +2588,7 @@ input[type="search"] {
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn, .input-group-lg
   input[type="month"] {
-    line-height: 49px;
+    line-height: 53px;
   }
 }
 /* line 215, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -2528,7 +2616,7 @@ input[type="search"] {
 /* line 232, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .radio label,
 .checkbox label {
-  min-height: 22px;
+  min-height: 25px;
   padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal;
@@ -2597,7 +2685,7 @@ input[type="checkbox"] {
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 0;
-  min-height: 38px;
+  min-height: 43px;
 }
 /* line 316, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
@@ -2613,9 +2701,9 @@ input[type="checkbox"] {
 .input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
-  height: 33px;
+  height: 36px;
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   border-radius: 2px;
 }
@@ -2624,8 +2712,8 @@ input[type="checkbox"] {
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn {
-  height: 33px;
-  line-height: 33px;
+  height: 36px;
+  line-height: 36px;
 }
 
 /* line 84, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
@@ -2641,16 +2729,16 @@ select[multiple].input-sm,
 
 /* line 334, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-sm .form-control {
-  height: 33px;
+  height: 36px;
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   border-radius: 2px;
 }
 /* line 341, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-sm select.form-control {
-  height: 33px;
-  line-height: 33px;
+  height: 36px;
+  line-height: 36px;
 }
 /* line 345, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-sm textarea.form-control,
@@ -2659,10 +2747,10 @@ select[multiple].input-sm,
 }
 /* line 349, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-sm .form-control-static {
-  height: 33px;
-  min-height: 36px;
+  height: 36px;
+  min-height: 41px;
   padding: 6px 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -2670,9 +2758,9 @@ select[multiple].input-sm,
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  height: 49px;
+  height: 53px;
   padding: 10px 16px;
-  font-size: 20px;
+  font-size: 23px;
   line-height: 1.33333;
   border-radius: 3px;
 }
@@ -2681,8 +2769,8 @@ select[multiple].input-sm,
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn {
-  height: 49px;
-  line-height: 49px;
+  height: 53px;
+  line-height: 53px;
 }
 
 /* line 84, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
@@ -2698,16 +2786,16 @@ select[multiple].input-lg,
 
 /* line 360, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-lg .form-control {
-  height: 49px;
+  height: 53px;
   padding: 10px 16px;
-  font-size: 20px;
+  font-size: 23px;
   line-height: 1.33333;
   border-radius: 3px;
 }
 /* line 367, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-lg select.form-control {
-  height: 49px;
-  line-height: 49px;
+  height: 53px;
+  line-height: 53px;
 }
 /* line 371, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-lg textarea.form-control,
@@ -2716,10 +2804,10 @@ select[multiple].input-lg,
 }
 /* line 375, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-lg .form-control-static {
-  height: 49px;
-  min-height: 42px;
+  height: 53px;
+  min-height: 48px;
   padding: 11px 16px;
-  font-size: 20px;
+  font-size: 23px;
   line-height: 1.33333;
 }
 
@@ -2729,7 +2817,7 @@ select[multiple].input-lg,
 }
 /* line 394, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback .form-control {
-  padding-right: 45px;
+  padding-right: 48.75px;
 }
 
 /* line 399, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -2739,9 +2827,9 @@ select[multiple].input-lg,
   right: 0;
   z-index: 2;
   display: block;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
   text-align: center;
   pointer-events: none;
 }
@@ -2752,9 +2840,9 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
-  width: 49px;
-  height: 49px;
-  line-height: 49px;
+  width: 53px;
+  height: 53px;
+  line-height: 53px;
 }
 
 /* line 418, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -2763,9 +2851,9 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
-  width: 33px;
-  height: 33px;
-  line-height: 33px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
 }
 
 /* line 8, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
@@ -2860,7 +2948,7 @@ select[multiple].input-lg,
 
 /* line 440, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback label ~ .form-control-feedback {
-  top: 27px;
+  top: 30px;
 }
 /* line 443, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback label.sr-only ~ .form-control-feedback {
@@ -2949,7 +3037,7 @@ select[multiple].input-lg,
 /* line 570, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 29px;
+  min-height: 32px;
 }
 /* line 576, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-horizontal .form-group {
@@ -2981,14 +3069,14 @@ select[multiple].input-lg,
   /* line 604, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .form-horizontal .form-group-lg .control-label {
     padding-top: 11px;
-    font-size: 20px;
+    font-size: 23px;
   }
 }
 @media (min-width: 768px) {
   /* line 612, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .form-horizontal .form-group-sm .control-label {
     padding-top: 6px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -3006,7 +3094,7 @@ select[multiple].input-lg,
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.42857;
   border-radius: 2px;
   -webkit-user-select: none;
@@ -3343,7 +3431,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 136, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-lg, .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 20px;
+  font-size: 23px;
   line-height: 1.33333;
   border-radius: 3px;
 }
@@ -3351,7 +3439,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 140, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-sm, .btn-group-sm > .btn {
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   border-radius: 2px;
 }
@@ -3359,7 +3447,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 144, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-xs, .btn-group-xs > .btn {
   padding: 1px 5px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   border-radius: 2px;
 }
@@ -3457,7 +3545,7 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -3474,7 +3562,7 @@ tbody.collapse.in {
 /* line 60, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
 .dropdown-menu .divider {
   height: 1px;
-  margin: 10px 0;
+  margin: 11.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -3542,7 +3630,7 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857;
   color: #becad1;
   white-space: nowrap;
@@ -3886,7 +3974,7 @@ tbody.collapse.in {
 /* line 77, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 1;
   color: #43545E;
@@ -3900,7 +3988,7 @@ tbody.collapse.in {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 2px;
 }
 /* line 94, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
@@ -3908,7 +3996,7 @@ tbody.collapse.in {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 10px 16px;
-  font-size: 20px;
+  font-size: 23px;
   border-radius: 3px;
 }
 /* line 101, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
@@ -4031,7 +4119,7 @@ tbody.collapse.in {
 /* line 59, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navs.scss */
 .nav .nav-divider {
   height: 1px;
-  margin: 10px 0;
+  margin: 11.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -4333,9 +4421,9 @@ tbody.collapse.in {
 /* line 163, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 24px 15px;
-  font-size: 20px;
-  line-height: 22px;
+  padding: 22.5px 15px;
+  font-size: 23px;
+  line-height: 25px;
   height: 70px;
 }
 /* line 170, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
@@ -4390,7 +4478,7 @@ tbody.collapse.in {
 
 /* line 232, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 12px -15px;
+  margin: 11.25px -15px;
 }
 /* line 235, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav > li > a {
@@ -4416,7 +4504,7 @@ tbody.collapse.in {
   }
   /* line 255, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 22px;
+    line-height: 25px;
   }
   /* line 257, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4448,8 +4536,8 @@ tbody.collapse.in {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 15.5px;
+  margin-bottom: 15.5px;
 }
 @media (min-width: 768px) {
   /* line 479, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -4553,13 +4641,13 @@ tbody.collapse.in {
 
 /* line 343, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 15.5px;
+  margin-bottom: 15.5px;
 }
 /* line 346, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-  margin-top: 18.5px;
-  margin-bottom: 18.5px;
+  margin-top: 17px;
+  margin-bottom: 17px;
 }
 /* line 349, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
@@ -4569,8 +4657,8 @@ tbody.collapse.in {
 
 /* line 359, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
 }
 @media (min-width: 768px) {
   /* line 359, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
@@ -4896,7 +4984,7 @@ a.label:hover, a.label:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   color: #fff;
   line-height: 1;
@@ -4949,7 +5037,7 @@ a.badge:hover, a.badge:focus {
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
   line-height: 1.42857;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -4981,7 +5069,7 @@ a.thumbnail.active {
 /* line 9, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
 .alert {
   padding: 15px;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
   border: 1px solid transparent;
   border-radius: 2px;
 }
@@ -5088,8 +5176,8 @@ a.thumbnail.active {
 /* line 26, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress {
   overflow: hidden;
-  height: 22px;
-  margin-bottom: 22px;
+  height: 25px;
+  margin-bottom: 25px;
   background-color: #f5f5f5;
   border-radius: 2px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -5100,8 +5188,8 @@ a.thumbnail.active {
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 25px;
   color: #fff;
   text-align: center;
   background-color: #337ab7;
@@ -5266,7 +5354,7 @@ a.thumbnail.active {
 /* line 6, ../../../../../../../Users/benworkandplay/Sites/hub3c.com/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_close.scss */
 .close {
   float: right;
-  font-size: 24px;
+  font-size: 27px;
   font-weight: bold;
   line-height: 1;
   color: #000;
@@ -5479,7 +5567,7 @@ button.close {
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-  font-size: 14px;
+  font-size: 16px;
   opacity: 0;
   filter: alpha(opacity=0);
 }
@@ -5617,7 +5705,7 @@ button.close {
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ccc;
@@ -5646,7 +5734,7 @@ button.close {
 .popover-title {
   margin: 0;
   padding: 8px 14px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-radius: 2px 2px 0 0;
@@ -10869,24 +10957,19 @@ body {
 
 /* line 24, project/_assets/sass/config/_base.scss */
 .site--wrapper {
-  position: relative;
-  overflow: hidden;
   height: 100%;
-  width: 100%;
 }
 @media (min-width: 1px) and (max-width: 480px) {
   /* line 24, project/_assets/sass/config/_base.scss */
   .site--wrapper {
-    width: 100% !important;
     min-width: 320px;
   }
 }
 
-/* line 35, project/_assets/sass/config/_base.scss */
+/* line 31, project/_assets/sass/config/_base.scss */
 .site--content {
-  position: relative;
-  overflow: hidden;
   min-height: 100%;
+  padding-bottom: calc(91px + 4em);
 }
 
 @keyframes kenburns {
@@ -10906,200 +10989,917 @@ body {
     opacity: 1;
   }
 }
-/* line 5, project/_assets/sass/components/_header.scss */
-.site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  z-index: 9;
-}
-
-/* line 14, project/_assets/sass/components/_header.scss */
-.site-logo {
-  background-image: url("../img//hub3c-logo.svg");
-  background-repeat: no-repeat;
-  width: 123px;
-  height: 70px;
-  display: inline-block;
-  background-position: center;
-  background-size: contain;
-  vertical-align: middle;
-}
-
-/* line 5, project/_assets/sass/components/_nav.scss */
-.site-nav {
-  display: inline-block;
-  vertical-align: middle;
-  width: calc(100% - 150px);
-  text-align: right;
-}
-/* line 11, project/_assets/sass/components/_nav.scss */
-.site-nav .nav li {
-  display: inline-block;
-  text-transform: uppercase;
-  margin-left: 8px;
-  font-size: 0.875em;
-  letter-spacing: 1px;
-  vertical-align: middle;
-}
-/* line 19, project/_assets/sass/components/_nav.scss */
-.site-nav .nav > li > a {
-  transition: 0.2s all ease-in-out;
-  border-radius: 0;
-  color: #dde4e6;
-  background: rgba(20, 20, 20, 0.1);
-  vertical-align: middle;
-}
-/* line 25, project/_assets/sass/components/_nav.scss */
-.site-nav .nav > li > a:hover, .site-nav .nav > li > a:active {
-  color: #FFFFFF;
-  background: rgba(20, 20, 20, 0.3);
-}
-@media (max-width: 1023px) {
-  /* line 5, project/_assets/sass/components/_nav.scss */
-  .site-nav {
-    display: none;
-  }
-}
-
-/* line 39, project/_assets/sass/components/_nav.scss */
-.menu-toggle {
-  position: absolute;
-  cursor: pointer;
-  z-index: 9;
-  right: 10px;
-  top: 0px;
-  display: none;
-}
-@media (max-width: 1023px) {
-  /* line 39, project/_assets/sass/components/_nav.scss */
-  .menu-toggle {
-    display: block;
-  }
-}
-
-/* line 51, project/_assets/sass/components/_nav.scss */
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-  background: #FFFFFF;
-}
-
-/* line 5, project/_assets/sass/components/_page.scss */
-.page--header {
+/*!
+ * animsition v4.0.2
+ * A simple and easy jQuery plugin for CSS animated page transitions.
+ * http://blivesta.github.io/animsition
+ * License : MIT
+ * Author : blivesta (http://blivesta.com/)
+ */
+/* line 8, project/_assets/sass/config/_animsition.scss */
+.animsition,
+.animsition-overlay {
   position: relative;
-  overflow: hidden;
-  display: table;
-  width: 100%;
+  opacity: 0;
+  animation-fill-mode: both;
 }
-/* line 8, project/_assets/sass/components/_page.scss */
-.page--header.frontpage {
-  height: 617px;
-  overflow: hidden;
-}
-/* line 11, project/_assets/sass/components/_page.scss */
-.page--header.frontpage .page--header-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+
+/**
+ * overlay option
+ */
+/* line 19, project/_assets/sass/config/_animsition.scss */
+.animsition-overlay-slide {
+  position: fixed;
+  z-index: 999;
   width: 100%;
   height: 100%;
-  z-index: 0;
-  background-color: #00b6f2;
-  background-blend-mode: multiply;
-}
-/* line 20, project/_assets/sass/components/_page.scss */
-.page--header.frontpage .page--header-bg > img {
-  animation-name: kenburns;
-  animation-duration: 120s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-}
-/* line 31, project/_assets/sass/components/_page.scss */
-.page--header .inner-wrap {
-  position: relative;
-  z-index: 1;
-  display: table-cell;
-  vertical-align: middle;
+  background-color: #43545E;
 }
 
-@-moz-document url-prefix() {
-  /* line 42, project/_assets/sass/components/_page.scss */
-  .page--header.frontpage .page-header-bg {
-    animation: none;
-  }
-}
-/* line 50, project/_assets/sass/components/_page.scss */
-a.video--play-btn {
-  transition: 0.2s all ease-in-out;
-  display: block;
-  margin: 1em 0;
-}
-/* line 54, project/_assets/sass/components/_page.scss */
-a.video--play-btn span.play--btn {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
+/* loading option */
+/* line 27, project/_assets/sass/config/_animsition.scss */
+.animsition-loading,
+.animsition-loading:after {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
   border-radius: 50%;
-  text-align: center;
-  font-size: 1em;
-  line-height: 48px;
-  vertical-align: middle;
-  color: #FFFFFF;
-  background: #8AC644;
-}
-/* line 66, project/_assets/sass/components/_page.scss */
-a.video--play-btn span.video--caption {
-  display: inline-block;
-  margin-left: 5px;
+  z-index: 100;
 }
 
-/* line 72, project/_assets/sass/components/_page.scss */
-.page--headline {
-  margin: 0;
-  font-size: 4em;
-  line-height: 1.1;
-  font-family: "SourceSansPro Light", Arial, Helvetica, sans-serif;
-  color: #FFFFFF;
+/* line 40, project/_assets/sass/config/_animsition.scss */
+.animsition-loading {
+  background-color: transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.2);
+  border-right: 5px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #eee;
+  transform: translateZ(0);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: .8s;
+  animation-name: animsition-loading;
 }
-@media (max-width: 667px) {
-  /* line 72, project/_assets/sass/components/_page.scss */
-  .page--headline {
-    font-size: 3em;
+@keyframes animsition-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
-
-/* line 86, project/_assets/sass/components/_page.scss */
-.page--header::before, .page--header::after {
-  position: absolute;
-  z-index: 2;
-  content: '';
-  height: 40px;
-  background: #ecf0f1;
-  bottom: 0;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-/* line 95, project/_assets/sass/components/_page.scss */
-.page--header::before {
-  width: 30%;
-  border-radius: 0 50px 0 0;
-  left: 0;
+/* line 99, project/_assets/sass/config/_animsition.scss */
+.fade-in {
+  animation-name: fade-in;
 }
-/* line 100, project/_assets/sass/components/_page.scss */
-.page--header::after {
-  width: 70%;
-  border-radius: 50px 0 0 0;
-  right: 0;
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
-/* line 107, project/_assets/sass/components/_page.scss */
-.page-content {
+/* line 125, project/_assets/sass/config/_animsition.scss */
+.fade-out {
+  animation-name: fade-out;
+}
+@keyframes fade-in-up {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* line 155, project/_assets/sass/config/_animsition.scss */
+.fade-in-up {
+  animation-name: fade-in-up;
+}
+@keyframes fade-out-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+}
+/* line 189, project/_assets/sass/config/_animsition.scss */
+.fade-out-up {
+  animation-name: fade-out-up;
+}
+@keyframes fade-in-up-sm {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* line 219, project/_assets/sass/config/_animsition.scss */
+.fade-in-up-sm {
+  animation-name: fade-in-up-sm;
+}
+@keyframes fade-out-up-sm {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+/* line 253, project/_assets/sass/config/_animsition.scss */
+.fade-out-up-sm {
+  animation-name: fade-out-up-sm;
+}
+@keyframes fade-in-up-lg {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* line 283, project/_assets/sass/config/_animsition.scss */
+.fade-in-up-lg {
+  animation-name: fade-in-up-lg;
+}
+@keyframes fade-out-up-lg {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+/* line 317, project/_assets/sass/config/_animsition.scss */
+.fade-out-up-lg {
+  animation-name: fade-out-up-lg;
+}
+@keyframes fade-in-down {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* line 347, project/_assets/sass/config/_animsition.scss */
+.fade-in-down {
+  animation-name: fade-in-down;
+}
+@keyframes fade-out-down {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+}
+/* line 381, project/_assets/sass/config/_animsition.scss */
+.fade-out-down {
+  animation-name: fade-out-down;
+}
+@keyframes fade-in-down-sm {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* line 411, project/_assets/sass/config/_animsition.scss */
+.fade-in-down-sm {
+  animation-name: fade-in-down-sm;
+}
+@keyframes fade-out-down-sm {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+/* line 445, project/_assets/sass/config/_animsition.scss */
+.fade-out-down-sm {
+  animation-name: fade-out-down-sm;
+}
+@keyframes fade-in-down-lg {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* line 475, project/_assets/sass/config/_animsition.scss */
+.fade-in-down-lg {
+  animation-name: fade-in-down;
+}
+@keyframes fade-out-down-lg {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+}
+/* line 509, project/_assets/sass/config/_animsition.scss */
+.fade-out-down-lg {
+  animation-name: fade-out-down-lg;
+}
+@keyframes fade-in-left {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* line 539, project/_assets/sass/config/_animsition.scss */
+.fade-in-left {
+  animation-name: fade-in-left;
+}
+@keyframes fade-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+}
+/* line 573, project/_assets/sass/config/_animsition.scss */
+.fade-out-left {
+  animation-name: fade-out-left;
+}
+@keyframes fade-in-left-sm {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* line 603, project/_assets/sass/config/_animsition.scss */
+.fade-in-left-sm {
+  animation-name: fade-in-left-sm;
+}
+@keyframes fade-out-left-sm {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+/* line 637, project/_assets/sass/config/_animsition.scss */
+.fade-out-left-sm {
+  animation-name: fade-out-left-sm;
+}
+@keyframes fade-in-left-lg {
+  0% {
+    transform: translateX(-1500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* line 667, project/_assets/sass/config/_animsition.scss */
+.fade-in-left-lg {
+  animation-name: fade-in-left-lg;
+}
+@keyframes fade-out-left-lg {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1500px);
+    opacity: 0;
+  }
+}
+/* line 701, project/_assets/sass/config/_animsition.scss */
+.fade-out-left-lg {
+  animation-name: fade-out-left-lg;
+}
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* line 731, project/_assets/sass/config/_animsition.scss */
+.fade-in-right {
+  animation-name: fade-in-right;
+}
+@keyframes fade-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+}
+/* line 765, project/_assets/sass/config/_animsition.scss */
+.fade-out-right {
+  animation-name: fade-out-right;
+}
+@keyframes fade-in-right-sm {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* line 795, project/_assets/sass/config/_animsition.scss */
+.fade-in-right-sm {
+  animation-name: fade-in-right-sm;
+}
+@keyframes fade-out-right-sm {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+/* line 829, project/_assets/sass/config/_animsition.scss */
+.fade-out-right-sm {
+  animation-name: fade-out-right-sm;
+}
+@keyframes fade-in-right-lg {
+  0% {
+    transform: translateX(1500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* line 859, project/_assets/sass/config/_animsition.scss */
+.fade-in-right-lg {
+  animation-name: fade-in-right-lg;
+}
+@keyframes fade-out-right-lg {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1500px);
+    opacity: 0;
+  }
+}
+/* line 893, project/_assets/sass/config/_animsition.scss */
+.fade-out-right-lg {
+  animation-name: fade-out-right-lg;
+}
+@keyframes rotate-in {
+  0% {
+    transform: rotate(-90deg);
+    transform-origin: center center;
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    transform-origin: center center;
+    opacity: 1;
+  }
+}
+/* line 933, project/_assets/sass/config/_animsition.scss */
+.rotate-in {
+  animation-name: rotate-in;
+}
+@keyframes rotate-out {
+  0% {
+    transform: rotate(0);
+    transform-origin: center center;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(90deg);
+    transform-origin: center center;
+    opacity: 0;
+  }
+}
+/* line 975, project/_assets/sass/config/_animsition.scss */
+.rotate-out {
+  animation-name: rotate-out;
+}
+@keyframes rotate-in-sm {
+  0% {
+    transform: rotate(-45deg);
+    transform-origin: center center;
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    transform-origin: center center;
+    opacity: 1;
+  }
+}
+/* line 1013, project/_assets/sass/config/_animsition.scss */
+.rotate-in-sm {
+  animation-name: rotate-in-sm;
+}
+@keyframes rotate-out-sm {
+  0% {
+    transform: rotate(0);
+    transform-origin: center center;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg);
+    transform-origin: center center;
+    opacity: 0;
+  }
+}
+/* line 1055, project/_assets/sass/config/_animsition.scss */
+.rotate-out-sm {
+  animation-name: rotate-out-sm;
+}
+@keyframes rotate-in-lg {
+  0% {
+    transform: rotate(-180deg);
+    transform-origin: center center;
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    transform-origin: center center;
+    opacity: 1;
+  }
+}
+/* line 1093, project/_assets/sass/config/_animsition.scss */
+.rotate-in-lg {
+  animation-name: rotate-in-lg;
+}
+@keyframes rotate-out-lg {
+  0% {
+    transform: rotate(0);
+    transform-origin: center center;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(180deg);
+    transform-origin: center center;
+    opacity: 0;
+  }
+}
+/* line 1135, project/_assets/sass/config/_animsition.scss */
+.rotate-out-lg {
+  animation-name: rotate-out-lg;
+}
+@keyframes flip-in-x {
+  0% {
+    transform: perspective(550px) rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(550px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+/* line 1167, project/_assets/sass/config/_animsition.scss */
+.flip-in-x {
+  animation-name: flip-in-x;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-out-x {
+  0% {
+    transform: perspective(550px) rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(550px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+/* line 1203, project/_assets/sass/config/_animsition.scss */
+.flip-out-x {
+  animation-name: flip-out-x;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-in-x-nr {
+  0% {
+    transform: perspective(100px) rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(100px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+/* line 1235, project/_assets/sass/config/_animsition.scss */
+.flip-in-x-nr {
+  animation-name: flip-in-x-nr;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-out-x-nr {
+  0% {
+    transform: perspective(100px) rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(100px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+/* line 1271, project/_assets/sass/config/_animsition.scss */
+.flip-out-x-nr {
+  animation-name: flip-out-x-nr;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-in-x-fr {
+  0% {
+    transform: perspective(1000px) rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+/* line 1303, project/_assets/sass/config/_animsition.scss */
+.flip-in-x-fr {
+  animation-name: flip-in-x-fr;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-out-x-fr {
+  0% {
+    transform: perspective(1000px) rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(1000px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+/* line 1339, project/_assets/sass/config/_animsition.scss */
+.flip-out-x-fr {
+  animation-name: flip-out-x-fr;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-in-y {
+  0% {
+    transform: perspective(550px) rotateY(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(550px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+/* line 1371, project/_assets/sass/config/_animsition.scss */
+.flip-in-y {
+  animation-name: flip-in-y;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-out-y {
+  0% {
+    transform: perspective(550px) rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(550px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+/* line 1407, project/_assets/sass/config/_animsition.scss */
+.flip-out-y {
+  animation-name: flip-out-y;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-in-y-nr {
+  0% {
+    transform: perspective(100px) rotateY(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(100px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+/* line 1439, project/_assets/sass/config/_animsition.scss */
+.flip-in-y-nr {
+  animation-name: flip-in-y-nr;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-out-y-nr {
+  0% {
+    transform: perspective(100px) rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(100px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+/* line 1475, project/_assets/sass/config/_animsition.scss */
+.flip-out-y-nr {
+  animation-name: flip-out-y-nr;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-in-y-fr {
+  0% {
+    transform: perspective(1000px) rotateY(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+/* line 1507, project/_assets/sass/config/_animsition.scss */
+.flip-in-y-fr {
+  animation-name: flip-in-y-fr;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes flip-out-y-fr {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(1000px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+/* line 1543, project/_assets/sass/config/_animsition.scss */
+.flip-out-y-fr {
+  animation-name: flip-out-y-fr;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 1573, project/_assets/sass/config/_animsition.scss */
+.zoom-in {
+  animation-name: zoom-in;
+}
+@keyframes zoom-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 1613, project/_assets/sass/config/_animsition.scss */
+.zoom-out {
+  animation-name: zoom-out;
+}
+@keyframes zoom-in-sm {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 1639, project/_assets/sass/config/_animsition.scss */
+.zoom-in-sm {
+  animation-name: zoom-in-sm;
+}
+@keyframes zoom-out-sm {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 1679, project/_assets/sass/config/_animsition.scss */
+.zoom-out-sm {
+  animation-name: zoom-out-sm;
+}
+@keyframes zoom-in-lg {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 1705, project/_assets/sass/config/_animsition.scss */
+.zoom-in-lg {
+  animation-name: zoom-in-lg;
+}
+@keyframes zoom-out-lg {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 1745, project/_assets/sass/config/_animsition.scss */
+.zoom-out-lg {
+  animation-name: zoom-out-lg;
+}
+@keyframes overlay-slide-in-top {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+/* line 1769, project/_assets/sass/config/_animsition.scss */
+.overlay-slide-in-top {
+  top: 0;
+  height: 0;
+  animation-name: overlay-slide-in-top;
+}
+@keyframes overlay-slide-out-top {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+/* line 1797, project/_assets/sass/config/_animsition.scss */
+.overlay-slide-out-top {
+  top: 0;
   height: 100%;
-  position: relative;
-  background: #ecf0f1;
-  z-index: 9;
+  animation-name: overlay-slide-out-top;
+}
+@keyframes overlay-slide-in-bottom {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+/* line 1821, project/_assets/sass/config/_animsition.scss */
+.overlay-slide-in-bottom {
+  bottom: 0;
+  height: 0;
+  animation-name: overlay-slide-in-bottom;
+}
+@keyframes overlay-slide-out-bottom {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+/* line 1849, project/_assets/sass/config/_animsition.scss */
+.overlay-slide-out-bottom {
+  bottom: 0;
+  height: 100%;
+  animation-name: overlay-slide-out-bottom;
+}
+@keyframes overlay-slide-in-left {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+/* line 1873, project/_assets/sass/config/_animsition.scss */
+.overlay-slide-in-left {
+  width: 0;
+  animation-name: overlay-slide-in-left;
+}
+@keyframes overlay-slide-out-left {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* line 1900, project/_assets/sass/config/_animsition.scss */
+.overlay-slide-out-left {
+  left: 0;
+  width: 100%;
+  animation-name: overlay-slide-out-left;
+}
+@keyframes overlay-slide-in-right {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+/* line 1924, project/_assets/sass/config/_animsition.scss */
+.overlay-slide-in-right {
+  right: 0;
+  width: 0;
+  animation-name: overlay-slide-in-right;
+}
+@keyframes overlay-slide-out-right {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* line 1952, project/_assets/sass/config/_animsition.scss */
+.overlay-slide-out-right {
+  right: 0;
+  width: 100%;
+  animation-name: overlay-slide-out-right;
 }
 
 /* Magnific Popup CSS */
@@ -11607,6 +12407,269 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px;
   }
+}
+/* line 5, project/_assets/sass/components/_site-header.scss */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 9;
+}
+/* line 6, project/_assets/sass/components/_site-header.scss */
+.site-header > .container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 100%;
+}
+
+/* line 19, project/_assets/sass/components/_site-header.scss */
+.site-logo {
+  background-image: url("../img//hub3c-logo.svg");
+  background-repeat: no-repeat;
+  width: 170px;
+  height: 55px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+/* line 5, project/_assets/sass/components/_site-nav.scss */
+.site-nav {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 200px);
+  text-align: right;
+}
+/* line 11, project/_assets/sass/components/_site-nav.scss */
+.site-nav .nav li {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-left: 8px;
+  font-size: 0.77778em;
+  letter-spacing: 1px;
+  vertical-align: middle;
+}
+/* line 19, project/_assets/sass/components/_site-nav.scss */
+.site-nav .nav > li > a {
+  transition: 0.2s all ease-in-out;
+  border-radius: 0;
+  color: rgba(221, 228, 230, 0.8);
+  background: rgba(20, 20, 20, 0.1);
+  vertical-align: middle;
+}
+/* line 25, project/_assets/sass/components/_site-nav.scss */
+.site-nav .nav > li > a.current, .site-nav .nav > li > a:hover, .site-nav .nav > li > a:active {
+  color: #FFFFFF;
+  background: rgba(20, 20, 20, 0.3);
+}
+@media (max-width: 1023px) {
+  /* line 5, project/_assets/sass/components/_site-nav.scss */
+  .site-nav {
+    display: none;
+  }
+}
+
+/* line 40, project/_assets/sass/components/_site-nav.scss */
+.menu-toggle {
+  position: absolute;
+  cursor: pointer;
+  z-index: 9;
+  right: 10px;
+  top: 0px;
+  display: none;
+}
+@media (max-width: 1023px) {
+  /* line 40, project/_assets/sass/components/_site-nav.scss */
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* line 52, project/_assets/sass/components/_site-nav.scss */
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background: #FFFFFF;
+}
+
+/* line 5, project/_assets/sass/components/_site-footer.scss */
+.site--footer {
+  background: #43545E;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  height: 91px;
+  margin-top: -91px;
+}
+/* line 11, project/_assets/sass/components/_site-footer.scss */
+.site--footer p {
+  margin: 0;
+  font-size: 0.77778em;
+}
+
+/* line 5, project/_assets/sass/components/_page-header.scss */
+.page--header {
+  position: relative;
+  overflow: hidden;
+  height: 568px;
+  overflow: hidden;
+  background-color: #00a3d9;
+  display: table;
+  width: 100%;
+}
+/* line 11, project/_assets/sass/components/_page-header.scss */
+.page--header .page--header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+/* line 18, project/_assets/sass/components/_page-header.scss */
+.page--header .page--header-bg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00a3d9;
+  z-index: 1;
+  opacity: 0.75;
+}
+/* line 30, project/_assets/sass/components/_page-header.scss */
+.page--header .page--header-bg > img {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation-name: kenburns;
+  animation-duration: 120s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+/* line 42, project/_assets/sass/components/_page-header.scss */
+.page--header .inner-wrap {
+  position: relative;
+  z-index: 1;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+@-moz-document url-prefix() {
+  /* line 53, project/_assets/sass/components/_page-header.scss */
+  .page--header.frontpage .page-header-bg {
+    animation: none;
+  }
+}
+/* line 61, project/_assets/sass/components/_page-header.scss */
+a.video--play-btn {
+  transition: 0.2s all ease-in-out;
+  display: block;
+  margin: 1em 0;
+}
+/* line 65, project/_assets/sass/components/_page-header.scss */
+a.video--play-btn span.play--btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1em;
+  line-height: 48px;
+  vertical-align: middle;
+  color: #FFFFFF;
+  background: #8AC644;
+}
+/* line 78, project/_assets/sass/components/_page-header.scss */
+a.video--play-btn span.video--caption {
+  display: inline-block;
+  margin-left: 5px;
+  color: #cfd9db;
+  cursor: pointer;
+}
+
+/* line 86, project/_assets/sass/components/_page-header.scss */
+.page--headline {
+  margin: 0;
+  font-size: 4em;
+  line-height: 1.1;
+  font-family: "SourceSansPro Light", Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+@media (max-width: 667px) {
+  /* line 86, project/_assets/sass/components/_page-header.scss */
+  .page--headline {
+    font-size: 3em;
+  }
+}
+
+/* line 100, project/_assets/sass/components/_page-header.scss */
+.page--header::before, .page--header::after {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  height: 40px;
+  background: #ecf0f1;
+  bottom: 0;
+}
+/* line 109, project/_assets/sass/components/_page-header.scss */
+.page--header::before {
+  width: 30%;
+  border-radius: 0 50px 0 0;
+  left: 0;
+}
+/* line 114, project/_assets/sass/components/_page-header.scss */
+.page--header::after {
+  width: 70%;
+  border-radius: 50px 0 0 0;
+  right: 0;
+}
+
+/* line 1, project/_assets/sass/components/_page-content.scss */
+.page--content {
+  position: relative;
+  background: #ecf0f1;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+/* line 8, project/_assets/sass/components/_page-content.scss */
+.page-section {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+/* line 11, project/_assets/sass/components/_page-content.scss */
+.page-section:first-of-type {
+  padding-top: 0;
+}
+/* line 14, project/_assets/sass/components/_page-content.scss */
+.page-section:last-of-type {
+  padding-bottom: 0;
+}
+
+/* line 19, project/_assets/sass/components/_page-content.scss */
+.section-headline {
+  font-family: "SourceSansPro Light", Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+/* line 25, project/_assets/sass/components/_page-content.scss */
+.section-subheadline {
+  font-family: "SourceSansPro Bold", Arial, Helvetica, sans-serif;
+  color: #00a3d9;
 }
 
 

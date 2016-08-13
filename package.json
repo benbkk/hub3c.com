@@ -28,6 +28,7 @@
       "dest": "project/css/"
     },
     "compass": "compass-mixins/lib/",
+    "animate": "animatewithsass/",
     "bootstrap": {
       "sass": "bootstrap-sass/assets/stylesheets/",
       "js": "bootstrap-sass/assets/javascripts/",

@@ -1,0 +1,56 @@
+//
+// Site Navigation
+// --------------------------------------------------
+
+.site-nav {
+	display:inline-block;
+	vertical-align:middle;
+	width: calc(100% - 200px);
+	text-align:right;
+	.nav {
+		li {
+			display:inline-block;
+			text-transform: uppercase;
+			margin-left:8px;
+			font-size: em(14px);
+			letter-spacing: 1px;
+			vertical-align:middle;
+		}
+		> li > a {
+			@include transition(0.2s all ease-in-out);
+			border-radius:0;
+			color: rgba(palette(clouds, dark),0.8);
+			background: palette(black, shadow);
+			vertical-align: middle;
+			&.current,
+			&:hover,
+			&:active {
+				color: palette(white);
+				background: palette(black, shadow-dark);
+			}
+		}
+	}
+	@include mq(tablet-sm) {
+		display:none;
+	}
+}
+
+
+
+.menu-toggle {
+	position: absolute;
+	cursor: pointer;
+	z-index: 9;
+	right: 10px;
+	top:0px;
+	display:none;
+	@include mq(tablet-sm) {
+		display:block;
+	}
+}
+
+.hamburger-inner, 
+.hamburger-inner::before, 
+.hamburger-inner::after {
+	background: palette(white);
+}

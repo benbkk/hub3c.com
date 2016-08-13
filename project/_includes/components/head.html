@@ -2,13 +2,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
-  {%capture metaTitle%}{{site.title}}{%endcapture%}
+  {%capture metaTitle%}{{site.title}} | {{site.slogan}}{%endcapture%}
   {%capture metaDescription%}{{site.title}} {{site.description}} by {{site.author}} for {{site.project}}{%endcapture%}
-  <title>{% if page.title %}{{page.title}} {%else%} {{ metaTitle }}{% endif %}</title>
+  <title>{% if page.title %}{{page.title}} | {{site.title}} - {{site.slogan}} {%else%} {{ metaTitle }}{% endif %}</title>
   <!--// Metadata //-->
   <meta name="author" content="{{ site.author }}" />
   <meta name="description" content="{{ metaDescription }}">
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="{{'favicon.ico' | prepend: site.baseurl}}" />
   <!--// Stylesheets //-->
-  <link rel="stylesheet" href="{{'css/app.css'}}">
+  <link rel="stylesheet" href="{{'css/app.css' | prepend: site.baseurl}}">
 </head>

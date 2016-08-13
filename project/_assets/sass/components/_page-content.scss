@@ -1,0 +1,28 @@
+.page--content {
+	position: relative;
+	background: palette(clouds);
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+.page-section {
+	padding-top: 4em;
+	padding-bottom: 4em;
+	&:first-of-type {
+		padding-top:0;
+	}
+	&:last-of-type {
+		padding-bottom: 0;
+	}
+}
+
+.section-headline {
+	font-family: $font--family-light;
+	font-size: 3em;
+	line-height: 1.1;
+}
+
+.section-subheadline {
+	font-family: $font--family-bold;
+	color: palette(blue, darker);
+}

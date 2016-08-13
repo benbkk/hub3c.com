@@ -1,13 +1,26 @@
 ---
 layout: page
-title: hub3c
 headline: The business platform that promotes business
+header_bg: 'img/hero.jpg'
+video_link: 'https://vimeo.com/147010370'
+video_type: vimeo
+nav_weight: 1
 ---
 
-{%for section in site.home-sections%}
-	<section id="section{{section.title | capitalize}}" class="page-section {{section.title}}">
-		<h2 class="section-headline">{{section.headline}}</h2>
-		<h3 class="section-subheadline">{{section.subheadline</h3>
-		<p>{{section.content}}</p>
-	</section>
+{% assign sections = site.home-sections | sort: 'weight'%}
+{% for section in sections %}
+{% assign sectionId = section.title | camelcase | split: ' ' | join: '' %}
+{% assign sectionClass = section.title | downcase | split: ' ' | join: '-' %}
+<section id="section{{sectionId}}" class="page-section {{sectionClass}}">
+	<div class="container">
+		<div class="row">
+			{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+			<div class="{% if thecycle == 'odd' %}col-sm-6{%else%}col-sm-6 col-sm-push-6{%endif%}">
+				<h2 class="section-headline">{{section.headline}}</h2>
+				<h3 class="section-subheadline">{{section.subheadline}}</h3>
+				<p>{{section.content}}</p>
+			</div>	
+		</div>	
+	</div>	
+</section>
 {%endfor%}

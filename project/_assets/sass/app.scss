@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import "compass";
+@import "animate";
 @import "config/variables";
 @import "utilities/mixins";
 @import "bootstrap";
@@ -8,12 +9,16 @@
 @import "utilities/extends";
 @import "utilities/reset";
 
+
 @import "fonts/fonts";
 @import "font-awesome";
 @import "hamburgers";
 @import "config/base";
-
-@import "components/header";
-@import "components/nav";
-@import "components/page";
+@import "config/animsition";
 @import "components/magnific-popup";
+
+@import "components/site-header";
+@import "components/site-nav";
+@import "components/site-footer";
+@import "components/page-header";
+@import "components/page-content";

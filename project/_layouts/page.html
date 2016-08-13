@@ -1,16 +1,28 @@
 ---
 layout: default
 ---
-<div id="pageWrapper">
-	<header id="pageHeader" class="page--header{% if page.url == '/' %} frontpage{% endif %}">
-		<div class="inner-wrap">
-			<div class="container">
-				<h1 class="page--headline">{{page.headline}}</h1>
-			</div>
+<header id="pageHeader" class="page--header{% if page.url == '/' %} frontpage{% endif %}">
+	<div class="inner-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<h1 class="page--headline">{{page.headline}}</h1>
+					{%if page.video_link%}{%include components/modal-video.html%}{%endif%}
+					{%if page.subheadline%}
+						<p class="page--subheadline h3">{{page.subheadline}}</p>
+					{%endif%}
+				</div>
+			</div>	
 		</div>
-		{%if page.header_bg%}<div class="page--header-bg"><img src="{{page.header_bg}}"></div>{%endif%}
-	</header>
-	<div id="pageContent" class="page--content">
+	</div>
+	{%if page.header_bg%}<div class="page--header-bg"><img src="{{page.header_bg}}"></div>{%endif%}
+</header>
+<div id="pageContent" class="page--content">
+{%if page.url == '/'%}
+	{{content}}
+{%else%}
+	<div class="content-wrapper container">
 		{{content}}
 	</div>
+{%endif%}	
 </div>	

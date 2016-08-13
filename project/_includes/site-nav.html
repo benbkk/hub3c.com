@@ -1,8 +1,10 @@
+{%capture location%}{{page.url | split: '/'}}{%endcapture%}
 <nav id="siteNav" class="site-nav">
 	<ul class="nav nav-pills">
-		<li class="current"><a href="/" title="Home">Hub3c</a></li>
-		<li><a href="/apps/" title="Apps">Apps</a></li>
-		<li><a href="/partner/" title="Global Partner Program">Global Partner Program</a></li>
-		<li><a href="/about/" title="About Us">About</a></li>
+	{%assign pages = site.html_pages | sort: 'nav_weight'%}
+	{%for page in pages%}
+		{%assign current = page.title | downcase | split: ' ' | join: '-' %}
+		<li><a href="{{page.url}}" class="animsition-link {%if location == current%}current{%endif%}">{%if page.url == '/'%}{{site.title}}{%else%}{{page.title}}{%endif%}</a></li>
+	{%endfor%}
 	</ul>
 </nav>

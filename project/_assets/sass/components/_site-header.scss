@@ -1,0 +1,25 @@
+//
+// Site Header
+// --------------------------------------------------
+
+.site-header {
+	& > .container {
+		padding-top:8px;
+		padding-bottom: 8px;
+		height: 100%;
+	}
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height: $navbar-height;
+	z-index: 9;
+}
+
+.site-logo {
+	@include img-replace('hub3c-logo.svg', 170px, 55px, inline-block);
+	background-position: center;
+	background-size: contain;
+	vertical-align:middle;
+}
+

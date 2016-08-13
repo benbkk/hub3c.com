@@ -32,6 +32,13 @@
     "imagefill": "*"
   },
   "devDependencies": {},
-  "overrides": {},
+  "overrides": {
+    "imagefill": {
+      "main": "js/jquery-imagefill.js"
+    },
+    "animsition" : {
+      "main": "dist/js/animsition.js"
+    }
+  },
   "private": true
 }
