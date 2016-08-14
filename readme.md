@@ -1,7 +1,7 @@
-#**Hub3c.com**#
+# Hub3c.com #
 ## A static HTML website that hopefully could serve as a working prototype for the new Hub3c.com marketing website. ##
 
-## *So why the heck would you add even more work to yourself which has caused __even more delay__ in your delivery time, Ben?* ##
+### So why the heck would you add even more work to yourself which has caused __even more delay__ in your delivery time, Ben? ###
 
 Let's just face it, to come up with a flat & static prototype such as sketch or psd for either web apps or sites is just not gonna work these days. It's not agile, not practical for both developers & designers. 
 
@@ -29,7 +29,7 @@ Plus other packages.
 4. `bower install`
 5. `gulp serve`
 
-### Whoa...  Sorry, I don't need all these. I just need your html, css and js. ###
+### Whoa...  Sorry, I don't need all these. I just need your html, css and js to get me started. ###
 
 Sure, in fact at the end of the day, that's the purpose of all these - _to provide everyone with a working solution_. You can find the compiled **_dist** folder. This is the compiled files. Beware though, you might get unexpected results. 
 
