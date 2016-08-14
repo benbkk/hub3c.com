@@ -1,16 +1,18 @@
-(function($) {
-	// Menu Toggle
-	$('#menuToggle').on('click touchstart', function(){
-		$(this).toggleClass('is-active');
-	});
-	// Page Header Bg
-	if($('.page--header-bg')) {
-		$('.page--header-bg').imagefill();
-	}
-	// Modal Video
-	$('.popup-vimeo').magnificPopup({type: 'iframe'});
+'use strict';
 
-	$(".animsition-overlay").animsition({
+(function ($) {
+  // Menu Toggle
+  $('#menuToggle').on('click touchstart', function () {
+    $(this).toggleClass('is-active');
+  });
+  // Page Header Bg
+  if ($('.page--header-bg')) {
+    $('.page--header-bg').imagefill();
+  }
+  // Modal Video
+  $('.popup-vimeo').magnificPopup({ type: 'iframe' });
+
+  $(".animsition-overlay").animsition({
     inClass: 'overlay-slide-in-bottom',
     outClass: 'overlay-slide-out-bottom',
     inDuration: 1500,
@@ -24,13 +26,14 @@
     timeout: false,
     timeoutCountdown: 5000,
     onLoadEvent: true,
-    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    browser: ['animation-duration', '-webkit-animation-duration'],
     // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
     // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-    overlay : true,
-    overlayClass : 'animsition-overlay-slide',
-    overlayParentElement : 'body',
-    transition: function(url){ window.location.href = url; }
+    overlay: true,
+    overlayClass: 'animsition-overlay-slide',
+    overlayParentElement: 'body',
+    transition: function transition(url) {
+      window.location.href = url;
+    }
   });
-
 })(jQuery);

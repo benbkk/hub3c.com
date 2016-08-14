@@ -3,6 +3,7 @@
  **/
 
 const gulp          = require('gulp'),
+			babel					= require('gulp-babel'),
 	 	  clean         = require('gulp-clean'),
 	  	watch         = require('gulp-watch'),
 	  	plugins       = require('gulp-plumber'),

@@ -9,6 +9,7 @@ var gulp           = require('gulp'),
     eslint         = require('gulp-eslint'),
     concat         = require('gulp-concat'),
     uglify         = require('gulp-uglify'),
+    babel          = require('gulp-babel'),
 /** Config */
     paths          = require('../package.json').paths;
 
@@ -29,6 +30,9 @@ module.exports = function buildJs() {
   // Concat files
     .pipe(concat('vendor.js'))
     .pipe(sourcemaps.write(paths))
+    .pipe(babel({
+            presets: ['es2015']
+        }))
     .pipe(gulp.dest(paths.vendor.dest))
   // Minify combined files and rename
     .pipe(uglify())
