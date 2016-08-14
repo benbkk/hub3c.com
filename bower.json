@@ -20,7 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "compass-mixins": "^1.0.2",
     "bootstrap-sass": "^3.3.6",
     "font-awesome": "fontawesome#^4.6.3",
     "jquery": "2.2.4",
@@ -36,7 +35,7 @@
     "imagefill": {
       "main": "js/jquery-imagefill.js"
     },
-    "animsition" : {
+    "animsition": {
       "main": "dist/js/animsition.js"
     }
   },

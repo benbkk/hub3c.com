@@ -29,8 +29,8 @@ Plus other packages.
 4. `bower install`
 5. `gulp serve`
 
-## Sorry, I'm not interested in all these **js** and **ruby** and all that **frontend** stuff. I think it's overkill for what I need. Can I just copy paste your html & css? ##
+### Whoa...  Sorry, I don't need all these. I just need your html, css and js. ###
 
-Sure, in fact at the end of the day, that's the purpose of all these - to provide everyone with a working solution. You can find the compiled **_dist** folder. This is the compiled files. Beware though, you might get unexpected results. 
+Sure, in fact at the end of the day, that's the purpose of all these - _to provide everyone with a working solution_. You can find the compiled **_dist** folder. This is the compiled files. Beware though, you might get unexpected results. 
 
 ## Thanks everyone! ##
