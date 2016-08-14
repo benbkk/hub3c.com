@@ -28,7 +28,8 @@
     "animsition": "^4.0.2",
     "magnific-popup": "^1.1.0",
     "imagesloaded": "^4.1.0",
-    "imagefill": "*"
+    "imagefill": "*",
+    "animatewithsass": "^3.2.2"
   },
   "devDependencies": {},
   "overrides": {

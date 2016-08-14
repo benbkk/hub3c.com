@@ -13,6 +13,7 @@ module.exports = function buildCss () {
     return sass(paths.sass.src + 'app.scss', {
         lineNumbers: true,
         loadPath: [
+            paths.bower + paths.animate,
             paths.bower + paths.fontawesome.sass,
             paths.bower + paths.animate,
             paths.bower + paths.bootstrap.sass,
