@@ -1,5 +1,5 @@
 # Hub3c.com #
-## A static HTML website that hopefully could serve as Hub3c.com marketing website. ##
+## A static HTML website that hopefully could serve as a working prototype for the new Hub3c.com marketing website. ##
 
 ## So why would you add even more work to yourself, Ben? ##
 
@@ -24,7 +24,7 @@ Plus other packages.
 
 ## If anyone should be intereted to clone and see how it works ##
 
-1. git clone this repo - `git clone 
+1. git clone this repo - `git clone git@bitbucket.org:benworkandplay/hub3c.com.git && cd hub3c.com`
 3. `npm install`
 4. `bower install`
 5. `gulp serve`
