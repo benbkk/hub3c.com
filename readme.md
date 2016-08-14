@@ -24,17 +24,16 @@ Plus other packages.
 
 ## If anyone should be intereted to clone and see how it works ##
 
-1. git clone this repo
-2. cd to the git repo 
+1. git clone this repo - `git clone 
 3. `npm install`
 4. `bower install`
 5. `gulp serve`
 
-## Sorry, I'm not interested with all node stuff. Can I just copy paste your html & css? ##
+## Sorry, I'm not interested in all these **js** and **ruby** and all that **frontend** stuff. I think it's overkill for what I need. Can I just copy paste your html & css? ##
 
-Sure. Please browse the repo and find **_dist** folder. This is the compiled files. Beware though, you might get unexpected results. 
+Sure, in fact at the end of the day, that's the purpose of all these - to provide everyone with a working solution. You can find the compiled **_dist** folder. This is the compiled files. Beware though, you might get unexpected results. 
 
-## Thanks everyone I hope this could be a new standard for us in prototyping ##
+## Thanks everyone! ##
 
 
 
