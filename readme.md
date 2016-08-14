@@ -1,4 +1,4 @@
-# Hub3c.com #
+#**Hub3c.com**#
 ## A static HTML website that hopefully could serve as a working prototype for the new Hub3c.com marketing website. ##
 
 ### So why the heck would you add even more work to yourself which has caused __even more delay__ in your delivery time, Ben? ###
@@ -9,11 +9,11 @@ On the other hand, due to its 'static' nature, creating a working prototype with
 
 For example imagine a multiple-page web app with an admin page with sidebar links that are suppose to show how this would work. To create that, one will need to repeatedly copy-paste the `<head>`, `<nav>`, `<footer>`. The worst part will be - updating manually the menu each time. Then what about the link to stylesheet and JS? There you go. 
 
-## Ok. Could you please stop showing off and complaining about your life and actually do something about it? ##
+##**Ok. Could you please stop showing off and complaining about your life and actually do something about it?**##
 
 **Let's make the static dynamic!** 
 
-## And how would you do such thing? ##
+##**And how would you do such thing?**##
 
 1. [npm](https://www.npmjs.com/)
 2. [bower](https://bower.io/)
