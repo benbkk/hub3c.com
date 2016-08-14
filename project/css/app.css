@@ -12455,7 +12455,7 @@ img.mfp-img {
 .site-nav .nav > li > a {
   transition: 0.2s all ease-in-out;
   border-radius: 0;
-  color: rgba(221, 228, 230, 0.8);
+  color: #dde4e6;
   background: rgba(20, 20, 20, 0.1);
   vertical-align: middle;
 }

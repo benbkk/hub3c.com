@@ -19,7 +19,7 @@
 		> li > a {
 			@include transition(0.2s all ease-in-out);
 			border-radius:0;
-			color: rgba(palette(clouds, dark),0.8);
+			color: palette(clouds, dark);
 			background: palette(black, shadow);
 			vertical-align: middle;
 			&.current,
