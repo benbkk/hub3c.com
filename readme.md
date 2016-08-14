@@ -34,6 +34,3 @@ Plus other packages.
 Sure, in fact at the end of the day, that's the purpose of all these - to provide everyone with a working solution. You can find the compiled **_dist** folder. This is the compiled files. Beware though, you might get unexpected results. 
 
 ## Thanks everyone! ##
-
-
-
