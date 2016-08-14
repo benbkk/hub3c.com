@@ -22,9 +22,10 @@ __Let's make the static **dynamic**!__
 
 Plus other packages.
 
-##**If anyone should be interested to see what I was on about, please do the following**##
+##**If this is something of your concern, you may do the following**##
 
-1. git clone this repo - `git clone git@bitbucket.org:benworkandplay/hub3c.com.git && cd hub3c.com`
+1. Install **node.js**, **npm** - maybe **nvm** too, **bower** and **gulp** globally.
+2. git clone this repo - `git clone git@bitbucket.org:benworkandplay/hub3c.com.git && cd hub3c.com`
 3. `npm install`
 4. `bower install`
 5. `gulp serve`
