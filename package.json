@@ -4,7 +4,7 @@
   "description": "Hub3c marketing website prototype",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://bitbucket.org/benworkandplay/hub3c.com"
   },
   "homepage": "http://www.hub3c.com",
   "main": "Gulpfile.js",
