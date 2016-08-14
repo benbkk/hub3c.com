@@ -36,8 +36,12 @@ gulp.task('build:prod', (callback) => {
 // Build JS
 gulp.task('buildJs', ['buildVendorJs', 'buildAppJs']);
 
+// Build Fonts
+gulp.task('buildFonts', ['buildFontAwesome']);
+
 // Build Assets
 gulp.task('build:assets', ['buildCss', 'buildJs', 'buildImg', 'buildFonts']); 
+
 
 // Clean
 gulp.task('clean:All', () => {

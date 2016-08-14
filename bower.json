@@ -21,7 +21,6 @@
   ],
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
-    "font-awesome": "fontawesome#^4.6.3",
     "jquery": "2.2.4",
     "css-hamburgers": "^0.5.0",
     "scrollreveal": "^3.3.1",
@@ -29,7 +28,8 @@
     "magnific-popup": "^1.1.0",
     "imagesloaded": "^4.1.0",
     "imagefill": "*",
-    "animatewithsass": "^3.2.2"
+    "animatewithsass": "^3.2.2",
+    "font-awesome": "^4.6.3"
   },
   "devDependencies": {},
   "overrides": {

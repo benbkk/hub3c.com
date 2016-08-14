@@ -45,7 +45,7 @@
     "fontawesome": {
       "sass": "font-awesome/scss/",
       "fonts": "font-awesome/fonts/",
-      "dest": "project/fonts/font-awesome/"
+      "dest": "project/fonts/FontAwesome/"
     }
   },
   "dependencies": {

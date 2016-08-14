@@ -4,8 +4,7 @@ const gulp           = require('gulp'),
 module.exports = function buildFonts(){
   return gulp.src([
   	paths.fonts.src + '**/*.*',
-  	paths.bower + paths.bootstrap.fonts + '**/*.*',
-  	paths.bower + paths.fontawesome.fonts + '**/*.*',
+  	paths.bower + paths.bootstrap.fonts + '**/*.*'
   	])
     .pipe(gulp.dest(paths.fonts.dest));
 }
