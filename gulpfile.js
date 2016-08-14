@@ -85,8 +85,6 @@ gulp.task('serve', () => {
   runSequence('clean:All', 'build:assets', 'build', 'browser');
   // CSS/SCSS
   watch([
-		paths.bower + paths.compass + '**/*.scss',
-		paths.bower + paths.compass + '*.scss',
 		paths.bower + paths.animate + '**/*.scss',
 		paths.bower + paths.animate + '*.scss',
 		paths.bower + paths.bootstrap.sass + '*.scss',

@@ -27,7 +27,6 @@
       "src": "project/_assets/sass/",
       "dest": "project/css/"
     },
-    "compass": "compass-mixins/lib/",
     "animate": "animatewithsass/",
     "bootstrap": {
       "sass": "bootstrap-sass/assets/stylesheets/",
