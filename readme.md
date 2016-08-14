@@ -11,7 +11,7 @@ For example imagine a multiple-page web app with an admin page with sidebar link
 
 ##**Ok. Could you please stop showing off and complaining about your life and actually do something about it?**##
 
-**Let's make the static dynamic!** 
+__Let's make the static **dynamic**!__ 
 
 ##**And how would you do such thing?**##
 
@@ -22,7 +22,7 @@ For example imagine a multiple-page web app with an admin page with sidebar link
 
 Plus other packages.
 
-## If anyone should be intereted to clone and see how it works ##
+##**If anyone should be intereted to clone and see how it works**##
 
 1. git clone this repo - `git clone git@bitbucket.org:benworkandplay/hub3c.com.git && cd hub3c.com`
 3. `npm install`
@@ -33,4 +33,4 @@ Plus other packages.
 
 Sure, in fact at the end of the day, that's the purpose of all these - _to provide everyone with a working solution_. You can find the compiled **_dist** folder. This is the compiled files. Beware though, you might get unexpected results. 
 
-## Thanks everyone! ##
+##*Thanks everyone!*##
