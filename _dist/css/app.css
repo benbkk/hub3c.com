@@ -11,94 +11,6 @@
  * A partial implementation of the Ruby display functions from Compass:
  * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
  */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInDownBig {
-  0% {
-    opacity: 0;
-    transform: translateY(-2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes fadeInLeftBig {
-  0% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes fadeInRightBig {
-  0% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInUpBig {
-  0% {
-    opacity: 0;
-    transform: translateY(2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @font-face {
   font-family: 'SourceSansPro Regular';
   font-weight: normal;
@@ -6493,7 +6405,94 @@ button {
     margin: auto;
   }
 }
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @font-face {
   font-family: 'SourceSansPro Regular';
   font-weight: normal;
