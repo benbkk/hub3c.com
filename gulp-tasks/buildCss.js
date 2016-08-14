@@ -15,7 +15,6 @@ module.exports = function buildCss () {
         loadPath: [
             paths.bower + paths.animate,
             paths.bower + paths.fontawesome.sass,
-            paths.bower + paths.bootstrap.sass,
             paths.bower + paths.hamburgers,
             paths.sass.src
         ],

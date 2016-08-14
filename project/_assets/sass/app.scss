@@ -3,22 +3,22 @@
 @import "compass/compass";
 @import "config/variables";
 @import "utilities/mixins";
-@import "bootstrap";
+@import "bootstrap/bootstrap";
 @import "utilities/helpers";
 @import "utilities/extends";
 @import "utilities/reset";
 @import "utilities/animate";
-
 
 @import "fonts/fonts";
 @import "font-awesome";
 @import "hamburgers";
 @import "config/base";
 
-@import "components/animsition";
-@import "components/magnific-popup";
-@import "components/site-header";
-@import "components/site-nav";
-@import "components/site-footer";
-@import "components/page-header";
-@import "components/page-content";
+@import "layouts/site-header";
+@import "layouts/site-nav";
+@import "layouts/site-footer";
+@import "layouts/page-header";
+@import "layouts/page-content";
+
+@import "plugins/animsition";
+@import "plugins/magnific-popup";
