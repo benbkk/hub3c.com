@@ -25,7 +25,7 @@
 			left:0;
 			background-color: palette(blue, darker);
 			z-index:1;
-			opacity:0.75;
+			opacity: 0.6;
 		}
 		& > img {
 			opacity:0;
@@ -44,16 +44,6 @@
 		z-index: 1;
 		display: table-cell;
 		vertical-align: middle;
-	}
-}
-
-@-moz-document url-prefix() {
-	.page--header {
-		&.frontpage {
-			.page-header-bg {
-				animation:none;
-			}
-		}
 	}
 }
 
@@ -94,6 +84,12 @@ a.video--play-btn {
 	}
 }
 
+.page--subheadline {
+	margin: 0;
+	font-family: $font--family-light;
+	color: palette(clouds);
+}
+
 // Pseudo
 
 .page--header {
@@ -115,5 +111,19 @@ a.video--play-btn {
 		width: 70%;
 		border-radius: 50px 0 0 0;
 		right: 0;
+	}
+}
+
+// Apps Page
+
+.page--header.apps {
+	&::before,
+	&::after {
+		width: 50%;
+	}
+	.page--header-bg {
+		&::before {
+			z-index:0;
+		}
 	}
 }

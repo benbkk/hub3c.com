@@ -1,28 +1,37 @@
 ---
 layout: default
 ---
-<header id="pageHeader" class="page--header{% if page.url == '/' %} frontpage{% endif %}">
+{%capture slug%}{{page.url | split: '/'}}{%endcapture%}
+<header id="pageHeader" class="page--header{% if page.url == '/' %} frontpage{%else%} {{slug}}{% endif %}">
 	<div class="inner-wrap">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-{%if page.url == '/apps/'%}12 text-center{%else%}8{%endif%}">
 					<h1 class="page--headline">{{page.headline}}</h1>
 					{%if page.video_link%}{%include components/modal-video.html%}{%endif%}
 					{%if page.subheadline%}
 						<p class="page--subheadline h3">{{page.subheadline}}</p>
 					{%endif%}
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 	{%if page.header_bg%}<div class="page--header-bg"><img src="{{page.header_bg}}"></div>{%endif%}
 </header>
-<div id="pageContent" class="page--content">
+<div id="pageContent" class="page--content {{slug}}">
 {%if page.url == '/'%}
 	{{content}}
+{%elsif page.url == '/apps/' %}
+	<div class="content-wrapper container">
+		<div class="row">
+			<div class="col-md-8 col-md-push-2 text-center">
+				{{content}}
+			</div>
+		</div>
+	</div>
 {%else%}
 	<div class="content-wrapper container">
 		{{content}}
 	</div>
-{%endif%}	
-</div>	
+{%endif%}
+</div>

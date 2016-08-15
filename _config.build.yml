@@ -12,8 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
 # Environment Settings
 environment: production
 baseurl: "/" # the subpath of your site, e.g. /blog/
-#url: "http://aesinv.com" # the base hostname & protocol for your site
-url: "http://localhost"
+url: ""
 source: project
 destination: _dist
 

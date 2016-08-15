@@ -2,13 +2,13 @@
 <html>
   {% include components/head.html %}
   <body {% if page.url == '/' %} class="is--frontpage"{% endif %}>
-  	<div id="siteWrapper" class="site--wrapper animsition-overlay" data-animsition-overlay="true">
+  	<div id="siteWrapper" class="site--wrapper animsition">
 	  	{%include site-header.html%}
 	  	<div id="siteContent" class="site--content">
 	  		{{content}}
-	  	</div>	
+	  	</div>
 	   	{%include site-footer.html%}
-	  </div> 	
+	  </div>
     {%include components/scripts.html%}
   </body>
 </html>

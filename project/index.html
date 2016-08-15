@@ -6,7 +6,6 @@ video_link: 'https://vimeo.com/147010370'
 video_type: vimeo
 nav_weight: 1
 ---
-
 {% assign sections = site.home-sections | sort: 'weight'%}
 {% for section in sections %}
 {% assign sectionId = section.title | camelcase | split: ' ' | join: '' %}
@@ -19,8 +18,8 @@ nav_weight: 1
 				<h2 class="section-headline">{{section.headline}}</h2>
 				<h3 class="section-subheadline">{{section.subheadline}}</h3>
 				<p>{{section.content}}</p>
-			</div>	
-		</div>	
-	</div>	
+			</div>
+		</div>
+	</div>
 </section>
 {%endfor%}

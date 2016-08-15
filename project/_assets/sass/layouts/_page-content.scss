@@ -3,7 +3,13 @@
 	background: palette(clouds);
 	padding-top: 4em;
 	padding-bottom: 4em;
+	min-height: calc(100% - 568px);
+	p:last-of-type {
+		margin-bottom:0;
+	}
 }
+
+// Front Page
 
 .page-section {
 	padding-top: 4em;
@@ -26,3 +32,5 @@
 	font-family: $font--family-bold;
 	color: palette(blue, darker);
 }
+
+// Page apps

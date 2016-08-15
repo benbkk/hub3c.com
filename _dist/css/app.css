@@ -17970,6 +17970,7 @@ body {
 
 /* line 24, project/_assets/sass/config/_base.scss */
 .site--wrapper {
+  background: #283339;
   height: 100%;
 }
 @media (min-width: 1px) and (max-width: 480px) {
@@ -17979,10 +17980,10 @@ body {
   }
 }
 
-/* line 31, project/_assets/sass/config/_base.scss */
+/* line 32, project/_assets/sass/config/_base.scss */
 .site--content {
   min-height: 100%;
-  padding-bottom: calc(91px + 4em);
+  padding-bottom: 91px;
 }
 
 @keyframes kenburns {
@@ -18133,7 +18134,7 @@ body {
   left: 0;
   background-color: #00a3d9;
   z-index: 1;
-  opacity: 0.75;
+  opacity: 0.6;
 }
 /* line 30, project/_assets/sass/layouts/_page-header.scss */
 .page--header .page--header-bg > img {
@@ -18160,19 +18161,13 @@ body {
   vertical-align: middle;
 }
 
-@-moz-document url-prefix() {
-  /* line 53, project/_assets/sass/layouts/_page-header.scss */
-  .page--header.frontpage .page-header-bg {
-    animation: none;
-  }
-}
-/* line 61, project/_assets/sass/layouts/_page-header.scss */
+/* line 51, project/_assets/sass/layouts/_page-header.scss */
 a.video--play-btn {
   transition: 0.2s all ease-in-out;
   display: block;
   margin: 1em 0;
 }
-/* line 65, project/_assets/sass/layouts/_page-header.scss */
+/* line 55, project/_assets/sass/layouts/_page-header.scss */
 a.video--play-btn span.play--btn {
   cursor: pointer;
   display: inline-block;
@@ -18186,7 +18181,7 @@ a.video--play-btn span.play--btn {
   color: #FFFFFF;
   background: #8AC644;
 }
-/* line 78, project/_assets/sass/layouts/_page-header.scss */
+/* line 68, project/_assets/sass/layouts/_page-header.scss */
 a.video--play-btn span.video--caption {
   display: inline-block;
   margin-left: 5px;
@@ -18194,7 +18189,7 @@ a.video--play-btn span.video--caption {
   cursor: pointer;
 }
 
-/* line 86, project/_assets/sass/layouts/_page-header.scss */
+/* line 76, project/_assets/sass/layouts/_page-header.scss */
 .page--headline {
   margin: 0;
   font-size: 4em;
@@ -18203,13 +18198,20 @@ a.video--play-btn span.video--caption {
   color: #FFFFFF;
 }
 @media (max-width: 667px) {
-  /* line 86, project/_assets/sass/layouts/_page-header.scss */
+  /* line 76, project/_assets/sass/layouts/_page-header.scss */
   .page--headline {
     font-size: 3em;
   }
 }
 
-/* line 100, project/_assets/sass/layouts/_page-header.scss */
+/* line 87, project/_assets/sass/layouts/_page-header.scss */
+.page--subheadline {
+  margin: 0;
+  font-family: "SourceSansPro Light", Arial, Helvetica, sans-serif;
+  color: #ecf0f1;
+}
+
+/* line 96, project/_assets/sass/layouts/_page-header.scss */
 .page--header::before, .page--header::after {
   position: absolute;
   z-index: 2;
@@ -18218,17 +18220,26 @@ a.video--play-btn span.video--caption {
   background: #ecf0f1;
   bottom: 0;
 }
-/* line 109, project/_assets/sass/layouts/_page-header.scss */
+/* line 105, project/_assets/sass/layouts/_page-header.scss */
 .page--header::before {
   width: 30%;
   border-radius: 0 50px 0 0;
   left: 0;
 }
-/* line 114, project/_assets/sass/layouts/_page-header.scss */
+/* line 110, project/_assets/sass/layouts/_page-header.scss */
 .page--header::after {
   width: 70%;
   border-radius: 50px 0 0 0;
   right: 0;
+}
+
+/* line 120, project/_assets/sass/layouts/_page-header.scss */
+.page--header.apps::before, .page--header.apps::after {
+  width: 50%;
+}
+/* line 125, project/_assets/sass/layouts/_page-header.scss */
+.page--header.apps .page--header-bg::before {
+  z-index: 0;
 }
 
 /* line 1, project/_assets/sass/layouts/_page-content.scss */
@@ -18237,30 +18248,35 @@ a.video--play-btn span.video--caption {
   background: #ecf0f1;
   padding-top: 4em;
   padding-bottom: 4em;
+  min-height: calc(100% - 568px);
+}
+/* line 7, project/_assets/sass/layouts/_page-content.scss */
+.page--content p:last-of-type {
+  margin-bottom: 0;
 }
 
-/* line 8, project/_assets/sass/layouts/_page-content.scss */
+/* line 14, project/_assets/sass/layouts/_page-content.scss */
 .page-section {
   padding-top: 4em;
   padding-bottom: 4em;
 }
-/* line 11, project/_assets/sass/layouts/_page-content.scss */
+/* line 17, project/_assets/sass/layouts/_page-content.scss */
 .page-section:first-of-type {
   padding-top: 0;
 }
-/* line 14, project/_assets/sass/layouts/_page-content.scss */
+/* line 20, project/_assets/sass/layouts/_page-content.scss */
 .page-section:last-of-type {
   padding-bottom: 0;
 }
 
-/* line 19, project/_assets/sass/layouts/_page-content.scss */
+/* line 25, project/_assets/sass/layouts/_page-content.scss */
 .section-headline {
   font-family: "SourceSansPro Light", Arial, Helvetica, sans-serif;
   font-size: 3em;
   line-height: 1.1;
 }
 
-/* line 25, project/_assets/sass/layouts/_page-content.scss */
+/* line 31, project/_assets/sass/layouts/_page-content.scss */
 .section-subheadline {
   font-family: "SourceSansPro Bold", Arial, Helvetica, sans-serif;
   color: #00a3d9;
@@ -18290,11 +18306,10 @@ a.video--play-btn span.video--caption {
   z-index: 999;
   width: 100%;
   height: 100%;
-  background-color: #43545E;
 }
 
 /* loading option */
-/* line 27, project/_assets/sass/plugins/_animsition.scss */
+/* line 26, project/_assets/sass/plugins/_animsition.scss */
 .animsition-loading,
 .animsition-loading:after {
   width: 32px;
@@ -18305,16 +18320,16 @@ a.video--play-btn span.video--caption {
   margin-top: -16px;
   margin-left: -16px;
   border-radius: 50%;
-  z-index: 100;
+  z-index: 9999;
 }
 
-/* line 40, project/_assets/sass/plugins/_animsition.scss */
+/* line 39, project/_assets/sass/plugins/_animsition.scss */
 .animsition-loading {
   background-color: transparent;
-  border-top: 5px solid rgba(0, 0, 0, 0.2);
-  border-right: 5px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
-  border-left: 5px solid #eee;
+  border-top: 5px solid rgba(67, 84, 94, 0.2);
+  border-right: 5px solid rgba(67, 84, 94, 0.2);
+  border-bottom: 5px solid rgba(67, 84, 94, 0.2);
+  border-left: 5px solid transparent;
   transform: translateZ(0);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -18337,7 +18352,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 99, project/_assets/sass/plugins/_animsition.scss */
+/* line 98, project/_assets/sass/plugins/_animsition.scss */
 .fade-in {
   animation-name: fade-in;
 }
@@ -18349,7 +18364,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 125, project/_assets/sass/plugins/_animsition.scss */
+/* line 124, project/_assets/sass/plugins/_animsition.scss */
 .fade-out {
   animation-name: fade-out;
 }
@@ -18363,7 +18378,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 155, project/_assets/sass/plugins/_animsition.scss */
+/* line 154, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-up {
   animation-name: fade-in-up;
 }
@@ -18377,7 +18392,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 189, project/_assets/sass/plugins/_animsition.scss */
+/* line 188, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-up {
   animation-name: fade-out-up;
 }
@@ -18391,7 +18406,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 219, project/_assets/sass/plugins/_animsition.scss */
+/* line 218, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-up-sm {
   animation-name: fade-in-up-sm;
 }
@@ -18405,7 +18420,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 253, project/_assets/sass/plugins/_animsition.scss */
+/* line 252, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-up-sm {
   animation-name: fade-out-up-sm;
 }
@@ -18419,7 +18434,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 283, project/_assets/sass/plugins/_animsition.scss */
+/* line 282, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-up-lg {
   animation-name: fade-in-up-lg;
 }
@@ -18433,7 +18448,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 317, project/_assets/sass/plugins/_animsition.scss */
+/* line 316, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-up-lg {
   animation-name: fade-out-up-lg;
 }
@@ -18447,7 +18462,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 347, project/_assets/sass/plugins/_animsition.scss */
+/* line 346, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-down {
   animation-name: fade-in-down;
 }
@@ -18461,7 +18476,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 381, project/_assets/sass/plugins/_animsition.scss */
+/* line 380, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-down {
   animation-name: fade-out-down;
 }
@@ -18475,7 +18490,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 411, project/_assets/sass/plugins/_animsition.scss */
+/* line 410, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-down-sm {
   animation-name: fade-in-down-sm;
 }
@@ -18489,7 +18504,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 445, project/_assets/sass/plugins/_animsition.scss */
+/* line 444, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-down-sm {
   animation-name: fade-out-down-sm;
 }
@@ -18503,7 +18518,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 475, project/_assets/sass/plugins/_animsition.scss */
+/* line 474, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-down-lg {
   animation-name: fade-in-down;
 }
@@ -18517,7 +18532,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 509, project/_assets/sass/plugins/_animsition.scss */
+/* line 508, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-down-lg {
   animation-name: fade-out-down-lg;
 }
@@ -18531,7 +18546,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 539, project/_assets/sass/plugins/_animsition.scss */
+/* line 538, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-left {
   animation-name: fade-in-left;
 }
@@ -18545,7 +18560,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 573, project/_assets/sass/plugins/_animsition.scss */
+/* line 572, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-left {
   animation-name: fade-out-left;
 }
@@ -18559,7 +18574,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 603, project/_assets/sass/plugins/_animsition.scss */
+/* line 602, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-left-sm {
   animation-name: fade-in-left-sm;
 }
@@ -18573,7 +18588,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 637, project/_assets/sass/plugins/_animsition.scss */
+/* line 636, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-left-sm {
   animation-name: fade-out-left-sm;
 }
@@ -18587,7 +18602,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 667, project/_assets/sass/plugins/_animsition.scss */
+/* line 666, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-left-lg {
   animation-name: fade-in-left-lg;
 }
@@ -18601,7 +18616,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 701, project/_assets/sass/plugins/_animsition.scss */
+/* line 700, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-left-lg {
   animation-name: fade-out-left-lg;
 }
@@ -18615,7 +18630,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 731, project/_assets/sass/plugins/_animsition.scss */
+/* line 730, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-right {
   animation-name: fade-in-right;
 }
@@ -18629,7 +18644,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 765, project/_assets/sass/plugins/_animsition.scss */
+/* line 764, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-right {
   animation-name: fade-out-right;
 }
@@ -18643,7 +18658,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 795, project/_assets/sass/plugins/_animsition.scss */
+/* line 794, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-right-sm {
   animation-name: fade-in-right-sm;
 }
@@ -18657,7 +18672,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 829, project/_assets/sass/plugins/_animsition.scss */
+/* line 828, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-right-sm {
   animation-name: fade-out-right-sm;
 }
@@ -18671,7 +18686,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 859, project/_assets/sass/plugins/_animsition.scss */
+/* line 858, project/_assets/sass/plugins/_animsition.scss */
 .fade-in-right-lg {
   animation-name: fade-in-right-lg;
 }
@@ -18685,7 +18700,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 893, project/_assets/sass/plugins/_animsition.scss */
+/* line 892, project/_assets/sass/plugins/_animsition.scss */
 .fade-out-right-lg {
   animation-name: fade-out-right-lg;
 }
@@ -18701,7 +18716,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 933, project/_assets/sass/plugins/_animsition.scss */
+/* line 932, project/_assets/sass/plugins/_animsition.scss */
 .rotate-in {
   animation-name: rotate-in;
 }
@@ -18717,7 +18732,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 975, project/_assets/sass/plugins/_animsition.scss */
+/* line 974, project/_assets/sass/plugins/_animsition.scss */
 .rotate-out {
   animation-name: rotate-out;
 }
@@ -18733,7 +18748,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1013, project/_assets/sass/plugins/_animsition.scss */
+/* line 1012, project/_assets/sass/plugins/_animsition.scss */
 .rotate-in-sm {
   animation-name: rotate-in-sm;
 }
@@ -18749,7 +18764,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1055, project/_assets/sass/plugins/_animsition.scss */
+/* line 1054, project/_assets/sass/plugins/_animsition.scss */
 .rotate-out-sm {
   animation-name: rotate-out-sm;
 }
@@ -18765,7 +18780,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1093, project/_assets/sass/plugins/_animsition.scss */
+/* line 1092, project/_assets/sass/plugins/_animsition.scss */
 .rotate-in-lg {
   animation-name: rotate-in-lg;
 }
@@ -18781,7 +18796,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1135, project/_assets/sass/plugins/_animsition.scss */
+/* line 1134, project/_assets/sass/plugins/_animsition.scss */
 .rotate-out-lg {
   animation-name: rotate-out-lg;
 }
@@ -18795,7 +18810,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1167, project/_assets/sass/plugins/_animsition.scss */
+/* line 1166, project/_assets/sass/plugins/_animsition.scss */
 .flip-in-x {
   animation-name: flip-in-x;
   -webkit-backface-visibility: visible !important;
@@ -18811,7 +18826,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1203, project/_assets/sass/plugins/_animsition.scss */
+/* line 1202, project/_assets/sass/plugins/_animsition.scss */
 .flip-out-x {
   animation-name: flip-out-x;
   -webkit-backface-visibility: visible !important;
@@ -18827,7 +18842,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1235, project/_assets/sass/plugins/_animsition.scss */
+/* line 1234, project/_assets/sass/plugins/_animsition.scss */
 .flip-in-x-nr {
   animation-name: flip-in-x-nr;
   -webkit-backface-visibility: visible !important;
@@ -18843,7 +18858,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1271, project/_assets/sass/plugins/_animsition.scss */
+/* line 1270, project/_assets/sass/plugins/_animsition.scss */
 .flip-out-x-nr {
   animation-name: flip-out-x-nr;
   -webkit-backface-visibility: visible !important;
@@ -18859,7 +18874,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1303, project/_assets/sass/plugins/_animsition.scss */
+/* line 1302, project/_assets/sass/plugins/_animsition.scss */
 .flip-in-x-fr {
   animation-name: flip-in-x-fr;
   -webkit-backface-visibility: visible !important;
@@ -18875,7 +18890,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1339, project/_assets/sass/plugins/_animsition.scss */
+/* line 1338, project/_assets/sass/plugins/_animsition.scss */
 .flip-out-x-fr {
   animation-name: flip-out-x-fr;
   -webkit-backface-visibility: visible !important;
@@ -18891,7 +18906,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1371, project/_assets/sass/plugins/_animsition.scss */
+/* line 1370, project/_assets/sass/plugins/_animsition.scss */
 .flip-in-y {
   animation-name: flip-in-y;
   -webkit-backface-visibility: visible !important;
@@ -18907,7 +18922,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1407, project/_assets/sass/plugins/_animsition.scss */
+/* line 1406, project/_assets/sass/plugins/_animsition.scss */
 .flip-out-y {
   animation-name: flip-out-y;
   -webkit-backface-visibility: visible !important;
@@ -18923,7 +18938,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1439, project/_assets/sass/plugins/_animsition.scss */
+/* line 1438, project/_assets/sass/plugins/_animsition.scss */
 .flip-in-y-nr {
   animation-name: flip-in-y-nr;
   -webkit-backface-visibility: visible !important;
@@ -18939,7 +18954,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1475, project/_assets/sass/plugins/_animsition.scss */
+/* line 1474, project/_assets/sass/plugins/_animsition.scss */
 .flip-out-y-nr {
   animation-name: flip-out-y-nr;
   -webkit-backface-visibility: visible !important;
@@ -18955,7 +18970,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1507, project/_assets/sass/plugins/_animsition.scss */
+/* line 1506, project/_assets/sass/plugins/_animsition.scss */
 .flip-in-y-fr {
   animation-name: flip-in-y-fr;
   -webkit-backface-visibility: visible !important;
@@ -18971,7 +18986,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1543, project/_assets/sass/plugins/_animsition.scss */
+/* line 1542, project/_assets/sass/plugins/_animsition.scss */
 .flip-out-y-fr {
   animation-name: flip-out-y-fr;
   -webkit-backface-visibility: visible !important;
@@ -18986,7 +19001,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1573, project/_assets/sass/plugins/_animsition.scss */
+/* line 1572, project/_assets/sass/plugins/_animsition.scss */
 .zoom-in {
   animation-name: zoom-in;
 }
@@ -19003,7 +19018,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1613, project/_assets/sass/plugins/_animsition.scss */
+/* line 1612, project/_assets/sass/plugins/_animsition.scss */
 .zoom-out {
   animation-name: zoom-out;
 }
@@ -19016,7 +19031,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1639, project/_assets/sass/plugins/_animsition.scss */
+/* line 1638, project/_assets/sass/plugins/_animsition.scss */
 .zoom-in-sm {
   animation-name: zoom-in-sm;
 }
@@ -19033,7 +19048,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1679, project/_assets/sass/plugins/_animsition.scss */
+/* line 1678, project/_assets/sass/plugins/_animsition.scss */
 .zoom-out-sm {
   animation-name: zoom-out-sm;
 }
@@ -19046,7 +19061,7 @@ a.video--play-btn span.video--caption {
     opacity: 1;
   }
 }
-/* line 1705, project/_assets/sass/plugins/_animsition.scss */
+/* line 1704, project/_assets/sass/plugins/_animsition.scss */
 .zoom-in-lg {
   animation-name: zoom-in-lg;
 }
@@ -19063,7 +19078,7 @@ a.video--play-btn span.video--caption {
     opacity: 0;
   }
 }
-/* line 1745, project/_assets/sass/plugins/_animsition.scss */
+/* line 1744, project/_assets/sass/plugins/_animsition.scss */
 .zoom-out-lg {
   animation-name: zoom-out-lg;
 }
@@ -19075,7 +19090,7 @@ a.video--play-btn span.video--caption {
     height: 0;
   }
 }
-/* line 1769, project/_assets/sass/plugins/_animsition.scss */
+/* line 1768, project/_assets/sass/plugins/_animsition.scss */
 .overlay-slide-in-top {
   top: 0;
   height: 0;
@@ -19089,7 +19104,7 @@ a.video--play-btn span.video--caption {
     height: 100%;
   }
 }
-/* line 1797, project/_assets/sass/plugins/_animsition.scss */
+/* line 1796, project/_assets/sass/plugins/_animsition.scss */
 .overlay-slide-out-top {
   top: 0;
   height: 100%;
@@ -19103,7 +19118,7 @@ a.video--play-btn span.video--caption {
     height: 0;
   }
 }
-/* line 1821, project/_assets/sass/plugins/_animsition.scss */
+/* line 1820, project/_assets/sass/plugins/_animsition.scss */
 .overlay-slide-in-bottom {
   bottom: 0;
   height: 0;
@@ -19117,7 +19132,7 @@ a.video--play-btn span.video--caption {
     height: 100%;
   }
 }
-/* line 1849, project/_assets/sass/plugins/_animsition.scss */
+/* line 1848, project/_assets/sass/plugins/_animsition.scss */
 .overlay-slide-out-bottom {
   bottom: 0;
   height: 100%;
@@ -19131,7 +19146,7 @@ a.video--play-btn span.video--caption {
     width: 0;
   }
 }
-/* line 1873, project/_assets/sass/plugins/_animsition.scss */
+/* line 1872, project/_assets/sass/plugins/_animsition.scss */
 .overlay-slide-in-left {
   width: 0;
   animation-name: overlay-slide-in-left;
@@ -19144,7 +19159,7 @@ a.video--play-btn span.video--caption {
     width: 100%;
   }
 }
-/* line 1900, project/_assets/sass/plugins/_animsition.scss */
+/* line 1899, project/_assets/sass/plugins/_animsition.scss */
 .overlay-slide-out-left {
   left: 0;
   width: 100%;
@@ -19158,7 +19173,7 @@ a.video--play-btn span.video--caption {
     width: 0;
   }
 }
-/* line 1924, project/_assets/sass/plugins/_animsition.scss */
+/* line 1923, project/_assets/sass/plugins/_animsition.scss */
 .overlay-slide-in-right {
   right: 0;
   width: 0;
@@ -19172,7 +19187,7 @@ a.video--play-btn span.video--caption {
     width: 100%;
   }
 }
-/* line 1952, project/_assets/sass/plugins/_animsition.scss */
+/* line 1951, project/_assets/sass/plugins/_animsition.scss */
 .overlay-slide-out-right {
   right: 0;
   width: 100%;

@@ -2,11 +2,11 @@
 // Base
 // --------------------------------------------------
 
-html, 
+html,
 body {
 	height: 100%!important;
 }
-html, 
+html,
 body, * {
   padding: 0;
   margin: 0;
@@ -22,6 +22,7 @@ body {
 }
 
 .site--wrapper {
+	background: palette(grey, dark);
 	height:100%;
 	@include mq(mobile-sm) {
 		min-width: 320px;
@@ -30,7 +31,7 @@ body {
 
 .site--content {
   min-height: 100%;
-  padding-bottom: calc(91px + 4em);
+  padding-bottom: 91px;
 }
 
 @keyframes kenburns {

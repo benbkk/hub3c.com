@@ -4,15 +4,15 @@
 		$(this).toggleClass('is-active');
 	});
 	// Page Header Bg
-	if($('.page--header-bg')) {
+	if($('.page--header-bg').length) {
 		$('.page--header-bg').imagefill();
 	}
 	// Modal Video
 	$('.popup-vimeo').magnificPopup({type: 'iframe'});
 
-	$(".animsition-overlay").animsition({
-    inClass: 'overlay-slide-in-bottom',
-    outClass: 'overlay-slide-out-bottom',
+	$(".animsition").animsition({
+    inClass: 'fade-in-down-sm',
+    outClass: 'fade-out-down-sm',
     inDuration: 1500,
     outDuration: 800,
     linkElement: '.animsition-link',
@@ -27,7 +27,7 @@
     browser: [ 'animation-duration', '-webkit-animation-duration'],
     // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
     // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-    overlay : true,
+    overlay : false,
     overlayClass : 'animsition-overlay-slide',
     overlayParentElement : 'body',
     transition: function(url){ window.location.href = url; }
