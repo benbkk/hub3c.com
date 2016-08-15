@@ -17965,7 +17965,7 @@ body {
 
 /* line 20, project/_assets/sass/config/_base.scss */
 body {
-  background: #ecf0f1;
+  background: #283339;
 }
 
 /* line 24, project/_assets/sass/config/_base.scss */
@@ -17988,9 +17988,8 @@ body {
 
 @keyframes kenburns {
   0% {
-    opacity: 1;
-  }
-  5% {
+    transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
+    animation-timing-function: ease-in;
     opacity: 1;
   }
   50% {
@@ -17999,7 +17998,7 @@ body {
     opacity: 1;
   }
   100% {
-    transform: scale3d(2, 2, 2) translate3d(0px, 0px, 0px);
+    transform: scale3d(1.75, 1.75, 1.75) translate3d(0px, 0px, 0px);
     opacity: 1;
   }
 }
@@ -18326,9 +18325,9 @@ a.video--play-btn span.video--caption {
 /* line 39, project/_assets/sass/plugins/_animsition.scss */
 .animsition-loading {
   background-color: transparent;
-  border-top: 5px solid rgba(67, 84, 94, 0.2);
-  border-right: 5px solid rgba(67, 84, 94, 0.2);
-  border-bottom: 5px solid rgba(67, 84, 94, 0.2);
+  border-top: 5px solid rgba(51, 204, 255, 0.4);
+  border-right: 5px solid rgba(51, 204, 255, 0.25);
+  border-bottom: 5px solid rgba(51, 204, 255, 0.1);
   border-left: 5px solid transparent;
   transform: translateZ(0);
   animation-iteration-count: infinite;

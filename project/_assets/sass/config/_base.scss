@@ -18,7 +18,7 @@ body {
 }
 
 body {
-	background: palette(clouds);
+	background: palette(grey,dark);
 }
 
 .site--wrapper {
@@ -36,9 +36,8 @@ body {
 
 @keyframes kenburns {
   0% {
-    opacity: 1;
-  }
-  5% {
+		transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
+		animation-timing-function: ease-in;
     opacity: 1;
   }
   50% {
@@ -47,7 +46,7 @@ body {
       opacity: 1;
   }
   100% {
-      transform: scale3d(2, 2, 2) translate3d(0px, 0px, 0px);
+      transform: scale3d(1.75, 1.75, 1.75) translate3d(0px, 0px, 0px);
       opacity: 1;
   }
 }
