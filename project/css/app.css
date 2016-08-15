@@ -18133,7 +18133,7 @@ body {
   left: 0;
   background-color: #00a3d9;
   z-index: 1;
-  opacity: 0.6;
+  opacity: 0.75;
 }
 /* line 30, project/_assets/sass/layouts/_page-header.scss */
 .page--header .page--header-bg > img {
