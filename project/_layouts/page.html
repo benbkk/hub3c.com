@@ -28,8 +28,24 @@ layout: default
 				{{content}}
 			</div>
 		</div>
-		
 	</div>
+{%elsif page.url == '/global-partners-program/'%}
+	{% assign partnerships = site.partnerships | sort: 'weight'%}
+	<div class="content-wrapper container">
+		<div class="row">
+			{% for program in partnerships %}
+			{% assign programId = program.title | camelcase | split: ' ' | join: '' %}
+			{% assign programClass = program.title | downcase | split: ' ' | join: '-' %}
+			<section id="{{programId}}" class="{{programClass}} col-md-4">
+				<div class="inner-wrap">
+					<h3>{{program.title}}</h3>
+					<p>{{program.content}}</p>
+				</div>
+			</section>
+			{%endfor%}
+		</div>
+	</div>
+{%elsif page.url == '' %}	
 {%else%}
 	<div class="content-wrapper container">
 		{{content}}

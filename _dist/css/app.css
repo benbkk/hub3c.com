@@ -18146,13 +18146,8 @@ body {
   animation-fill-mode: both;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  animation-name: kenburns;
-  animation-duration: 120s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
-/* line 42, project/_assets/sass/layouts/_page-header.scss */
+/* line 37, project/_assets/sass/layouts/_page-header.scss */
 .page--header .inner-wrap {
   position: relative;
   z-index: 1;
@@ -18160,13 +18155,23 @@ body {
   vertical-align: middle;
 }
 
-/* line 51, project/_assets/sass/layouts/_page-header.scss */
+/* line 47, project/_assets/sass/layouts/_page-header.scss */
+.page--header.frontpage .page--header-bg,
+.page--header.global-partners-program .page--header-bg {
+  animation-name: kenburns;
+  animation-duration: 120s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+/* line 57, project/_assets/sass/layouts/_page-header.scss */
 a.video--play-btn {
   transition: 0.2s all ease-in-out;
   display: block;
   margin: 1em 0;
 }
-/* line 55, project/_assets/sass/layouts/_page-header.scss */
+/* line 61, project/_assets/sass/layouts/_page-header.scss */
 a.video--play-btn span.play--btn {
   cursor: pointer;
   display: inline-block;
@@ -18180,7 +18185,7 @@ a.video--play-btn span.play--btn {
   color: #FFFFFF;
   background: #8AC644;
 }
-/* line 68, project/_assets/sass/layouts/_page-header.scss */
+/* line 74, project/_assets/sass/layouts/_page-header.scss */
 a.video--play-btn span.video--caption {
   display: inline-block;
   margin-left: 5px;
@@ -18188,7 +18193,7 @@ a.video--play-btn span.video--caption {
   cursor: pointer;
 }
 
-/* line 76, project/_assets/sass/layouts/_page-header.scss */
+/* line 82, project/_assets/sass/layouts/_page-header.scss */
 .page--headline {
   margin: 0;
   font-size: 4em;
@@ -18197,20 +18202,20 @@ a.video--play-btn span.video--caption {
   color: #FFFFFF;
 }
 @media (max-width: 667px) {
-  /* line 76, project/_assets/sass/layouts/_page-header.scss */
+  /* line 82, project/_assets/sass/layouts/_page-header.scss */
   .page--headline {
     font-size: 3em;
   }
 }
 
-/* line 87, project/_assets/sass/layouts/_page-header.scss */
+/* line 93, project/_assets/sass/layouts/_page-header.scss */
 .page--subheadline {
   margin: 0;
   font-family: "SourceSansPro Light", Arial, Helvetica, sans-serif;
   color: #ecf0f1;
 }
 
-/* line 96, project/_assets/sass/layouts/_page-header.scss */
+/* line 102, project/_assets/sass/layouts/_page-header.scss */
 .page--header::before, .page--header::after {
   position: absolute;
   z-index: 2;
@@ -18219,24 +18224,24 @@ a.video--play-btn span.video--caption {
   background: #ecf0f1;
   bottom: 0;
 }
-/* line 105, project/_assets/sass/layouts/_page-header.scss */
+/* line 111, project/_assets/sass/layouts/_page-header.scss */
 .page--header::before {
   width: 30%;
   border-radius: 0 50px 0 0;
   left: 0;
 }
-/* line 110, project/_assets/sass/layouts/_page-header.scss */
+/* line 116, project/_assets/sass/layouts/_page-header.scss */
 .page--header::after {
   width: 70%;
   border-radius: 50px 0 0 0;
   right: 0;
 }
 
-/* line 120, project/_assets/sass/layouts/_page-header.scss */
+/* line 126, project/_assets/sass/layouts/_page-header.scss */
 .page--header.apps::before, .page--header.apps::after {
   width: 50%;
 }
-/* line 125, project/_assets/sass/layouts/_page-header.scss */
+/* line 131, project/_assets/sass/layouts/_page-header.scss */
 .page--header.apps .page--header-bg::before {
   z-index: 0;
 }
@@ -18279,6 +18284,21 @@ a.video--play-btn span.video--caption {
 .section-subheadline {
   font-family: "SourceSansPro Bold", Arial, Helvetica, sans-serif;
   color: #00a3d9;
+}
+
+/* line 41, project/_assets/sass/layouts/_page-content.scss */
+.page--content.global-partners-program section h3 {
+  font-family: "SourceSansPro Bold", Arial, Helvetica, sans-serif;
+  color: #00a3d9;
+}
+/* line 46, project/_assets/sass/layouts/_page-content.scss */
+.page--content.global-partners-program section p a {
+  border-bottom: 1px dotted #cfd9db;
+  color: #00a3d9;
+}
+/* line 49, project/_assets/sass/layouts/_page-content.scss */
+.page--content.global-partners-program section p a:hover, .page--content.global-partners-program section p a:active {
+  color: #33CCFF;
 }
 
 /*!

@@ -30,11 +30,6 @@
 		& > img {
 			opacity:0;
 			@include fadeIn();
-			animation-name: kenburns;
-			animation-duration: 120s;
-			animation-timing-function: ease-out;
- 			animation-fill-mode: forwards;
- 			-webkit-animation-fill-mode: forwards;
 		}
 	}
 	display: table;
@@ -44,6 +39,17 @@
 		z-index: 1;
 		display: table-cell;
 		vertical-align: middle;
+	}
+}
+
+.page--header.frontpage,
+.page--header.global-partners-program {
+	.page--header-bg {
+		animation-name: kenburns;
+		animation-duration: 120s;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
+		-webkit-animation-fill-mode: forwards;
 	}
 }
 

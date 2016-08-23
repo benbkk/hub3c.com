@@ -33,4 +33,25 @@
 	color: palette(blue, darker);
 }
 
-// Page apps
+// Page Partnerships
+
+.page--content {
+	&.global-partners-program {
+		section {
+			h3 {
+				font-family: $font--family-bold;
+				color: palette(blue, darker);
+			}
+			p {
+				a {
+					border-bottom: 1px dotted palette(clouds, darker);
+					color: palette(blue, darker);
+					&:hover,
+					&:active {
+						color: palette(blue);
+					}
+				}
+			}
+		}
+	}
+}

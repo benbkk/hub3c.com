@@ -26,3 +26,5 @@ permalink: pretty
 # Includes & Excludes
 collections:
 - home-sections
+- apps
+- partnerships
