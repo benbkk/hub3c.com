@@ -55,3 +55,28 @@
 		}
 	}
 }
+
+.page--content {
+	&.apps {
+		.apps-list {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		.app-icon {
+			width: 120px;
+			height:120px;
+			display:inline-block;
+			margin:2em 0.5em;
+			figcaption {
+				margin-top:1em;
+				font-size: em(12px);
+				text-transform: uppercase;
+			}
+			img {
+				width:96%;
+				max-width:96%;
+				height:auto;
+			}
+		}
+	}
+}

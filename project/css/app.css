@@ -18301,6 +18301,31 @@ a.video--play-btn span.video--caption {
   color: #33CCFF;
 }
 
+/* line 61, project/_assets/sass/layouts/_page-content.scss */
+.page--content.apps .apps-list {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+/* line 65, project/_assets/sass/layouts/_page-content.scss */
+.page--content.apps .app-icon {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  margin: 2em 0.5em;
+}
+/* line 70, project/_assets/sass/layouts/_page-content.scss */
+.page--content.apps .app-icon figcaption {
+  margin-top: 1em;
+  font-size: 0.66667em;
+  text-transform: uppercase;
+}
+/* line 75, project/_assets/sass/layouts/_page-content.scss */
+.page--content.apps .app-icon img {
+  width: 96%;
+  max-width: 96%;
+  height: auto;
+}
+
 /*!
  * animsition v4.0.2
  * A simple and easy jQuery plugin for CSS animated page transitions.

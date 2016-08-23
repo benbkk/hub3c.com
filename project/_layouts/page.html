@@ -28,6 +28,18 @@ layout: default
 				{{content}}
 			</div>
 		</div>
+		<div class="row">
+			<div class="container apps-list text-center">
+				{% for app in site.apps %}
+				{% assign appId = app.title | camelcase | split: ' ' | join: '' %}
+				{% assign appClass = app.title | downcase | split: ' ' | join: '-' %}
+				<figure id="{{appId}}" class="app-icon {{appClass}}">
+					<a href="/apps/"><img src="{{app.icon}}" alt="{{app.title}}">
+					<figcaption class="app-name">{{app.title}}</figcaption></a>
+				</figure>
+				{%endfor%}
+			</div>
+		</div>
 	</div>
 {%elsif page.url == '/global-partners-program/'%}
 	{% assign partnerships = site.partnerships | sort: 'weight'%}
@@ -45,7 +57,6 @@ layout: default
 			{%endfor%}
 		</div>
 	</div>
-{%elsif page.url == '' %}	
 {%else%}
 	<div class="content-wrapper container">
 		{{content}}
