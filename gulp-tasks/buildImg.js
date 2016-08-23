@@ -1,9 +1,9 @@
-var gulp        = require('gulp'),
-    /** Images */
-    imagemin    = require('gulp-imagemin'),
-    pngquant    = require('imagemin-pngquant'),
-    /** Config */
-    paths      = require("../package.json").paths;
+import fs from 'fs'
+import gulp from 'gulp'
+import imagemin from 'gulp-imagemin'
+import pngquant from 'imagemin-pngquant'
+
+let config = JSON.parse(fs.readFileSync('./config.json'))
 
 /**
  * Images
@@ -11,12 +11,12 @@ var gulp        = require('gulp'),
  */
 
 module.exports = function buildImg() {
-  return gulp.src([paths.img.src + '*', paths.img.src + '**/*'])
+  return gulp.src([config.img.src + '*', config.img.src + '**/*'])
     .pipe(imagemin({
       progressive: true,
       use: [pngquant({
         quality: '65-75'
       })]
     }))
-    .pipe(gulp.dest(paths.img.dest));
+    .pipe(gulp.dest(config.img.dist));
 };

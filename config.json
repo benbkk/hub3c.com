@@ -1,0 +1,40 @@
+{
+  "baseDir": "./",
+  "projectDir": "project/",
+  "buildDir": "_dist/",
+  "tasks": "gulp-tasks/",
+  "vendor": {
+    "dist": "project/js/"
+  },
+  "js": {
+    "src": "project/_assets/js/",
+    "dist": "project/js/"
+  },
+  "sass": {
+    "src": "project/_assets/sass/",
+    "dist": "project/css/"
+  },
+  "bower": {
+    "rootDir": "bower_components/",
+    "animate": "animatewithsass/",
+    "hamburgers": "css-hamburgers/_sass/hamburgers/"
+  },
+  "bootstrap": {
+    "sass": "bootstrap-sass/assets/stylesheets/",
+    "js": "bootstrap-sass/assets/javascripts/",
+    "fonts": "bootstrap-sass/assets/fonts/"
+  },
+  "img": {
+    "src": "project/_assets/img/",
+    "dist": "project/img/"
+  },
+  "fonts": {
+    "src": "project/_assets/fonts/",
+    "dist": "project/fonts/"
+  },
+  "fontawesome": {
+    "sass": "font-awesome/scss/",
+    "fonts": "font-awesome/fonts/",
+    "dist": "project/fonts/FontAwesome/"
+  }
+}

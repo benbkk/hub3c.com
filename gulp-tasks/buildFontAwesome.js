@@ -1,9 +1,11 @@
-const gulp           = require('gulp'),
-      paths          = require('../package.json').paths;
+import fs from 'fs'
+import gulp from 'gulp'
+
+let config = JSON.parse(fs.readFileSync('./config.json'))
 
 module.exports = function buildFontAwesome(){
   return gulp.src([
-  	paths.bower + paths.fontawesome.fonts + '*.*'
+  	config.bower.rootDir + config.fontawesome.fonts + '*.*'
   	])
-    .pipe(gulp.dest(paths.fontawesome.dest));
+    .pipe(gulp.dest(config.fontawesome.dist));
 }

@@ -2,24 +2,27 @@
  * Main Gulp File
  **/
 
-const gulp          = require('gulp'),
-			babel					= require('gulp-babel'),
-	 	  clean         = require('gulp-clean'),
-	  	watch         = require('gulp-watch'),
-	  	plugins       = require('gulp-plumber'),
-	  	browserSync   = require('browser-sync').create('jekyll'),
-	  	requireDir    = require('require-dir'),
-	  	runSequence   = require('run-sequence'),
-	  	gutil         = require('gulp-util'),
-	  	gulpAutoTask  = require('gulp-auto-task'),
-	  	paths     	  = require('./package.json').paths;
+import fs from 'fs'
+import gulp from 'gulp'
+import babel from 'gulp-babel'
+import del from 'del'
+import watch from 'gulp-watch'
+import plugins from 'gulp-plumber'
+import browserSync from 'browser-sync'
+import requireDir from 'require-dir'
+import gutil from 'gulp-util'
+import gulpAutoTask from 'gulp-auto-task'
+import runSequence from 'run-sequence'
+
+let config = JSON.parse(fs.readFileSync('./config.json'));
+let tasks = requireDir(config.baseDir + config.tasks, {recursive: true});
 
 /** Import Main Tasks */
 // Require them so they can be called as functions
 const utils = requireDir('gulp-tasks');
 // Automagically set up tasks
 gulpAutoTask('{*,**/*}.js', {
-  base: paths.tasks,
+  base: config.tasks,
   gulp: gulp
 });
 
@@ -40,32 +43,27 @@ gulp.task('buildJs', ['buildVendorJs', 'buildAppJs']);
 gulp.task('buildFonts', ['buildFontAwesome']);
 
 // Build Assets
-gulp.task('build:assets', ['buildCss', 'buildJs', 'buildImg', 'buildFonts']); 
+gulp.task('build:assets', ['buildCss', 'buildJs', 'buildImg', 'buildFonts']);
 
 
 // Clean
 gulp.task('clean:All', () => {
-  return gulp.src([
-  	paths.build + '**/*.*'
-  ])
-  .pipe(clean({force: true}));
+  del(config.buildDir + '**/*.*')
 });
 
 gulp.task('clean:Css', () => {
-  return gulp.src([
-	paths.sass.dest + '*',
-	paths.build + 'css/*',
+  del([
+		config.sass.dist + '*',
+		config.buildDir + 'css/*',
   ])
-  .pipe(clean());
 });
 
 gulp.task('clean:Js', () => {
-	return gulp.src([
-		paths.js.dest + '*',
-		paths.build + 'js/*'
+	del([
+		config.js.dist + '*',
+		config.buildDir + 'js/*'
 	])
-	.pipe(clean());
-});	
+});
 
 /**
  * BrowserSync
@@ -73,7 +71,7 @@ gulp.task('clean:Js', () => {
 // Init server to build directory
 gulp.task('browser', () => {
   browserSync.init({
-	server: "./" + paths.build,
+	server: "./" + config.buildDir
   });
 });
 
@@ -89,35 +87,32 @@ gulp.task('serve', () => {
   runSequence('clean:All', 'build:assets', 'build', 'browser');
   // CSS/SCSS
   watch([
-		paths.bower + paths.bootstrap.sass + '*.scss',
-		paths.bower + paths.bootstrap.sass + '**/*.scss',
-		paths.bower + paths.fontawesome + '*.scss',
-		paths.sass.src + '*.scss',
-		paths.sass.src + '**/*.scss'
-  ], () => {
+		config.bower.rootDir + config.bootstrap.sass + '*.scss',
+		config.bower.rootDir + config.bootstrap.sass + '**/*.scss',
+		config.bower.rootDir + config.fontawesome.sass + '*.scss', config.sass.src + '*.scss', config.sass.src + '**/*.scss'], () => {
 		runSequence('clean:Css', 'buildCss', 'build', ['browser:reload']);
   });
   // JS
   watch([
-  		paths.js.src + '*.js'
+  		config.js.src + '*.js'
   ], () => {
 		runSequence('clean:Js', 'buildJs', 'build', 'browser:reload');
   });
   // Images
-  watch([paths.img.src +'*', paths.img.src +'**/*'], () => {
+  watch([config.img.src +'*', config.img.src +'**/*'], () => {
 		runSequence('buildImg', 'build', ['browser:reload']);
   });
   // Markup / Posts/ Data
   watch([
-		paths.src +'*',
-		paths.src +'_data/*',
-		paths.src +'_plugins/*',
-		paths.src +'**/*.md',
-		paths.src +'**/*.html',
-		paths.src +'**/*.markdown',
-		paths.src +'_includes/**/*.md',
-		paths.src +'_includes/**/*.svg',
-		paths.src +'_includes/**/*.html',
+		config.projectDir +'*',
+		config.projectDir +'_data/*',
+		config.projectDir +'_plugins/*',
+		config.projectDir +'**/*.md',
+		config.projectDir +'**/*.html',
+		config.projectDir +'**/*.markdown',
+		config.projectDir +'_includes/**/*.md',
+		config.projectDir +'_includes/**/*.svg',
+		config.projectDir +'_includes/**/*.html',
   ], () => {
 		runSequence('build', 'browser:reload');
   });

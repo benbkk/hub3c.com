@@ -13,47 +13,15 @@
   },
   "author": "Ben Anggoro <ben@benworkandplay.com> (http://www.benworkandplay.com)",
   "license": "UNLICENSED",
-  "paths": {
-    "tasks": "gulp-tasks/",
-    "project": "project/",
-    "src": "project/",
-    "build": "_dist/",
-    "bower": "bower_components/",
-    "js": {
-      "src": "project/_assets/js/",
-      "dest": "project/js/"
-    },
-    "sass": {
-      "src": "project/_assets/sass/",
-      "dest": "project/css/"
-    },
-    "animate": "animatewithsass/",
-    "bootstrap": {
-      "sass": "bootstrap-sass/assets/stylesheets/",
-      "js": "bootstrap-sass/assets/javascripts/",
-      "fonts": "bootstrap-sass/assets/fonts/"
-    },
-    "hamburgers": "css-hamburgers/_sass/hamburgers/",
-    "img": {
-      "src": "project/_assets/img/",
-      "dest": "project/img"
-    },
-    "fonts": {
-      "src": "project/_assets/fonts/",
-      "dest": "project/fonts/"
-    },
-    "fontawesome": {
-      "sass": "font-awesome/scss/",
-      "fonts": "font-awesome/fonts/",
-      "dest": "project/fonts/FontAwesome/"
-    }
-  },
   "dependencies": {
     "graceful-fs": "^4.1.5"
   },
   "devDependencies": {
+    "babel-core": "^6.13.2",
     "babel-preset-es2015": "^6.13.2",
     "browser-sync": "^2.8.2",
+    "del": "^2.2.2",
+    "fs": "0.0.2",
     "graceful-fs": "^4.1.5",
     "gulp": "^3.9.1",
     "gulp-auto-task": "0.0.1",
