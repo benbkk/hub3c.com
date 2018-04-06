@@ -13,7 +13,7 @@ we don't know anymore which one is what.
 For example imagine a web app with an admin page with sidebar links that are suppose to show how this would work.
 To create that, one will need to repeatedly copy-paste the `<head>`, `<nav>`, `<footer>`. The worst part will be - updating manually the menu each time. Then what about the link to stylesheet and JS? There you go. 
 
-##**Ok. Could we please stop complaining about our lives and actually do something about it?**##
+##**Ok. Could we please stop complaining about our lives and actually do something about it?**
 
 __Exactly. Let's make the static **dynamic**!__ 
 
