@@ -1,6 +1,6 @@
-####Deprecated
+#### ⚠️ Deprecated: outdated & should not to be taken as reference
 
-#**Hub3c.com**#
+# **Hub3c.com**
 ## A static HTML website that hopefully could serve as a working prototype.
 https://hub3c-prototype.aerobaticapp.com/
 
@@ -13,11 +13,9 @@ we don't know anymore which one is what.
 For example imagine a web app with an admin page with sidebar links that are suppose to show how this would work.
 To create that, one will need to repeatedly copy-paste the `<head>`, `<nav>`, `<footer>`. The worst part will be - updating manually the menu each time. Then what about the link to stylesheet and JS? There you go. 
 
-##**Ok. Could we please stop complaining about our lives and actually do something about it?**
+### **Ok. Could we please stop complaining about our lives and actually do something about it?**
 
-__Exactly. Let's make the static **dynamic**!__ 
-
-##**And how would you do such thing?**
+__Exactly. Let's make the static **dynamic**!__ ...well, sorta. 
 
 1. [npm](https://www.npmjs.com/)
 2. [bower](https://bower.io/)
